@@ -55,7 +55,8 @@ cd C:/AI Document/projects/track-lane-guard/android
 
 ## 5. 发布信息
 
-- GitHub 仓库：**尚未创建**（等待用户确认仓库名后推送）
+- GitHub 仓库：https://github.com/1494948/track-lane-guard （public，`main` 分支，已推送）
+- 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/
 - 分支：`main`
 - 产品名：跑道守卫 / TrackLaneGuard
 - 当前版本：v1.1.0（versionCode 2）
