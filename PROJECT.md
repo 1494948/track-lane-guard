@@ -53,6 +53,12 @@ cd C:/AI Document/projects/track-lane-guard/android
 # 产物：android/app/build/outputs/apk/release/app-release.apk
 ```
 
+```bash
+# 3) 跑抗干扰基准测试（不需要相机；改算法后先跑这个再打包）
+cd C:/AI Document/projects/track-lane-guard/test
+node robustness.js
+```
+
 ## 5. 发布信息
 
 - GitHub 仓库：https://github.com/1494948/track-lane-guard （public，`main` 分支，已推送）
@@ -103,3 +109,6 @@ cd C:/AI Document/projects/track-lane-guard/android
   - 加 Alpha-Beta 跟踪器 + 残差门控 + 持续帧投票（默认 8 帧）
   - 合成基准（`playground/track-lane-build/test_robust.js`）：9 类干扰场景零误报零丢失；
     纯手持晃动误报 16/40 → 0；消融证明关掉持续帧投票误报回到 37、关掉闭运算抖动 σ 恶化 27 倍
+  - 基准测试纳入仓库 `test/robustness.js`（原先只在 playground，会被当临时文件清掉）
+- 2026-09-27 · 推送 GitHub（1494948/track-lane-guard）并发布在线版
+  （https://track-lane-guard.app.workbuddy.host/，sites 静态托管） · 在线版与 APK 同一套前端
