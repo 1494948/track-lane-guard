@@ -1,5 +1,10 @@
+// 注：本机直连 repo.maven.apache.org 会出现 TLS 握手被重置（Remote host terminated
+// the handshake），因此把国内镜像放在前面，官方源仅作兜底。网络正常时可删除镜像段。
 pluginManagement {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -9,6 +14,8 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
         mavenCentral()
     }

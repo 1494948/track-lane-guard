@@ -76,9 +76,19 @@ cd C:/AI Document/projects/track-lane-guard/android
 7. **WebView 必须用 https 源**才能 `getUserMedia`（相机）。因此用 `WebViewAssetLoader` 把
    assets 映射为 `https://appassets.androidplatform.net/`，不要退回 `file:///android_asset/`。
 8. **Android 6+ 需先拿到 CAMERA 权限**，再在 `onPermissionRequest` 里 grant，否则 WebView 静默失败。
+9. **直连 `repo.maven.apache.org` 会出现 `Remote host terminated the handshake`**（JVM TLS 被重置，
+   curl 却是 200）→ `settings.gradle` 里把阿里云镜像排在 `google()` / `mavenCentral()` 前面。
+10. **release 签名用的 `~/.android/debug.keystore` 默认不存在**，会挂在
+    `:app:validateSigningRelease` → 用 keytool 生成一次即可（别名 `androiddebugkey`，口令 `android`）。
+11. **构建脚本走 `T:` 盘符**（`subst T: "C:\AI Document\playground\android-toolchain"`）：
+    工具链路径含空格，从 Git Bash 直传参数给 `cmd` 会被 MSYS 路径转换破坏。
+12. AGP 会尝试联网拉 SDK package manifest（失败也只报 Warning，不影响构建），
+    第一次构建会因此多等约 3 分钟。
 
 ## 7. 变更记录
 
 - 2026-09-27 · 创建项目，实现前端识别算法（cv.js）、反馈（audio.js）、界面（app.js） · 首个可用版本
 - 2026-09-27 · 搭建 Android WebView 外壳并打通本机 APK 构建链路 · 兑现「生成 apk 文件」需求
 - 2026-09-27 · 补 PWA（manifest + service worker）与图标 · 便于不装 APK 时直接用浏览器
+- 2026-09-27 · 修复「白色分道线饱和度为 0 会被红色掩膜排除」的算法缺陷，白线改为独立掩膜 + 邻近跑道约束 · 合成测试 6 项断言全通过，单帧 0.61 ms
+- 2026-09-27 · 首次成功构建 APK 并归档到 `releases/track-lane-guard/v1.0.0/` · 386 KB，含完整离线前端
