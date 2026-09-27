@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0f1115">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>跑道守卫 · TrackLaneGuard</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-level="0">
+
+<div id="app">
+  <header id="status" class="status ok">
+    <span class="dot"></span>
+    <span id="stateText">安全</span>
+  </header>
+  <div id="meta" class="meta">待启动</div>
+
+  <div id="stage">
+    <canvas id="view"></canvas>
+  </div>
+
+  <div id="maskWrap">
+    <div class="maskLabel">识别调试图　<span>红 = 跑道面　白 = 分道线</span></div>
+    <canvas id="mask"></canvas>
+  </div>
+
+  <p id="hint" class="hint" style="display:none"></p>
+  <div id="calibTip">点击画面中「跑道地面」的位置完成标定</div>
+
+  <nav class="ctrls">
+    <button id="btnStart" class="primary">开始检测</button>
+    <button id="btnStop" disabled>停止</button>
+    <button id="btnCalib">标定</button>
+    <button id="btnSettings">设置</button>
+  </nav>
+
+  <p class="tips">建议横持手机，镜头朝前下方对准跑道；佩戴耳机时左右耳提示音方向更明确。</p>
+</div>
+
+<video id="video" playsinline muted autoplay style="display:none"></video>
+
+<aside id="panel">
+  <div class="panelHead">
+    <b>设置</b>
+    <button id="btnClosePanel" class="ghost">收起</button>
+  </div>
+  <div id="settingsBody"></div>
+  <div class="panelFoot">
+    <button id="btnTestL">试听「往左」</button>
+    <button id="btnTestR">试听「往右」</button>
+    <button id="btnReset" class="ghost">恢复默认</button>
+  </div>
+</aside>
+
+<script src="js/cv.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

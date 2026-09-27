@@ -1,0 +1,19 @@
+# Node / 前端
+node_modules/
+*.log
+.DS_Store
+
+# Android / Gradle 构建产物
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# 分发包归档在 releases/（根目录），不进仓库
+releases/
