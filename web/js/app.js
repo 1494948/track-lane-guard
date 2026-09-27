@@ -18,6 +18,12 @@
     bandTop: 0.50,       // 检测带上边界（画面高度比例）
     bandBottom: 0.92,    // 检测带下边界
     minCoverage: 0.06,   // 低于该红色占比判定为"未检测到跑道"
+    minTrackPixels: 0.02,// 跑道连通域最小面积（占整帧比例），滤掉零散红色物体
+    lineMinRowRatio: 0.5,// 分道线至少要在检测带这么多比例的行上出现
+    lineMaxRms: 2.6,     // 分道线直线拟合残差上限(px)，滤掉零散白斑
+    gate: 0.28,          // 跟踪器残差门限：位置突变超过它视为噪声
+    stableFrames: 8,     // 同方向持续多少帧才允许报警（抗抖/抗晃动；晃动半周期约 4 帧）
+    minConfidence: 0.45, // 置信度低于它不报警
     caution: 0.18,       // 注意阈值 |p-0.5|
     danger: 0.34,        // 警告阈值 |p-0.5|
     fps: 20,
@@ -29,6 +35,8 @@
   };
 
   var cfg = loadCfg();
+  var tracker = new cv.Tracker();
+  var lastSt = { p: 0.5, width: 0.5, conf: 0, sameDir: 0, miss: 0 };
   var running = false;
   var stream = null;
   var video = null;
@@ -115,6 +123,8 @@
     { key: 'bandBottom', label: '检测带下边界', min: 0.35, max: 1.00, step: 0.02, fmt: pct },
     { key: 'caution', label: '「注意」阈值', min: 0.08, max: 0.40, step: 0.01, fmt: pct },
     { key: 'danger', label: '「警告」阈值', min: 0.15, max: 0.50, step: 0.01, fmt: pct },
+    { key: 'stableFrames', label: '持续帧数（越大越抗误报）', min: 2, max: 15, step: 1, suffix: ' 帧' },
+    { key: 'minConfidence', label: '最低置信度（越大越保守）', min: 0.20, max: 0.85, step: 0.05, fmt: pct },
     { key: 'fps', label: '处理帧率', min: 5, max: 30, step: 1, suffix: ' fps' },
     { key: 'volume', label: '提示音量', min: 0, max: 1, step: 0.05, fmt: pct }
   ];
@@ -227,6 +237,8 @@
     pSmooth = 0.5;
     level = 0;
     dir = 0;
+    tracker.reset();
+    lastSt = tracker.state();
 
     el.btnStart.disabled = true;
     el.btnStop.disabled = false;
@@ -244,6 +256,8 @@
     dir = 0;
     fpsText = '待启动';
     infoExtra = '';
+    tracker.reset();
+    lastSt = tracker.state();
     fb.stop();
     if (stream) {
       stream.getTracks().forEach(function (t) { t.stop(); });
@@ -319,20 +333,27 @@
     var res = cv.analyze(imgData, cfg);
     lastResult = res;
 
-    // --- 检测稳定性 ---
+    // --- 时序跟踪：Alpha-Beta 滤波 + 残差门控 + 持续帧投票 ---
+    lastSt = tracker.update(res, cfg);
+    pSmooth = lastSt.p;
+
     if (res.ok) { okFrames++; lostFrames = 0; } else { lostFrames++; okFrames = 0; }
     if (okFrames >= 3) detected = true;
-    if (lostFrames >= 6) detected = false;
+    if (lostFrames >= 8) detected = false;
 
-    // --- 位置平滑与状态判定（含迟滞，防止抖动误报）---
-    if (res.ok) {
-      pSmooth = pSmooth * 0.6 + res.p * 0.4;
-    }
-    var d = pSmooth - 0.5;
+    // --- 状态判定 ---
+    // 报警需要同时满足三个条件，缺一不报：
+    //   1) 检测到跑道   2) 置信度达标   3) 同方向已持续 stableFrames 帧
+    // 这样单帧噪声、手持晃动、短暂遮挡都不会触发误报
+    var d = lastSt.p - 0.5;
     var ad = Math.abs(d);
 
+    var trusted = detected && lastSt.miss === 0 &&
+      lastSt.conf >= cfg.minConfidence &&
+      lastSt.sameDir >= cfg.stableFrames;
+
     var newLevel = 0, newDir = 0;
-    if (detected) {
+    if (trusted) {
       var cThr = level >= 1 ? cfg.caution - 0.04 : cfg.caution;
       var dThr = level >= 2 ? cfg.danger - 0.06 : cfg.danger;
       if (ad >= dThr) newLevel = 2;
@@ -416,6 +437,16 @@
     ctx.strokeStyle = 'rgba(255,255,255,0.35)';
     ctx.strokeRect(barX, barY, barW, barH);
 
+    // 置信度角标：低于阈值时变黄，提醒此时不会报警
+    if (detected) {
+      ctx.font = 'bold 14px system-ui, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = lastSt.conf >= cfg.minConfidence
+        ? 'rgba(120,240,170,0.95)' : 'rgba(255,190,60,0.95)';
+      ctx.fillText('置信度 ' + (lastSt.conf * 100).toFixed(0) + '%', W - 10, 10);
+    }
+
     // 方向指示（大字 + 箭头）
     if (level > 0) {
       var alpha = 0.55 + 0.45 * Math.abs(Math.sin(pulsePhase));
@@ -463,9 +494,12 @@
 
   function setStatus(level, dir, res) {
     var cls = 'ok', text = '安全';
+    var ad0 = Math.abs(lastSt.p - 0.5);
     if (!detected) { cls = 'lost'; text = '未检测到跑道'; }
+    else if (lastSt.conf < cfg.minConfidence) { cls = 'lost'; text = '识别不稳定 · 暂不报警'; }
     else if (level === 2) { cls = 'danger'; text = '即将跑出 · ' + (dir < 0 ? '往左' : '往右'); }
     else if (level === 1) { cls = 'warn'; text = '注意偏出 · ' + (dir < 0 ? '往左' : '往右'); }
+    else if (ad0 >= cfg.caution && lastSt.sameDir < cfg.stableFrames) { cls = 'ok'; text = '偏移观察中…'; }
 
     el.status.className = 'status ' + cls;
     el.state.textContent = text;
@@ -474,6 +508,8 @@
     if (res) {
       infoExtra = ' · ' + (res.mode === 'lines' ? '分道线锁定' : (res.mode === 'edges' ? '跑道边界' : '无')) +
         ' · 偏离 ' + ((pSmooth - 0.5) * 200).toFixed(0) + '%' +
+        ' · 置信度 ' + (lastSt.conf * 100).toFixed(0) + '%' +
+        ' · 持续 ' + lastSt.sameDir + '/' + cfg.stableFrames + ' 帧' +
         ' · 红色占比 ' + (res.coverage * 100).toFixed(0) + '%';
     }
     updateMeta();
