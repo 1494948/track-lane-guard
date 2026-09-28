@@ -1,1 +1,169 @@
-IyDot5HpgZPlrojljasgVHJhY2tMYW5lR3VhcmQKCueUqOaJi+acuuaRhOWDj+WktOivhuWIq+e6ouiJsuWhkeiDtui3kemBk++8jOWNs+Wwhui3keWHuui3kemBk+aXtumAmui/hyoq6ICz5py65bem5Y+z5aOw5YOPICsg6K+t6Z+zICsg6ZyH5YqoICsg5bGP5bmV566t5aS0KirlkYror4nkvaDor6XlvoDlt6bov5jmmK/lvoDlj7PjgIIKCmBgYAp3ZWIvICAgICAg5a6M5pW05YmN56uv77yI6K+G5Yir566X5rOVIC8g55WM6Z2iIC8gUFdB77yJ77yM5ZSv5LiA5Yqf6IO95rqQ56CBCmFuZHJvaWQvICDmnoHnroAgV2ViVmlldyDlpJblo7PvvIzmioogd2ViLyDmiZPljIXmiJAgQVBL77yI56a757q/6L+Q6KGM77yJCmBgYAoKIyMg5LiA44CB5oCO5LmI55SoCgoxLiDlronoo4UgQVBL77yI5oiW5rWP6KeI5Zmo5omT5byA6YOo572y55qEIEhUVFBTIOWcsOWdgO+8ie+8jOaOiOS6iCoq55u45py65p2D6ZmQKirjgIIKMi4g5qiq5oyB5omL5py677yM6ZWc5aS05pyd5YmN5LiL5pa55a+55YeG6LeR6YGT77yM6K6p55S76Z2i5LiL5Y2K6YOo5YiG6KKr6LeR6YGT5Y2g5ruh44CCCjMuIOeCueOAjCoq5qCH5a6aKirjgI3vvIzlho3ngrnkuIDkuIvnlLvpnaLph4zot5HpgZPlnLDpnaLnmoTkvY3nva4g4oCU4oCUIOS8muiHquWKqOmUgeWumui/meenjee6ouiJsuOAggo0LiDngrnjgIwqKuW8gOWni+ajgOa1iyoq44CN44CC5bGP5bmV5LiK5Lya55S75Ye66K+G5Yir5Yiw55qE6LeR6YGT6L6555WM77yP5YiG6YGT57q/77yM5Lul5Y+K5L2g5b2T5YmN55qE5L2N572u5qCH6K6w44CCCgojIyMg5o+Q6YaS6KeE5YiZCgp8IOeKtuaAgSB8IOinpuWPkeadoeS7tiB8IOWPjemmiCB8CnwtLS18LS0tfC0tLXwKfCDlronlhaggfCDlgY/nprsgPCDms6jmhI/pmIjlgLwgfCDml6Dmj5DnpLrpn7MgfAp8IOWBj+enu+inguWvn+S4rSB8IOW3sui2hemYiOWAvOS9huaMgee7reW4p+aVsOS4jeWkn++8iOWPr+iDveWPquaYr+aZg+WKqO+8iSB8IOaXoOaPkOekuumfs++8jOeKtuaAgeagj+aPkOekuiB8Cnwg5rOo5oSPIHwg5LiJ5p2h5Lu26b2Q5aSHICsg5YGP56a76L6+44CM5rOo5oSP44CN6ZiI5YC877yI6buY6K6kIDE4Je+8iSB8IOWNleWjsOaPkOekuumfs++8jOWjsOWDj+WBj+WQkeW3pi/lj7PogLMgfAp8IOitpuWRiiB8IOS4ieadoeS7tum9kOWkhyArIOWBj+emu+i+vuOAjOitpuWRiuOAjemYiOWAvO+8iOm7mOiupCAzNCXvvIkgfCDmgKXkv4Plj4zlo7AgKyDpnIfliqggKyDor63pn7PjgIzlvoDlt6Yv5b6A5Y+z44CNKyDlsY/luZXlpKfnrq3lpLQgfAp8IOivhuWIq+S4jeeos+WumiB8IOe9ruS/oeW6puS9juS6jumYiOWAvCB8IOS4jeaKpeitpu+8jOWPs+S4iuinkue9ruS/oeW6puWPmOm7hCB8CgrjgIzkuInmnaHku7bjgI09IOajgOa1i+WIsOi3kemBkyArIOe9ruS/oeW6pui+vuaghyArIOWQjOaWueWQkeaMgee7rSBOIOW4p+OAggoK5pa55ZCR55SoKirkuKTnp43pgJrpgZPlhpfkvZnnvJbnoIEqKu+8jOaItOiAs+acuuaIluWkluaUvumDveiDveWIhui+qO+8mgoKLSDlo7Dlg4/vvJropoHlvoDlt6bkv64g4oaSIOWjsOmfs+WcqCoq5bem6ICzKirvvJvopoHlvoDlj7Pkv64g4oaSICoq5Y+z6ICzKioKLSDpn7Ppq5jvvJrlvoDlt6YgNjIwIEh677yM5b6A5Y+zIDkzMCBIegotIOmch+WKqO+8muW+gOW3puOAjOefrS3plb/jgI3vvIzlvoDlj7PjgIzplb8t55+t44CNCi0g6K+t6Z+z5LiO5bGP5bmV566t5aS05YWc5bqVCgojIyDkuozjgIHnrpfms5Xljp/nkIYKCuavj+W4p+WkhOeQhu+8iOm7mOiupCAyMCBmcHPvvIzlt6XkvZzliIbovqjnjocgMTkyw5cxMDjvvIzljZXluKfnuqYgMS4xIG1z77yJ77yaCgoxLiBgUkdCIOKGkiBIU1Zg77yIT3BlbkNWIOaDr+S+iyBI4oiIWzAsMTgwKe+8iQoyLiAqKuiJsuebuOeOr+W9oui3neemu+mYiOWAvCoq5YiG5Ymy57qi6Imy6LeR6YGT6Z2i77yb5qCH5a6a5Y2z56Gu5a6a6Imy55u45Lit5b+D5LiO5a655beuCjMuICoq5rC05bmz6Zet6L+Q566XKirloavlubPliIbpgZPnur/pgKDmiJDnmoTnvJ3pmpnvvIjlkKbliJnot5HpgZPov57pgJrln5/kvJrooqvliIfmiJDkuIDmnaHmnaHovabpgZPvvIkKNC4gKirmnIDlpKcgOC3pgrvln5/ov57pgJrln58qKiA9IOi3kemBk++8jOmbtuaVo+e6ouiJsueJqeS9k++8iOiho+acjeOAgeagh+W/l+eJjOOAgeebuOmCu+e6ouWcuuWcsO+8ieiiq+ebtOaOpeWJlOmZpAo1LiAqKuW9oueKtuagoemqjCoq77ya55yf5a6e6LeR6YGT44CM6L+R5a696L+c56qE44CB5bu25Ly45Yiw55S76Z2i5bqV6YOo44CB6LSv56m/5qOA5rWL5bim44CN77yM5LiN5ruh6Laz5YiZ6ZmN572u5L+h5bqmCjYuICoq5YiG6YGT57q/KirvvJrlj6rorqTot5HpgZPooYzljLrpl7TlhoXjgIHkuJTmu6HotrPjgIzooYzov57nu63mgKcg4omlNTAl44CNK+OAjOacgOWwj+S6jOS5mOebtOe6v+aLn+WQiOaui+W3riDiiaQyLjZweOOAjeeahOeZveiJsuWDj+e0oAo3LiDliIbpgZPnur/kuI3lj6/nlKjvvIjno6jmjZ8v6YCG5YWJL+W8r+mBk++8ieaXtioq6YCA5YyWKirkuLrot5HpgZPpnaLlt6blj7PovrnnlYwKOC4g6K6h566X55u45a+55L2N572uIGBwIOKIiCBbMCwxXWDvvIwwLjUg5Li65bGF5Lit77yb6J6N5ZCI6KaG55uW546HIC8g5b2i54q25YiGIC8g5YiG6YGT57q/5YiG5b6X5YiwKirnva7kv6HluqYqKgo5LiAqKkFscGhhLUJldGEg6Lef6Liq5ZmoKirvvJrmrovlt67pl6jmjqfliZTpmaTot7Plj5jvvIzmjIHnu63lkIzlkJHluKfmlbDovr7moIfmiY3lhYHorrjmiqXoraYKCuWIpOWumuaWueWQke+8mmBwID4gMC41YCDor7TmmI7kvaDlgY/lnKjot5HpgZPlj7Pkvqcg4oaSIOaPkOekuioq5b6A5bemKirvvJvlj43kuYvlvoDlj7PjgIIKCiMjIOS6jMK36KGl44CB5oqX6K+v5Yik6K6+6K6h77yIdjEuMS4wIOeahOmHjeeCue+8iQoK6K+v5Yik5pyJ5Zub5Liq5p2l5rqQ77yM5ZCE6Ieq5pyJ5a+55bqU55qE6Ziy57q/77yaCgp8IOivr+WIpOadpea6kCB8IOmYsue6vyB8IOaViOaenO+8iOWQiOaIkOWfuuWHhuWunua1i++8iSB8CnwtLS18LS0tfC0tLXwKfCDpm7bmlaPnuqLoibLniankvZPooqvlvZPot5HpgZMgfCDmnIDlpKfov57pgJrln58gKyDmnIDlsI/pnaLnp68gfCDnm7jpgrvnuqLlnLrlnLDlr7nkvY3nva7nmoTlvbHlk40gMC4wMjgg4oaSIDAuMDAxIHwKfCDnmb3mlpEgLyDmsaHmuI0gLyDkupHooqvlvZPliIbpgZPnur8gfCDooYzov57nu63mgKcgKyDnm7Tnur/mi5/lkIjmrovlt64gfCDnmb3oibLnoo7mlpHjgIHnmb3oibLlubLmibDlnZfpm7bor6/miqUgfAp8IOi/numAmuWfn+i3qOi9pumBk+i3s+WPmCB8IOawtOW5s+mXrei/kOeulyArIOeZveeCueiFkOiagCB8IOW8uuWZquWjsOS4i+aKluWKqCDPgyAwLjA5NzQg4oaSICoqMC4wMDM2KiogfAp8IOaJi+aMgeaZg+WKqCAvIOWNleW4p+aKluWKqCB8IOaui+W3rumXqOaOpyArIOaMgee7reW4p+aKleelqCB8IOe6r+aZg+WKqCA0MCDluKfvvJror6/miqUgMTYg4oaSICoqMCoqIHwKCioq5a6B5Y+v5LiN5oql77yM5LiN5Y+v5Lmx5oqlKirvvJrnva7kv6HluqbkvY7kuo7pmIjlgLzml7bmmL7npLrjgIzor4bliKvkuI3nqLPlrpogwrcg5pqC5LiN5oql6K2m44CN77yMCuatpOaXtueUu+mdouWPs+S4iuinkue9ruS/oeW6puS8muWPmOm7hO+8jOaPkOekuuS9oOmcgOimgeiwg+aVtOaJi+acuuinkuW6puaIlumHjeaWsOagh+WumuOAggoK5oql6K2m6ZyA5ZCM5pe25ruh6Laz5LiJ5Liq5p2h5Lu277ya5qOA5rWL5Yiw6LeR6YGT44CB572u5L+h5bqm6L6+5qCH44CB5ZCM5pa55ZCR5bey5oyB57utIE4g5bin77yI6buY6K6kIDgg5binIOKJiCAwLjQg56eS77yJ44CCCui/meWwseaYr+S4uuS7gOS5iOaZg+WKqOS4jeS8muivr+aKpeKAlOKAlOaZg+WKqOaYr+W+gOWkjeeahO+8jOecn+WunuWBj+emu+aYr+aMgee7reWNleWQkeeahOOAggoKIyMg5LiJ44CB5Y+C5pWw6LCD5LyY77yI6K6+572u6Z2i5p2/77yJCgp8IOWPguaVsCB8IOm7mOiupCB8IOivtOaYjiB8CnwtLS18LS0tfC0tLXwKfCDot5HpgZPoibLnm7jkuK3lv4MgLyDlrrnlt64gfCA0IC8gMTYgfCDnlKjjgIzmoIflrprjgI3oh6rliqjojrflj5bmnIDnnIHkuosgfAp8IOacgOWwj+mlseWSjOW6piAvIOS6ruW6piB8IDU1IC8gNDUgfCDmj5Dkuq7njq/looPlj6/osIPpq5jvvIzljovmmpflmarlo7AgfAp8IOWIhumBk+e6v+acgOWkp+mlseWSjOW6piAvIOacgOWwj+S6ruW6piB8IDgwIC8gMTcwIHwg55m957q/6K+G5Yir5LiN5Ye65p2l5pe25pS+5a69IHwKfCDmo4DmtYvluKbkuIov5LiL6L6555WMIHwgNTAlIC8gOTIlIHwg55S76Z2i5Lit55So5LqO5YiG5p6Q55qE5qiq5bim77yM6YG/5byA5aSp56m65ZKM6ISa5LiLIHwKfCDms6jmhI8gLyDorablkYrpmIjlgLwgfCAxOCUgLyAzNCUgfCDotorlsI/otormlY/mhJ8gfAp8IOaMgee7reW4p+aVsCB8IDggfCAqKuaKl+ivr+aKpeS4u+W8gOWFsyoq44CC5pmD5Yqo5Y2K5ZGo5pyf57qmIDQg5bin77yMOCDluKfotrPku6Xmu6TmjonvvJvosIPliLAgMTUg5pu056iz5L2G5oql6K2m5oWiIHwKfCDmnIDkvY7nva7kv6HluqYgfCA0NSUgfCDkvY7kuo7lroPlj6rmmL7npLrjgIzor4bliKvkuI3nqLPlrprjgI3vvIzkuI3miqXorabjgILmg7Pmm7Tkv53lrojlsLHosIPpq5ggfAp8IOWkhOeQhuW4p+eOhyB8IDIwIHwg6ZmN5L2O5Y+v55yB55S1IHwKCioq6K+G5Yir5LiN5YeG5pe255qE5o6S5p+l6aG65bqPKirvvJrlvIDjgIzmmL7npLror4bliKvosIPor5Xlm77jgI3ihpIg55yL6LCD6K+V5Zu+6YeM6LeR6YGT5piv5ZCm5a6M5pW05Y+Y57qiIOKGkgrkuI3lrozmlbTlsLHph43mlrDmoIflrprmiJbosIPppbHlkozluqYv5Lqu5bqmIOKGkiDliIbpgZPnur/msqHlh7rmnaXlsLHmlL7lrr3liIbpgZPnur/pmIjlgLzvvIjkvJroh6rliqjpgIDljJbliLDot5HpgZPovrnnlYzvvIzku43nhLblj6/nlKjvvInjgIIKCiMjIOWbm+OAgeaehOW7uiBBUEsKCmBgYGJhc2gKZXhwb3J0IEpBVkFfSE9NRT0iQzovQUkgRG9jdW1lbnQvcGxheWdyb3VuZC9hbmRyb2lkLXRvb2xjaGFpbi96dWx1MTcuNTAuMTktY2EtamRrMTcuMC4xMS13aW5feDY0IgpleHBvcnQgQU5EUk9JRF9IT01FPSJDOi9BSSBEb2N1bWVudC9wbGF5Z3JvdW5kL2FuZHJvaWQtdG9vbGNoYWluL2FuZHJvaWQtc2RrIgpjZCBDOi9BSSBEb2N1bWVudC9wcm9qZWN0cy90cmFjay1sYW5lLWd1YXJkL2FuZHJvaWQKIkM6L0FJIERvY3VtZW50L3BsYXlncm91bmQvYW5kcm9pZC10b29sY2hhaW4vZ3JhZGxlLTguNy9iaW4vZ3JhZGxlIiBhc3NlbWJsZVJlbGVhc2UKYGBgCgrkuqfnianvvJpgYW5kcm9pZC9hcHAvYnVpbGQvb3V0cHV0cy9hcGsvcmVsZWFzZS9hcHAtcmVsZWFzZS5hcGtgCgrpnIDopoEgSkRLIDE3ICsgQW5kcm9pZCBTREvvvIhwbGF0Zm9ybSAzNCAvIGJ1aWxkLXRvb2xzIDM0LjAuMO+8iSsgR3JhZGxlIDguN+OAggrmnKzmnLrlt6Xlhbfpk77nmoTlronoo4XmraXpqqTkuI7ouKnlnZHorrDlvZXop4EgYFBST0pFQ1QubWRgIOesrCA044CBNiDoioLjgIIKCiMjIOS6lOOAgei3keWfuuWHhua1i+ivlQoKYGBgYmFzaApjZCB0ZXN0ICYmIG5vZGUgcm9idXN0bmVzcy5qcwpgYGAKCuS4jemcgOimgea1j+iniOWZqOOAgeS4jemcgOimgeebuOacuu+8jOeUqOWQiOaIkOWbvuWDj+aooeaLnyA5IOexu+W5suaJsO+8iOeZveeijuaWkeOAgeebuOmCu+e6ouWcuuWcsOOAgeS4reW/g+ikquiJsuWdl+OAgQrmpJLnm5Dlmarlo7DjgIHnuqIv55m95bmy5omw5Z2X44CB5YGP5pqX44CB5peg5YiG6YGT57q/44CB5bmy5YeA77yJ77yM5q+P57G7IDQwIOW4p+W5tuWPoOWKoOaJi+aMgeaKluWKqO+8jArlkIzml7bovpPlh7ogKip2MSDml6fnrpfms5Xlr7nnhacqKiDkuI4gKirmtojono3lrp7pqowqKu+8iOmAkOmhueWFs+aOieaUuei/m++8jOeci+ivr+aKpeWmguS9leWbnuadpe+8ieOAggoK5Lya55So5Yiw55qE5pat6KiA77ya6K+v5oqlIDDjgIHkuKLlpLEgMOOAgeS9jee9ruivr+W3riDiiaQwLjA244CB5oqW5YqoIM+DIOKJpDAuMDLjgIEK55yf5a6e5YGP56a7IDEyIOW4p+WGheaKpeitpuOAgee6r+iNieWcsCAwIOivr+aKpeOAgeWNleW4pyA8IDggbXPjgILpgIDlh7rnoIHpnZ4gMCDljbPlpLHotKXjgIIKCuaUueeul+azleWQjuivt+WFiOi3keWug+WGjeaJk+WMhSDigJTigJQg6L+Z5Lqb5oyH5qCH5pivIuS4jeWuueaYk+ivr+WIpCLnmoTlj6/lpI3njrDor4Hmja7jgIIKCiMjIOS6lOOAgeaOiOadg+ivtOaYjgoK6K+G5Yir566X5rOV5Li65pys6aG555uu6Ieq56CU77yMKirmnKrlpI3liLbku7vkvZXnrKzkuInmlrnmupDnoIEqKu+8m+aehOW7uuacn+S+nei1luWdh+S4uiBwZXJtaXNzaXZlIOiuuOWPr+OAggror6bop4EgW2BUSElSRC1QQVJUWS1OT1RJQ0VTLm1kYF0oVEhJUkQtUEFSVFktTk9USUNFUy5tZCnjgILmnKzpobnnm67oh6rouqvph4fnlKggTUlUIOiuuOWPr+OAggoKIyMg5LqUwrfooaXjgIHmlbTlsY/liKnnlKjjgIHliY3nnrvkuI7kvKDmhJ/lmajvvIh2MS4zLjDvvIkKCioq5LiN5YaN5Y+q55So55S76Z2i5LiL5Y2K6L6544CCKiog6K+G5Yir6KaG55uW5pW05bmF55S76Z2i77yM5bm25YiG5oiQ5Lik5Liq55So6YCU5LiN5ZCM55qE5bim77yaCgp8IOW4piB8IOS9jee9riB8IOeUqOmAlCB8CnwtLS18LS0tfC0tLXwKfCDov5zluKYgfCDnlLvpnaIgMjYlfjU4JSB8IOeciyoq5YmN5pa56LeR6YGTKirnmoTkvY3nva7kuI7otbDlkJEgfAp8IOi/keW4piB8IOeUu+mdoiA2OCV+OTglIHwg5YikKirkvaDnjrDlnKgqKuWcqOi3kemBk+eahOWTquS4quS9jee9riB8CgoqKui/nOaZr+WJjeeeuyoq77ya5Y+W6L+c5aSE6LeR6YGT5Lit5b+D55u45a+555S76Z2i5Lit5b+D55qE5qiq5ZCR5YGP56e7546HIGB0cmVuZGDjgIIK6Iul6L+c5aSE6LeR6YGT5bey5piO5pi+5YGP5ZCR5LiA5L6n77yM5LiU5pa55ZCR5LiO6L+R5aSE5YGP56e75LiA6Ie077yM6K+05piO5L2g5q2j5Zyo5pyd6YKj6L655ryC4oCU4oCUCui2i+WKv+S8muaKmOeul+i/m+WBj+enu+mHj++8iOacgOWkmiAwLjEw77yJKirmj5DliY3pooToraYqKu+8jOS9huS4jei2s+S7peWNleeLrOinpuWPkeitpuWRiue6p++8jOmBv+WFjeivr+aKpeOAggoKKirlp7/mgIHkvKDmhJ/lmajvvIjpmYDonrrku6rvvIkqKuKAlOKAlOWPquWBmuS4ieS7tuS6i++8jOS4jeWPguS4juS9jee9ruWIpOWumu+8mgoKMS4g5omL5py65rKh5pyd5LiL5a+55YeG6LeR6YGT5pe25o+Q56S644CM6K+35pyd5LiL5a+55YeG6LeR6YGT44CNCjIuIOaZg+WKqOWJp+eDiOaXtuaKiuaMgee7reW4p+imgeaxgiArMu+8iOabtOiwqOaFju+8jOS4jeaYr+S4jeaKpe+8iQozLiDmqKrlkJHop5LpgJ/luqbmipjnrpfmiJDmvILnp7votovlir/vvIzkuI7nlLvpnaLliY3nnrvlkIjlubYKCuW/hemhu+ivtOa4heeahOi+ueeVjO+8muW7ieS7tyBNRU1TIOmZgOieuuS7qioq57ud5a+56Iiq5ZCR5LiN5Y+v5L+hKirvvIzlj6rkvb/nlKjlj5jljJbnjofvvJsKKirkvY3nva7liKTlrprlp4vnu4jlj6rnlLHnlLvpnaLnu5nlh7oqKu+8m2lPUyDpnIDlnKjlvLnlh7rmjojmnYPph4zlhYHorrjvvIhBbmRyb2lkIOaXoOmcgO+8ieOAggoKKirpmpznoo0gLyDljaDnlKjnianmo4DmtYsqKu+8muWcqOi3kemBk+mdouWGheaJvumdnui3kemBk+iJsueahOi/numAmuWdl+KAlOKAlOS6uuW9seOAgeiho+eJqeOAgeawtOWdkeOAgeadgueJqemDveiDveWRveS4re+8jArov57nu60gNSDluKfmiY3mj5DnpLrvvIznlLvpnaLnlLvpu4ToibLmoYbjgIIqKuS4jeWMuuWIhuaYr+S6uui/mOaYr+W9seWtkO+8jOS5n+S4jeiDvea1i+i3nSoq77yM5Y+q5o+Q56S6IuacieWNoOeUqOeJqSLjgIIKCioq5L2/55So5pa55byPKirvvJrpu5jorqQqKuaoquWxjyoq77yI6LeR6YGT57q15ZCR56m/6L+H55S76Z2i77yM5Lik5L6n6L6555WM6YO95Zyo6KeG6YeO5YaF77yM5Yik5a6a5pyA5Y+v6Z2g77yJ77yMCuWPr+WcqOiuvue9rumHjOWIh+erluWxj+aIluiHquWKqOOAguerluWxj+eUu+mdouaXtuS8muaPkOekuuS9oOaoquaMgeOAggoKIyMg5YWt44CB5qiq56uW5bGP5LiO5aSc6Ze077yIdjEuMi4w77yJCgoqKuaUr+aMgeerluaMgeaJi+acuioq77yIdjEuMS4wIOWPiuS5i+WJjeWPquaMieaoquaMgeiuvuiuoe+8jOerluaMgeS8muWujOWFqOivr+WIpO+8ie+8mgoKLSDlt6XkvZznlLvluIPmjInplb/ovrkgMTkyIOW9kuS4gO+8muerluaMgeaXtuaYryAxMDjDlzE5Mu+8jOajgOa1i+W4puWHoOS9leS4juaoquaMgeS4gOiHtAotIOivhuWIq+eahOaYr+OAjOS7juS9oOiEmuW6leWQkeS4iuazm+a0qui/numAmueahOe6ouiJsuWMuuWfn+OAjeKAlOKAlOeUu+mdouS4reS4iumDqOmalOedgOiNieWdqueahOWPpuS4gOautei3kemBkwogIOS4jeS8muW5suaJsOWIpOWumu+8iHYxLjEuMCDnmoTnnJ/lrp7kuovmlYXmraPmnaXmupDkuo7mraTvvIkKLSDot5HpgZPovrnnlYzot5Hlh7rnlLvpnaLml7bvvIzlr7nlupTooYzkuI3lj4LkuI7lrprkvY3vvJvkuKTkvqfovrnnlYzpg73kuI3lj6/op4Hml7bmmL7npLoKICDjgIzor7fmiqzpq5jmiYvmnLrjgI3vvIzmraTml7bkuI3miqXorabigJTigJTkvY3nva7kuI3lj6/nn6XkuI3nrYnkuo7ljbHpmakKCioq5aSc6Ze0KirvvJrms5vlhYnnga/kuIvot5HpgZPlsYDpg6jov4fmm53lj5jnmb3vvIznmb3oibLlg4/ntKDkvJrlubblhaXot5HpgZPmjqnohpzvvIjnmb3nur/mnKzmnaXlsLHmmK/ot5HpgZPnmoTkuIDpg6jliIbvvInvvIwK6YG/5YWN6LeR6YGT6KKr6L+H5pud5bim5oum6IWw5YiH5pat44CCCgoqKuW8r+mBkyoq77ya6L6555WM5piO5pi+5YGP56a755u057q/5pe254q25oCB5qCP5pi+56S644CM5byv6YGT44CN44CC6L+R5pmv5bim5YaF5byv6YGT5LuN6L+R5Ly855u057q/77yMCuaWueWQkeWIpOWumumAu+i+keS4jeWPmO+8m+S9huivt+eQhuino+W8r+mBk+aXtuWJjeeeu+abtOefre+8jOivt+WHj+mAn+OAggoKIyMg5LiD44CB5bGA6ZmQCgotIOS+nei1luminOiJsueJueW+ge+8mua3seiJsui3kemBk+OAgeW8uueDiOmAhuWFieOAgeenr+awtOWPjeWFieS8muaYvuiRl+mZjeS9juWPr+mdoOaAp++8jOWKoeW/heeOsOWcuuagh+WumuOAggotIOWPquWIpOaWreOAjOW9k+WJjeaYr+WQpuWBj+emu+OAje+8jOS4jeWBmuWJjeeeu+mihOa1i++8jOi/h+W8r+aXtuS8muaciei/n+a7nu+8iOW3suaPkOekuuW8r+mBk++8ieOAggotIOerluaMgeS4lOi3kemBk+aYjuaYvuWuveS6jueUu+mdouaXtu+8jOiLpei+ueeVjOWujOWFqOS4jeWPr+ingeS8muS4u+WKqOS4jeaKpeitpu+8iOWugeWPr+S4jeaKpe+8ieOAggotIOacquWcqOecn+Wunui3kemBk+S4iuWBmumVv+aXtuWunua1i++8jOmmluasoeS9v+eUqOivt+WcqOWuieWFqOWcuuWcsOS9jumAn+mqjOivgeOAggotIOi3keatpeaXtuS9v+eUqOeUteWtkOiuvuWkh+ivt+azqOaEj+iHqui6q+S4juWRqOWbtOWuieWFqOOAggo=
+# 跑道守卫 TrackLaneGuard
+
+用手机摄像头识别红色塑胶跑道，即将跑出跑道时通过**耳机左右声像 + 语音 + 震动 + 屏幕箭头**告诉你该往左还是往右。
+
+```
+web/      完整前端（识别算法 / 界面 / PWA），唯一功能源码
+android/  极简 WebView 外壳，把 web/ 打包成 APK（离线运行）
+```
+
+## 一、怎么用
+
+1. 安装 APK（或浏览器打开部署的 HTTPS 地址），授予**相机权限**。
+2. 横持手机，镜头朝前下方对准跑道，让画面下半部分被跑道占满。
+3. 点「**标定**」，再点一下画面里跑道地面的位置 —— 会自动锁定这种红色。
+4. 点「**开始检测**」。屏幕上会画出识别到的跑道边界／分道线，以及你当前的位置标记。
+
+### 提醒规则
+
+| 状态 | 触发条件 | 反馈 |
+|---|---|---|
+| 安全 | 偏离 < 注意阈值 | 无提示音 |
+| 偏移观察中 | 已超阈值但持续帧数不够（可能只是晃动） | 无提示音，状态栏提示 |
+| 注意 | 三条件齐备 + 偏离达「注意」阈值（默认 18%） | 单声提示音，声像偏向左/右耳 |
+| 警告 | 三条件齐备 + 偏离达「警告」阈值（默认 34%） | 急促双声 + 震动 + 语音「往左/往右」+ 屏幕大箭头 |
+| 识别不稳定 | 置信度低于阈值 | 不报警，右上角置信度变黄 |
+
+「三条件」= 检测到跑道 + 置信度达标 + 同方向持续 N 帧。
+
+方向用**两种通道冗余编码**，戴耳机或外放都能分辨：
+
+- 声像：要往左修 → 声音在**左耳**；要往右修 → **右耳**
+- 音高：往左 620 Hz，往右 930 Hz
+- 震动：往左「短-长」，往右「长-短」
+- 语音与屏幕箭头兜底
+
+## 二、算法原理
+
+每帧处理（默认 20 fps，工作分辨率 192×108，单帧约 1.1 ms）：
+
+1. `RGB → HSV`（OpenCV 惯例 H∈[0,180)）
+2. **色相环形距离阈值**分割红色跑道面；标定即确定色相中心与容差
+3. **水平闭运算**填平分道线造成的缝隙（否则跑道连通域会被切成一条条车道）
+4. **最大 8-邻域连通域** = 跑道，零散红色物体（衣服、标志牌、相邻红场地）被直接剔除
+5. **形状校验**：真实跑道「近宽远窄、延伸到画面底部、贯穿检测带」，不满足则降置信度
+6. **分道线**：只认跑道行区间内、且满足「行连续性 ≥50%」+「最小二乘直线拟合残差 ≤2.6px」的白色像素
+7. 分道线不可用（磨损/逆光/弯道）时**退化**为跑道面左右边界
+8. 计算相对位置 `p ∈ [0,1]`，0.5 为居中；融合覆盖率 / 形状分 / 分道线分得到**置信度**
+9. **Alpha-Beta 跟踪器**：残差门控剔除跳变，持续同向帧数达标才允许报警
+
+判定方向：`p > 0.5` 说明你偏在跑道右侧 → 提示**往左**；反之往右。
+
+## 二·补、抗误判设计（v1.1.0 的重点）
+
+误判有四个来源，各自有对应的防线：
+
+| 误判来源 | 防线 | 效果（合成基准实测） |
+|---|---|---|
+| 零散红色物体被当跑道 | 最大连通域 + 最小面积 | 相邻红场地对位置的影响 0.028 → 0.001 |
+| 白斑 / 污渍 / 云被当分道线 | 行连续性 + 直线拟合残差 | 白色碎斑、白色干扰块零误报 |
+| 连通域跨车道跳变 | 水平闭运算 + 白点腐蚀 | 强噪声下抖动 σ 0.0974 → **0.0036** |
+| 手持晃动 / 单帧抖动 | 残差门控 + 持续帧投票 | 纯晃动 40 帧：误报 16 → **0** |
+
+**宁可不报，不可乱报**：置信度低于阈值时显示「识别不稳定 · 暂不报警」，
+此时画面右上角置信度会变黄，提示你需要调整手机角度或重新标定。
+
+报警需同时满足三个条件：检测到跑道、置信度达标、同方向已持续 N 帧（默认 8 帧 ≈ 0.4 秒）。
+这就是为什么晃动不会误报——晃动是往复的，真实偏离是持续单向的。
+
+## 三、参数调优（设置面板）
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| 跑道色相中心 / 容差 | 4 / 16 | 用「标定」自动获取最省事 |
+| 最小饱和度 / 亮度 | 55 / 45 | 提亮环境可调高，压暗噪声 |
+| 分道线最大饱和度 / 最小亮度 | 80 / 170 | 白线识别不出来时放宽 |
+| 检测带上/下边界 | 50% / 92% | 画面中用于分析的横带，避开天空和脚下 |
+| 注意 / 警告阈值 | 18% / 34% | 越小越敏感 |
+| 持续帧数 | 8 | **抗误报主开关**。晃动半周期约 4 帧，8 帧足以滤掉；调到 15 更稳但报警慢 |
+| 最低置信度 | 45% | 低于它只显示「识别不稳定」，不报警。想更保守就调高 |
+| 处理帧率 | 20 | 降低可省电 |
+
+**识别不准时的排查顺序**：开「显示识别调试图」→ 看调试图里跑道是否完整变红 →
+不完整就重新标定或调饱和度/亮度 → 分道线没出来就放宽分道线阈值（会自动退化到跑道边界，仍然可用）。
+
+## 四、构建 APK
+
+```bash
+export JAVA_HOME="C:/AI Document/playground/android-toolchain/zulu17.50.19-ca-jdk17.0.11-win_x64"
+export ANDROID_HOME="C:/AI Document/playground/android-toolchain/android-sdk"
+cd C:/AI Document/projects/track-lane-guard/android
+"C:/AI Document/playground/android-toolchain/gradle-8.7/bin/gradle" assembleRelease
+```
+
+产物：`android/app/build/outputs/apk/release/app-release.apk`
+
+需要 JDK 17 + Android SDK（platform 34 / build-tools 34.0.0）+ Gradle 8.7。
+本机工具链的安装步骤与踩坑记录见 `PROJECT.md` 第 4、6 节。
+
+## 五、跑基准测试
+
+```bash
+cd test && node robustness.js
+```
+
+不需要浏览器、不需要相机，用合成图像模拟 9 类干扰（白碎斑、相邻红场地、中心褪色块、
+椒盐噪声、红/白干扰块、偏暗、无分道线、干净），每类 40 帧并叠加手持抖动，
+同时输出 **v1 旧算法对照** 与 **消融实验**（逐项关掉改进，看误报如何回来）。
+
+会用到的断言：误报 0、丢失 0、位置误差 ≤0.06、抖动 σ ≤0.02、
+真实偏离 12 帧内报警、纯草地 0 误报、单帧 < 8 ms。退出码非 0 即失败。
+
+改算法后请先跑它再打包 —— 这些指标是"不容易误判"的可复现证据。
+
+## 五、授权说明
+
+识别算法为本项目自研，**未复制任何第三方源码**；构建期依赖均为 permissive 许可。
+详见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)。本项目自身采用 MIT 许可。
+
+## 五·补、整屏利用、前瞻与传感器（v1.3.0）
+
+**不再只用画面下半边。** 识别覆盖整幅画面，并分成两个用途不同的带：
+
+| 带 | 位置 | 用途 |
+|---|---|---|
+| 远带 | 画面 26%~58% | 看**前方跑道**的位置与走向 |
+| 近带 | 画面 68%~98% | 判**你现在**在跑道的哪个位置 |
+
+**远景前瞻**：取远处跑道中心相对画面中心的横向偏移率 `trend`。
+若远处跑道已明显偏向一侧，且方向与近处偏移一致，说明你正在朝那边漂——
+趋势会折算进偏移量（最多 0.10）**提前预警**，但不足以单独触发警告级，避免误报。
+
+**姿态传感器（陀螺仪）**——只做三件事，不参与位置判定：
+
+1. 手机没朝下对准跑道时提示「请朝下对准跑道」
+2. 晃动剧烈时把持续帧要求 +2（更谨慎，不是不报）
+3. 横向角速度折算成漂移趋势，与画面前瞻合并
+
+必须说清的边界：廉价 MEMS 陀螺仪**绝对航向不可信**，只使用变化率；
+**位置判定始终只由画面给出**；iOS 需在弹出授权里允许（Android 无需）。
+
+**障碍 / 占用物检测**：在跑道面内找非跑道色的连通块——人影、衣物、水坑、杂物都能命中，
+连续 5 帧才提示，画面画黄色框。**不区分是人还是影子，也不能测距**，只提示"有占用物"。
+
+**使用方式**：默认**横屏**（跑道纵向穿过画面，两侧边界都在视野内，判定最可靠），
+可在设置里切竖屏或自动。竖屏画面时会提示你横持。
+
+## 六、横竖屏与夜间（v1.2.0）
+
+**支持竖持手机**（v1.1.0 及之前只按横持设计，竖持会完全误判）：
+
+- 工作画布按长边 192 归一：竖持时是 108×192，检测带几何与横持一致
+- 识别的是「从你脚底向上泛洪连通的红色区域」——画面中上部隔着草坪的另一段跑道
+  不会干扰判定（v1.1.0 的真实事故正来源于此）
+- 跑道边界跑出画面时，对应行不参与定位；两侧边界都不可见时显示
+  「请抬高手机」，此时不报警——位置不可知不等于危险
+
+**夜间**：泛光灯下跑道局部过曝变白，白色像素会并入跑道掩膜（白线本来就是跑道的一部分），
+避免跑道被过曝带拦腰切断。
+
+**弯道**：边界明显偏离直线时状态栏显示「弯道」。近景带内弯道仍近似直线，
+方向判定逻辑不变；但请理解弯道时前瞻更短，请减速。
+
+## 七、局限
+
+- 依赖颜色特征：深色跑道、强烈逆光、积水反光会显著降低可靠性，务必现场标定。
+- 只判断「当前是否偏离」，不做前瞻预测，过弯时会有迟滞（已提示弯道）。
+- 竖持且跑道明显宽于画面时，若边界完全不可见会主动不报警（宁可不报）。
+- 未在真实跑道上做长时实测，首次使用请在安全场地低速验证。
+- 跑步时使用电子设备请注意自身与周围安全。

@@ -1,1 +1,172 @@
-LyoKICogYXVkaW8uanMg4oCU4oCUIOWQrOiniSAvIOinpuinieWPjemmiAogKgogKiDorr7orqHopoHngrnvvJoKICogICAxLiDlj4zpgJrpgZPnvJbnoIHmlrnlkJHvvIzpgb/lhY3ljZXlo7DpgZPmiazlo7DlmajkuIvml6Dms5XliIbovqjvvJoKICogICAgICAgIC0g56uL5L2T5aOw5aOw5YOP77yIU3RlcmVvUGFubmVy77yJ77ya5b6A5bem5L+u5q2jIC0+IOW3puiAs++8m+W+gOWPs+S/ruatoyAtPiDlj7PogLMKICogICAgICAgIC0g6Z+z6auY5beu5byC77ya5b6A5bemID0g5L2O6aKRIDYyMEh677yM5b6A5Y+zID0g6auY6aKRIDkzMEh6CiAqICAgMi4g5LiJ57qn5by65bqm77ya5a6J5YWoKOmdmem7mC/lj6/pgInlv4Pot7MpIC8g5rOo5oSPKOWNleWjsCkgLyDorablkYoo5oCl5L+D5Y+M5aOwICsg6ZyH5YqoICsg6K+t6Z+zKQogKiAgIDMuIOivremfs+aSreaKpSLlvoDlt6YiIuW+gOWPsyLlgZrmnIDnu4jlhZzlupXvvIzpmLLmraLlkKzplJnmlrnlkJEKICovCihmdW5jdGlvbiAoZ2xvYmFsKSB7CiAgJ3VzZSBzdHJpY3QnOwoKICB2YXIgVExHID0gZ2xvYmFsLlRMRyB8fCAoZ2xvYmFsLlRMRyA9IHt9KTsKCiAgdmFyIGN0eCA9IG51bGw7CiAgdmFyIG1hc3RlckdhaW4gPSBudWxsOwogIHZhciB0aW1lciA9IG51bGw7CiAgdmFyIHR0c1RpbWVyID0gbnVsbDsKICB2YXIgY2ZnID0gewogICAgdm9sdW1lOiAwLjgsCiAgICB0dHNFbmFibGVkOiB0cnVlLAogICAgdmlicmF0ZUVuYWJsZWQ6IHRydWUsCiAgICBoZWFydGJlYXQ6IGZhbHNlCiAgfTsKICB2YXIgc3RhdGUgPSB7IGxldmVsOiAwLCBkaXI6IDAgfTsKICB2YXIgbGFzdFR0c0F0ID0gMDsKCiAgZnVuY3Rpb24gZW5zdXJlQ3R4KCkgewogICAgaWYgKCFjdHgpIHsKICAgICAgdmFyIEFDID0gZ2xvYmFsLkF1ZGlvQ29udGV4dCB8fCBnbG9iYWwud2Via2l0QXVkaW9Db250ZXh0OwogICAgICBpZiAoIUFDKSByZXR1cm4gbnVsbDsKICAgICAgY3R4ID0gbmV3IEFDKCk7CiAgICAgIG1hc3RlckdhaW4gPSBjdHguY3JlYXRlR2FpbigpOwogICAgICBtYXN0ZXJHYWluLmdhaW4udmFsdWUgPSBjZmcudm9sdW1lOwogICAgICBtYXN0ZXJHYWluLmNvbm5lY3QoY3R4LmRlc3RpbmF0aW9uKTsKICAgIH0KICAgIGlmIChjdHguc3RhdGUgPT09ICdzdXNwZW5kZWQnKSBjdHgucmVzdW1lKCk7CiAgICByZXR1cm4gY3R4OwogIH0KCiAgLyoqCiAgICog5Y2V5qyh6ISJ5Yay6Z+zCiAgICogQHBhcmFtIHtudW1iZXJ9IHBhbiAtMSjlt6YpIH4gMSjlj7MpCiAgICogQHBhcmFtIHtudW1iZXJ9IGZyZXEg6aKR546HCiAgICogQHBhcmFtIHtudW1iZXJ9IGR1ciDml7bplb8o56eSKQogICAqLwogIGZ1bmN0aW9uIHB1bHNlKHBhbiwgZnJlcSwgZHVyLCBwZWFrKSB7CiAgICBpZiAoIWVuc3VyZUN0eCgpKSByZXR1cm47CiAgICB2YXIgdDAgPSBjdHguY3VycmVudFRpbWU7CiAgICB2YXIgb3NjID0gY3R4LmNyZWF0ZU9zY2lsbGF0b3IoKTsKICAgIHZhciBnYWluID0gY3R4LmNyZWF0ZUdhaW4oKTsKICAgIG9zYy50eXBlID0gJ3NpbmUnOwogICAgb3NjLmZyZXF1ZW5jeS5zZXRWYWx1ZUF0VGltZShmcmVxLCB0MCk7CgogICAgZ2Fpbi5nYWluLnNldFZhbHVlQXRUaW1lKDAuMDAwMSwgdDApOwogICAgZ2Fpbi5nYWluLmV4cG9uZW50aWFsUmFtcFRvVmFsdWVBdFRpbWUocGVhayB8fCAwLjUsIHQwICsgMC4wMTIpOwogICAgZ2Fpbi5nYWluLmV4cG9uZW50aWFsUmFtcFRvVmFsdWVBdFRpbWUoMC4wMDAxLCB0MCArIGR1cik7CgogICAgdmFyIG91dCA9IGdhaW47CiAgICBpZiAoY3R4LmNyZWF0ZVN0ZXJlb1Bhbm5lcikgewogICAgICB2YXIgcGFubmVyID0gY3R4LmNyZWF0ZVN0ZXJlb1Bhbm5lcigpOwogICAgICBwYW5uZXIucGFuLnZhbHVlID0gTWF0aC5tYXgoLTEsIE1hdGgubWluKDEsIHBhbikpOwogICAgICBnYWluLmNvbm5lY3QocGFubmVyKTsKICAgICAgb3V0ID0gcGFubmVyOwogICAgfQogICAgb3V0LmNvbm5lY3QobWFzdGVyR2Fpbik7CiAgICBvc2MuY29ubmVjdChnYWluKTsKICAgIG9zYy5zdGFydCh0MCk7CiAgICBvc2Muc3RvcCh0MCArIGR1ciArIDAuMDIpOwogIH0KCiAgZnVuY3Rpb24gZGlyVGV4dChkaXIpIHsKICAgIHJldHVybiBkaXIgPCAwID8gJ+W+gOW3picgOiAn5b6A5Y+zJzsKICB9CgogIGZ1bmN0aW9uIHNwZWFrKGRpcikgewogICAgaWYgKCFjZmcudHRzRW5hYmxlZCB8fCAhZ2xvYmFsLnNwZWVjaFN5bnRoZXNpcykgcmV0dXJuOwogICAgdmFyIG5vdyA9IERhdGUubm93KCk7CiAgICBpZiAobm93IC0gbGFzdFR0c0F0IDwgMjIwMCkgcmV0dXJuOwogICAgbGFzdFR0c0F0ID0gbm93OwogICAgdHJ5IHsKICAgICAgZ2xvYmFsLnNwZWVjaFN5bnRoZXNpcy5jYW5jZWwoKTsKICAgICAgdmFyIHUgPSBuZXcgU3BlZWNoU3ludGhlc2lzVXR0ZXJhbmNlKGRpclRleHQoZGlyKSArICfvvIwnICsgZGlyVGV4dChkaXIpKTsKICAgICAgdS5sYW5nID0gJ3poLUNOJzsKICAgICAgdS5yYXRlID0gMS41OwogICAgICB1LnBpdGNoID0gMS4yOwogICAgICB1LnZvbHVtZSA9IDE7CiAgICAgIGdsb2JhbC5zcGVlY2hTeW50aGVzaXMuc3BlYWsodSk7CiAgICB9IGNhdGNoIChlKSB7IC8qIOW/veeVpeS4jeaUr+aMgeivremfs+eahOeOr+WigyAqLyB9CiAgfQoKICBmdW5jdGlvbiB2aWJyYXRlKGRpcikgewogICAgaWYgKCFjZmcudmlicmF0ZUVuYWJsZWQgfHwgIW5hdmlnYXRvci52aWJyYXRlKSByZXR1cm47CiAgICAvLyDlt6bkvqfkv67mraMgPSDnn60t6ZW/77yb5Y+z5L6n5L+u5q2jID0g6ZW/Leefre+8iOinpuinieS5n+iDveWIhui+qOaWueWQke+8iQogICAgdHJ5IHsKICAgICAgbmF2aWdhdG9yLnZpYnJhdGUoZGlyIDwgMCA/IFs2MCwgOTAsIDE2MF0gOiBbMTYwLCA5MCwgNjBdKTsKICAgIH0gY2F0Y2ggKGUpIHsgLyogbm9vcCAqLyB9CiAgfQoKICBmdW5jdGlvbiB0aWNrKCkgewogICAgdmFyIGxldmVsID0gc3RhdGUubGV2ZWwsIGRpciA9IHN0YXRlLmRpcjsKICAgIGlmIChsZXZlbCA9PT0gMCB8fCBkaXIgPT09IDApIHJldHVybjsKICAgIHZhciBwYW4gPSBkaXIgPCAwID8gLTAuODUgOiAwLjg1OwogICAgdmFyIGZyZXEgPSBkaXIgPCAwID8gNjIwIDogOTMwOwoKICAgIGlmIChsZXZlbCA9PT0gMSkgewogICAgICBwdWxzZShwYW4sIGZyZXEsIDAuMTIsIDAuMjgpOwogICAgfSBlbHNlIGlmIChsZXZlbCA9PT0gMikgewogICAgICBwdWxzZShwYW4sIGZyZXEsIDAuMDksIDAuNTUpOwogICAgICBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHsgcHVsc2UocGFuLCBmcmVxLCAwLjA5LCAwLjU1KTsgfSwgMTMwKTsKICAgICAgdmlicmF0ZShkaXIpOwogICAgICBzcGVhayhkaXIpOwogICAgfQogIH0KCiAgZnVuY3Rpb24gcmVzdGFydFRpbWVyKCkgewogICAgaWYgKHRpbWVyKSB7IGNsZWFySW50ZXJ2YWwodGltZXIpOyB0aW1lciA9IG51bGw7IH0KICAgIGlmIChzdGF0ZS5sZXZlbCA9PT0gMCB8fCBzdGF0ZS5kaXIgPT09IDApIHJldHVybjsKICAgIHZhciBwZXJpb2QgPSBzdGF0ZS5sZXZlbCA9PT0gMiA/IDcwMCA6IDEyMDA7CiAgICB0aWNrKCk7IC8vIOeri+WNs+WPjemmiOS4gOasoQogICAgdGltZXIgPSBzZXRJbnRlcnZhbCh0aWNrLCBwZXJpb2QpOwogIH0KCiAgdmFyIEZlZWRiYWNrID0gewogICAgaW5pdDogZnVuY3Rpb24gKGNvbmYpIHsKICAgICAgaWYgKGNvbmYpIHsKICAgICAgICBmb3IgKHZhciBrIGluIGNvbmYpIGlmIChjb25mLmhhc093blByb3BlcnR5KGspKSBjZmdba10gPSBjb25mW2tdOwogICAgICB9CiAgICAgIGVuc3VyZUN0eCgpOwogICAgICBpZiAobWFzdGVyR2FpbikgbWFzdGVyR2Fpbi5nYWluLnZhbHVlID0gY2ZnLnZvbHVtZTsKICAgIH0sCiAgICBzZXRDb25maWc6IGZ1bmN0aW9uIChjb25mKSB7CiAgICAgIGZvciAodmFyIGsgaW4gY29uZikgaWYgKGNvbmYuaGFzT3duUHJvcGVydHkoaykpIGNmZ1trXSA9IGNvbmZba107CiAgICAgIGlmIChtYXN0ZXJHYWluKSBtYXN0ZXJHYWluLmdhaW4udmFsdWUgPSBjZmcudm9sdW1lOwogICAgICBpZiAoIWNmZy50dHNFbmFibGVkICYmIGdsb2JhbC5zcGVlY2hTeW50aGVzaXMpIHsKICAgICAgICB0cnkgeyBnbG9iYWwuc3BlZWNoU3ludGhlc2lzLmNhbmNlbCgpOyB9IGNhdGNoIChlKSB7IC8qIG5vb3AgKi8gfQogICAgICB9CiAgICB9LAogICAgLyoqCiAgICAgKiBAcGFyYW0ge251bWJlcn0gbGV2ZWwgMCDlronlhaggLyAxIOazqOaEjyAvIDIg6K2m5ZGKCiAgICAgKiBAcGFyYW0ge251bWJlcn0gZGlyICAtMSDlupTlvoDlt6YgLyArMSDlupTlvoDlj7MgLyAwIOaXoAogICAgICovCiAgICBzZXRTdGF0ZTogZnVuY3Rpb24gKGxldmVsLCBkaXIpIHsKICAgICAgaWYgKGxldmVsID09PSBzdGF0ZS5sZXZlbCAmJiBkaXIgPT09IHN0YXRlLmRpcikgcmV0dXJuOwogICAgICBzdGF0ZS5sZXZlbCA9IGxldmVsOwogICAgICBzdGF0ZS5kaXIgPSBkaXI7CiAgICAgIHJlc3RhcnRUaW1lcigpOwogICAgfSwKICAgIHN0b3A6IGZ1bmN0aW9uICgpIHsKICAgICAgc3RhdGUubGV2ZWwgPSAwOwogICAgICBzdGF0ZS5kaXIgPSAwOwogICAgICBpZiAodGltZXIpIHsgY2xlYXJJbnRlcnZhbCh0aW1lcik7IHRpbWVyID0gbnVsbDsgfQogICAgICBpZiAoZ2xvYmFsLnNwZWVjaFN5bnRoZXNpcykgeyB0cnkgeyBnbG9iYWwuc3BlZWNoU3ludGhlc2lzLmNhbmNlbCgpOyB9IGNhdGNoIChlKSB7IC8qIG5vb3AgKi8gfSB9CiAgICB9LAogICAgLyoqIOivleWQrO+8muS8oOWFpSAtMSDmiJYgKzEgKi8KICAgIHRlc3Q6IGZ1bmN0aW9uIChkaXIpIHsKICAgICAgdmFyIHBhbiA9IGRpciA8IDAgPyAtMC44NSA6IDAuODU7CiAgICAgIHZhciBmcmVxID0gZGlyIDwgMCA/IDYyMCA6IDkzMDsKICAgICAgcHVsc2UocGFuLCBmcmVxLCAwLjE2LCAwLjUpOwogICAgICBzcGVhayhkaXIpOwogICAgICB2aWJyYXRlKGRpcik7CiAgICB9LAogICAgLyoqIOaPkOekuumfs++8muWQr+WKqCAvIOS4ouWksei3kemBkyAqLwogICAgY2hpcnA6IGZ1bmN0aW9uICh1cCkgewogICAgICBlbnN1cmVDdHgoKTsKICAgICAgcHVsc2UoMCwgdXAgPyA4ODAgOiAzMDAsIDAuMTgsIDAuMzUpOwogICAgfQogIH07CgogIFRMRy5mZWVkYmFjayA9IEZlZWRiYWNrOwp9KSh3aW5kb3cpOwo=
+/*
+ * audio.js —— 听觉 / 触觉反馈
+ *
+ * 设计要点：
+ *   1. 双通道编码方向，避免单声道扬声器下无法分辨：
+ *        - 立体声声像（StereoPanner）：往左修正 -> 左耳；往右修正 -> 右耳
+ *        - 音高差异：往左 = 低频 620Hz，往右 = 高频 930Hz
+ *   2. 三级强度：安全(静默/可选心跳) / 注意(单声) / 警告(急促双声 + 震动 + 语音)
+ *   3. 语音播报"往左""往右"做最终兜底，防止听错方向
+ */
+(function (global) {
+  'use strict';
+
+  var TLG = global.TLG || (global.TLG = {});
+
+  var ctx = null;
+  var masterGain = null;
+  var timer = null;
+  var ttsTimer = null;
+  var cfg = {
+    volume: 0.8,
+    ttsEnabled: true,
+    vibrateEnabled: true,
+    heartbeat: false
+  };
+  var state = { level: 0, dir: 0 };
+  var lastTtsAt = 0;
+
+  function ensureCtx() {
+    if (!ctx) {
+      var AC = global.AudioContext || global.webkitAudioContext;
+      if (!AC) return null;
+      ctx = new AC();
+      masterGain = ctx.createGain();
+      masterGain.gain.value = cfg.volume;
+      masterGain.connect(ctx.destination);
+    }
+    if (ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+
+  /**
+   * 单次脉冲音
+   * @param {number} pan -1(左) ~ 1(右)
+   * @param {number} freq 频率
+   * @param {number} dur 时长(秒)
+   */
+  function pulse(pan, freq, dur, peak) {
+    if (!ensureCtx()) return;
+    var t0 = ctx.currentTime;
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, t0);
+
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(peak || 0.5, t0 + 0.012);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+
+    var out = gain;
+    if (ctx.createStereoPanner) {
+      var panner = ctx.createStereoPanner();
+      panner.pan.value = Math.max(-1, Math.min(1, pan));
+      gain.connect(panner);
+      out = panner;
+    }
+    out.connect(masterGain);
+    osc.connect(gain);
+    osc.start(t0);
+    osc.stop(t0 + dur + 0.02);
+  }
+
+  function dirText(dir) {
+    return dir < 0 ? '往左' : '往右';
+  }
+
+  function speak(dir) {
+    if (!cfg.ttsEnabled || !global.speechSynthesis) return;
+    var now = Date.now();
+    if (now - lastTtsAt < 2200) return;
+    lastTtsAt = now;
+    try {
+      global.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(dirText(dir) + '，' + dirText(dir));
+      u.lang = 'zh-CN';
+      u.rate = 1.5;
+      u.pitch = 1.2;
+      u.volume = 1;
+      global.speechSynthesis.speak(u);
+    } catch (e) { /* 忽略不支持语音的环境 */ }
+  }
+
+  function vibrate(dir) {
+    if (!cfg.vibrateEnabled || !navigator.vibrate) return;
+    // 左侧修正 = 短-长；右侧修正 = 长-短（触觉也能分辨方向）
+    try {
+      navigator.vibrate(dir < 0 ? [60, 90, 160] : [160, 90, 60]);
+    } catch (e) { /* noop */ }
+  }
+
+  function tick() {
+    var level = state.level, dir = state.dir;
+    if (level === 0 || dir === 0) return;
+    var pan = dir < 0 ? -0.85 : 0.85;
+    var freq = dir < 0 ? 620 : 930;
+
+    if (level === 1) {
+      pulse(pan, freq, 0.12, 0.28);
+    } else if (level === 2) {
+      pulse(pan, freq, 0.09, 0.55);
+      setTimeout(function () { pulse(pan, freq, 0.09, 0.55); }, 130);
+      vibrate(dir);
+      speak(dir);
+    }
+  }
+
+  function restartTimer() {
+    if (timer) { clearInterval(timer); timer = null; }
+    if (state.level === 0 || state.dir === 0) return;
+    var period = state.level === 2 ? 700 : 1200;
+    tick(); // 立即反馈一次
+    timer = setInterval(tick, period);
+  }
+
+  var Feedback = {
+    init: function (conf) {
+      if (conf) {
+        for (var k in conf) if (conf.hasOwnProperty(k)) cfg[k] = conf[k];
+      }
+      ensureCtx();
+      if (masterGain) masterGain.gain.value = cfg.volume;
+    },
+    setConfig: function (conf) {
+      for (var k in conf) if (conf.hasOwnProperty(k)) cfg[k] = conf[k];
+      if (masterGain) masterGain.gain.value = cfg.volume;
+      if (!cfg.ttsEnabled && global.speechSynthesis) {
+        try { global.speechSynthesis.cancel(); } catch (e) { /* noop */ }
+      }
+    },
+    /**
+     * @param {number} level 0 安全 / 1 注意 / 2 警告
+     * @param {number} dir  -1 应往左 / +1 应往右 / 0 无
+     */
+    setState: function (level, dir) {
+      if (level === state.level && dir === state.dir) return;
+      state.level = level;
+      state.dir = dir;
+      restartTimer();
+    },
+    stop: function () {
+      state.level = 0;
+      state.dir = 0;
+      if (timer) { clearInterval(timer); timer = null; }
+      if (global.speechSynthesis) { try { global.speechSynthesis.cancel(); } catch (e) { /* noop */ } }
+    },
+    /** 试听：传入 -1 或 +1 */
+    test: function (dir) {
+      var pan = dir < 0 ? -0.85 : 0.85;
+      var freq = dir < 0 ? 620 : 930;
+      pulse(pan, freq, 0.16, 0.5);
+      speak(dir);
+      vibrate(dir);
+    },
+    /** 提示音：启动 / 丢失跑道 */
+    chirp: function (up) {
+      ensureCtx();
+      pulse(0, up ? 880 : 300, 0.18, 0.35);
+    }
+  };
+
+  TLG.feedback = Feedback;
+})(window);

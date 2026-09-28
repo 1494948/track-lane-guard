@@ -1,1 +1,146 @@
-IyBQUk9KRUNULm1kIOKAlCBUcmFja0xhbmVHdWFyZO+8iOi3kemBk+WuiOWNq++8iQoKIyMgMS4g5a6a5L2NCgoqKuS4reaWh+WQje+8mui3kemBk+WuiOWNqyoqIOKAlOKAlCDnlKjmiYvmnLrmkYTlg4/lpLTlrp7ml7bor4bliKvnuqLoibLloZHog7bot5HpgZPkuI7nmb3oibLliIbpgZPnur/vvIzlnKjljbPlsIbot5Hlh7rot5HpgZPml7bpgJrov4fogLPmnLov5oms5aOw5Zmo55qE5bem5Y+z5aOw5YOP5o+Q56S66Z+z44CB6K+t6Z+z5pKt5oql44CB6ZyH5Yqo5ZKM5bGP5bmV566t5aS077yM5ZGK6K+J5L2/55So6ICF6K+l5b6A5bem6L+Y5piv5b6A5Y+z5L+u5q2j44CCCgrkuIDlpZfku6PnoIHkuKTnp43lvaLmgIHvvJpgd2ViL2Ag5piv5a6M5pW05YmN56uv77yI5Y+v5L2c5Li6IFBXQSDlronoo4XvvInvvIxgYW5kcm9pZC9gIOaYr+aegeeugCBXZWJWaWV3IOWkluWjs++8jOaKiiBgd2ViL2Ag5omT5YyF6L+bIEFQSyDnprvnur/ov5DooYzjgIIKCiMjIDIuIOeKtuaAgQoKKirlj6/nlKjvvIh2MS4zLjDvvIkqKiDCtyDmnIDlkI7mm7TmlrAgMjAyNi0wOS0yOAoKLSDnrpfms5XvvJpIU1Yg5YiG5YmyICsg5rC05bmz6Zet6L+Q566XICsg5pyA5aSn6L+e6YCa5Z+fICsg5b2i54q25qCh6aqMICsg5YiG6YGT57q/55u057q/5ouf5ZCIICsKICDlpJror4Hmja7nva7kv6HluqYgKyBBbHBoYS1CZXRhIOi3n+i4quWZqO+8jOS4iee6p+aPkOmGkgotIOaKl+ivr+WIpO+8muWQiOaIkOWfuuWHhiA5IOexu+W5suaJsOWcuuaZr+mbtuivr+aKpembtuS4ouWkse+8m+e6r+aJi+aMgeaZg+WKqOivr+aKpSAxNi80MCDihpIgMAotIOaJk+WMhe+8muWPr+S6p+WHuuWPr+WuieijheeahCBBUEvvvIhkZWJ1ZyDnrb7lkI3vvIkKLSDmnKrlnKjnnJ/lrp7ot5HpgZPkuIrlgZrov4fplb/ml7bpl7Tlrp7mtYvvvIzpmIjlgLzpnIDnjrDlnLrmoIflrpoKCiMjIDMuIOaKgOacr+agiOS4juWFs+mUruS+nei1lu+8iOeyvuehrueJiOacrO+8iQoKfCDlsYIgfCDkvp3otZYgfCDniYjmnKwgfCDorrjlj68gfAp8LS0tfC0tLXwtLS18LS0tfAp8IOWJjeerryB8IOWOn+eUnyBIVE1MNSAvIENhbnZhcyAvIFdlYiBBdWRpbyAvIGdldFVzZXJNZWRpYSB8IOaXoOahhuaetiB8IOacrOmhueebruiHqueglCB8Cnwg5YmN56uvIHwgU2VydmljZSBXb3JrZXIgKyBXZWIgQXBwIE1hbmlmZXN077yIUFdB77yJIHwg4oCUIHwg5pys6aG555uu6Ieq56CUIHwKfCBBbmRyb2lkIHwgY29tcGlsZVNkayAvIHRhcmdldFNkayB8IDM0IHwg4oCUIHwKfCBBbmRyb2lkIHwgbWluU2RrIHwgMjTvvIhBbmRyb2lkIDcuMO+8iSB8IOKAlCB8CnwgQW5kcm9pZCB8IEFuZHJvaWQgR3JhZGxlIFBsdWdpbiB8IDguNS4yIHwg5p6E5bu65pyfIHwKfCBBbmRyb2lkIHwgYW5kcm9pZHgud2Via2l0OndlYmtpdCB8IDEuOC4wIHwgQXBhY2hlLTIuMCB8Cnwg5p6E5bu6IHwgR3JhZGxlIHwgOC43IHwgQXBhY2hlLTIuMCB8Cnwg5p6E5bu6IHwgSkRL77yIQXp1bCBadWx177yJIHwgMTcuMC4xMSB8IOaehOW7uuacn++8jOS4jemajyBBUEsg5YiG5Y+RIHwKfCDmnoTlu7ogfCBBbmRyb2lkIGJ1aWxkLXRvb2xzIHwgMzQuMC4wIHwg5p6E5bu65pyfIHwKCioq6Zu256ys5LiJ5pa56L+Q6KGM5pe25Luj56CB5ou36LSdKirvvJror4bliKvnrpfms5Xlhajpg6joh6rnoJTvvIzmnKrlpI3liLbku7vkvZUgR2l0SHViIOS7k+W6k+a6kOeggeOAguivpuingSBgVEhJUkQtUEFSVFktTk9USUNFUy5tZGDjgIIKCiMjIDQuIOWQr+WKqCAvIOaehOW7uiAvIOaJk+WMhe+8iOWPr+ebtOaOpeWkjeWItu+8iQoKYGBgYmFzaAojIDApIOmmluasoeWHhuWkh+W3peWFt+mTvu+8iOacrOacuuaXoOmihOijhSBKREsvU0RLL0dyYWRsZe+8iQojICAgIOingeesrCA2IOiKguOAjOW3suefpeeahOWdkeOAje+8jOW3peWFt+mTvuaUvuWcqCBwbGF5Z3JvdW5kL2FuZHJvaWQtdG9vbGNoYWluLwoKIyAxKSDmnKzlnLDpooTop4jliY3nq6/vvIjpnIAgSFRUUFMg5oiWIGxvY2FsaG9zdCDmiY3og73lvIDnm7jmnLrvvIkKY2QgQzovQUkgRG9jdW1lbnQvcHJvamVjdHMvdHJhY2stbGFuZS1ndWFyZC93ZWIKcHl0aG9uIC1tIGh0dHAuc2VydmVyIDgwODAKIyDmtY/op4jlmajmiZPlvIAgaHR0cDovL2xvY2FsaG9zdDo4MDgwCgojIDIpIOaJk+WMhSBBUEsKZXhwb3J0IEpBVkFfSE9NRT0iQzovQUkgRG9jdW1lbnQvcGxheWdyb3VuZC9hbmRyb2lkLXRvb2xjaGFpbi96dWx1MTcuNTAuMTktY2EtamRrMTcuMC4xMS13aW5feDY0IgpleHBvcnQgQU5EUk9JRF9IT01FPSJDOi9BSSBEb2N1bWVudC9wbGF5Z3JvdW5kL2FuZHJvaWQtdG9vbGNoYWluL2FuZHJvaWQtc2RrIgpleHBvcnQgUEFUSD0iL3Vzci9iaW46L2JpbjovYy9XaW5kb3dzL1N5c3RlbTMyOiRQQVRIIgpjZCBDOi9BSSBEb2N1bWVudC9wcm9qZWN0cy90cmFjay1sYW5lLWd1YXJkL2FuZHJvaWQKIkM6L0FJIERvY3VtZW50L3BsYXlncm91bmQvYW5kcm9pZC10b29sY2hhaW4vZ3JhZGxlLTguNy9iaW4vZ3JhZGxlIiBhc3NlbWJsZVJlbGVhc2UKCiMg5Lqn54mp77yaYW5kcm9pZC9hcHAvYnVpbGQvb3V0cHV0cy9hcGsvcmVsZWFzZS9hcHAtcmVsZWFzZS5hcGsKYGBgCgpgYGBiYXNoCiMgMykg6LeR5oqX5bmy5omw5Z+65YeG5rWL6K+V77yI5LiN6ZyA6KaB55u45py677yb5pS5566X5rOV5ZCO5YWI6LeR6L+Z5Liq5YaN5omT5YyF77yJCmNkIEM6L0FJIERvY3VtZW50L3Byb2plY3RzL3RyYWNrLWxhbmUtZ3VhcmQvdGVzdApub2RlIHJvYnVzdG5lc3MuanMKYGBgCgojIyA1LiDlj5HluIPkv6Hmga8KCi0gR2l0SHViIOS7k+W6k++8mmh0dHBzOi8vZ2l0aHViLmNvbS8xNDk0OTQ4L3RyYWNrLWxhbmUtZ3VhcmQg77yIcHVibGlj77yMYG1haW5gIOWIhuaUr++8jOW3suaOqOmAge+8iQotIOWcqOe6v+eJiO+8iFBXQe+8jEhUVFBT77yM5YWN5a6J6KOF77yJ77yaaHR0cHM6Ly90cmFjay1sYW5lLWd1YXJkLmFwcC53b3JrYnVkZHkuaG9zdC8KLSDliIbmlK/vvJpgbWFpbmAKLSDkuqflk4HlkI3vvJrot5HpgZPlrojljasgLyBUcmFja0xhbmVHdWFyZAotIOW9k+WJjeeJiOacrO+8mnYxLjMuMO+8iHZlcnNpb25Db2RlIDTvvIkKLSDkuqfnianlkb3lkI3op4TliJnvvJpgcmVsZWFzZXMvdHJhY2stbGFuZS1ndWFyZC92POeJiOacrD4vVHJhY2tMYW5lR3VhcmQtdjzniYjmnKw+LmFwa2AKLSDnrb7lkI3vvJpyZWxlYXNlIOWkjeeUqCBgfi8uYW5kcm9pZC9kZWJ1Zy5rZXlzdG9yZWDvvIjoh6rnlKjliIblj5HvvIzpnZ7llYblupfkuIrmnrbnrb7lkI3vvIkKCiMjIDYuIOW3suefpeeahOWdke+8iOacrOacuueJueacie+8iQoKMS4gKirmnKzmnLrmsqHmnInpooToo4UgSkRLIC8gQW5kcm9pZCBTREsgLyBHcmFkbGUqKu+8jOWFqOmDqOeOsOijheWIsAogICBgQzovQUkgRG9jdW1lbnQvcGxheWdyb3VuZC9hbmRyb2lkLXRvb2xjaGFpbi9g77yI57qmIDIgR0LvvIzlsZ7kuo7kuLTml7blt6Xlhbfpk77vvIzlj6/pmo/ml7bliKDvvInjgIIKMi4gKirlt6Xlhbfpk77ot6/lvoTlkKvnqbrmoLwqKu+8iGBBSSBEb2N1bWVudGDvvInjgIJgc2RrbWFuYWdlci5iYXRgIOe7jyBgY21kIC8vY2Ag55u05Lyg5bim5byV5Y+35Y+C5pWw5Lya6KKrCiAgIE1TWVMg6Lev5b6E6L2s5o2i56C05Z2PIOKGkiAqKuW/hemhu+WGmeaIkCAuYmF0IOaWh+S7tuWGjeiwgyBgY21kIC8vYyAieHh4LmJhdCJgKirjgIIKMy4gKipgc2RrbWFuYWdlciAtLWxpY2Vuc2VzYCDkvJrljaHlnKjkuqTkupLovpPlhaUqKu+8iOeuoemBk+WWgiB5IOS5n+aXoOaViO+8ieKGkiDnm7TmjqXlvoAKICAgYDxzZGs+L2xpY2Vuc2VzL2Ag5YaZ5ZOI5biM5paH5Lu277yI6KeBIGBwbGF5Z3JvdW5kL2FuZHJvaWQtdG9vbGNoYWluL2luc3RhbGxfc2RrLmJhdGAg5ZCM55uu5b2V6ISa5pys77yJ44CCCjQuICoqR3JhZGxlIOWumOaWuea6kCBgc2VydmljZXMuZ3JhZGxlLm9yZ2Ag5pys5py6IFNTTCDmj6HmiYvlpLHotKXvvIhjdXJsIHJjPTM177yJKiog4oaSIOaUueeUqOiFvuiur+S6kemVnOWDjwogICBgaHR0cHM6Ly9taXJyb3JzLmNsb3VkLnRlbmNlbnQuY29tL2dyYWRsZS9ncmFkbGUtOC43LWJpbi56aXBg44CCCjUuICoqYGdpdGh1Yi5jb21gIOeUqCBjdXJsIOS4jemAmu+8iOi/lOWbniAwMDDvvIkqKu+8jOS9hiBgZ2l0YCDljY/orq7lj6/pgJrjgILkuIvovb0gR2l0SHViIFJlbGVhc2Ug6LWE5rqQ5Lya5aSx6LSl77yMCiAgIOaJgOS7pSBKREsg6YCJIEF6dWwgWnVsdSDnm7Tpk77ogIzpnZ4gQWRvcHRpdW3vvIjlkI7ogIXot7PovawgR2l0SHVi77yJ44CCCjYuICoq5Y6f55SfIGdpdCDkuI3orqQgYC9jLy4uLmAg6Lev5b6EKirvvIzkvKDot6/lvoTlj4LmlbDkuIDlvovlhpkgYEM6Ly4uLmDvvJvnlKggYEM6L1Byb2dyYW0gRmlsZXMvR2l0L2NtZC9naXQuZXhlYOOAggo3LiAqKldlYlZpZXcg5b+F6aG755SoIGh0dHBzIOa6kCoq5omN6IO9IGBnZXRVc2VyTWVkaWFg77yI55u45py677yJ44CC5Zug5q2k55SoIGBXZWJWaWV3QXNzZXRMb2FkZXJgIOaKigogICBhc3NldHMg5pig5bCE5Li6IGBodHRwczovL2FwcGFzc2V0cy5hbmRyb2lkcGxhdGZvcm0ubmV0L2DvvIzkuI3opoHpgIDlm54gYGZpbGU6Ly8vYW5kcm9pZF9hc3NldC9g44CCCjguICoqQW5kcm9pZCA2KyDpnIDlhYjmi7/liLAgQ0FNRVJBIOadg+mZkCoq77yM5YaN5ZyoIGBvblBlcm1pc3Npb25SZXF1ZXN0YCDph4wgZ3JhbnTvvIzlkKbliJkgV2ViVmlldyDpnZnpu5jlpLHotKXjgIIKOS4gKirnm7Tov54gYHJlcG8ubWF2ZW4uYXBhY2hlLm9yZ2Ag5Lya5Ye6546wIGBSZW1vdGUgaG9zdCB0ZXJtaW5hdGVkIHRoZSBoYW5kc2hha2VgKirvvIhKVk0gVExTIOiiq+mHjee9ru+8jAogICBjdXJsIOWNtOaYryAyMDDvvInihpIgYHNldHRpbmdzLmdyYWRsZWAg6YeM5oqK6Zi/6YeM5LqR6ZWc5YOP5o6S5ZyoIGBnb29nbGUoKWAgLyBgbWF2ZW5DZW50cmFsKClgIOWJjemdouOAggoxMC4gKipyZWxlYXNlIOetvuWQjeeUqOeahCBgfi8uYW5kcm9pZC9kZWJ1Zy5rZXlzdG9yZWAg6buY6K6k5LiN5a2Y5ZyoKirvvIzkvJrmjILlnKgKICAgIGA6YXBwOnZhbGlkYXRlU2lnbmluZ1JlbGVhc2VgIOKGkiDnlKgga2V5dG9vbCDnlJ/miJDkuIDmrKHljbPlj6/vvIjliKvlkI0gYGFuZHJvaWRkZWJ1Z2tleWDvvIzlj6Pku6QgYGFuZHJvaWRg77yJ44CCCjExLiAqKuaehOW7uuiEmuacrOi1sCBgVDpgIOebmOespioq77yIYHN1YnN0IFQ6ICJDOlxBSSBEb2N1bWVudFxwbGF5Z3JvdW5kXGFuZHJvaWQtdG9vbGNoYWluImDvvInvvJoKICAgIOW3peWFt+mTvui3r+W+hOWQq+epuuagvO+8jOS7jiBHaXQgQmFzaCDnm7TkvKDlj4LmlbDnu5kgYGNtZGAg5Lya6KKrIE1TWVMg6Lev5b6E6L2s5o2i56C05Z2P44CCCjEyLiBBR1Ag5Lya5bCd6K+V6IGU572R5ouJIFNESyBwYWNrYWdlIG1hbmlmZXN077yI5aSx6LSl5Lmf5Y+q5oqlIFdhcm5pbmfvvIzkuI3lvbHlk43mnoTlu7rvvInvvIwKICAgIOesrOS4gOasoeaehOW7uuS8muWboOatpOWkmuetiee6piAzIOWIhumSn+OAggoKIyMgNy4g5Y+Y5pu06K6w5b2VCgotIDIwMjYtMDktMjcgwrcg5Yib5bu66aG555uu77yM5a6e546w5YmN56uv6K+G5Yir566X5rOV77yIY3YuanPvvInjgIHlj43ppojvvIhhdWRpby5qc++8ieOAgeeVjOmdou+8iGFwcC5qc++8iSDCtyDpppbkuKrlj6/nlKjniYjmnKwKLSAyMDI2LTA5LTI3IMK3IOaQreW7uiBBbmRyb2lkIFdlYlZpZXcg5aSW5aOz5bm25omT6YCa5pys5py6IEFQSyDmnoTlu7rpk77ot68gwrcg5YWR546w44CM55Sf5oiQIGFwayDmlofku7bjgI3pnIDmsYIKLSAyMDI2LTA5LTI3IMK3IOihpSBQV0HvvIhtYW5pZmVzdCArIHNlcnZpY2Ugd29ya2Vy77yJ5LiO5Zu+5qCHIMK3IOS+v+S6juS4jeijhSBBUEsg5pe255u05o6l55So5rWP6KeI5ZmoCi0gMjAyNi0wOS0yNyDCtyDkv67lpI3jgIznmb3oibLliIbpgZPnur/ppbHlkozluqbkuLogMCDkvJrooqvnuqLoibLmjqnohpzmjpLpmaTjgI3nmoTnrpfms5XnvLrpmbfvvIznmb3nur/mlLnkuLrni6znq4vmjqnohpwgKyDpgrvov5Hot5HpgZPnuqbmnZ8gwrcg5ZCI5oiQ5rWL6K+VIDYg6aG55pat6KiA5YWo6YCa6L+H77yM5Y2V5binIDAuNjEgbXMKLSAyMDI2LTA5LTI3IMK3IOmmluasoeaIkOWKn+aehOW7uiBBUEsg5bm25b2S5qGj5YiwIGByZWxlYXNlcy90cmFjay1sYW5lLWd1YXJkL3YxLjAuMC9gIMK3IDM4NiBLQu+8jOWQq+WujOaVtOemu+e6v+WJjeerrwotIDIwMjYtMDktMjcgwrcgKip2MS4xLjAg5oqX6K+v5Yik6YeN5p6EKirvvIhjdi5qcyB2Mu+8icK3IOi1t+WboO+8mueUqOaIt+WPjemmiCLlrrnmmJPor6/liKQiCiAgLSDliqDmsLTlubPpl63ov5DnrpfvvJrloavlubPliIbpgZPnur/nvJ3pmpnvvIzpgb/lhY3ov57pgJrln5/ooqvliIfmiJDkuIDmnaHmnaHovabpgZPlkI7ot6jovabpgZPot7Plj5gKICAtIOWKoOacgOWkp+i/numAmuWfn++8muWJlOmZpOmbtuaVo+e6ouiJsueJqeS9k++8iOiho+acjeOAgeagh+W/l+eJjOOAgeebuOmCu+e6ouWcuuWcsO+8iQogIC0g5Yqg5b2i54q25qCh6aqMICsg5aSa6K+B5o2u572u5L+h5bqm77ya5LiN5Y+v6Z2g5pe25pi+56S644CM6K+G5Yir5LiN56iz5a6a44CN6ICM5LiN5Lmx5oqlCiAgLSDliIbpgZPnur/liqDooYzov57nu63mgKcgKyDmnIDlsI/kuozkuZjnm7Tnur/mi5/lkIjmrovlt67vvJrliZTpmaTnmb3mlpHjgIHmsaHmuI3jgIHkupEKICAtIOWKoCBBbHBoYS1CZXRhIOi3n+i4quWZqCArIOaui+W3rumXqOaOpyArIOaMgee7reW4p+aKleelqO+8iOm7mOiupCA4IOW4p++8iQogIC0g5ZCI5oiQ5Z+65YeG77yIYHBsYXlncm91bmQvdHJhY2stbGFuZS1idWlsZC90ZXN0X3JvYnVzdC5qc2DvvInvvJo5IOexu+W5suaJsOWcuuaZr+mbtuivr+aKpembtuS4ouWkse+8mwogICAg57qv5omL5oyB5pmD5Yqo6K+v5oqlIDE2LzQwIOKGkiAw77yb5raI6J6N6K+B5piO5YWz5o6J5oyB57ut5bin5oqV56Wo6K+v5oql5Zue5YiwIDM344CB5YWz5o6J6Zet6L+Q566X5oqW5YqoIM+DIOaBtuWMliAyNyDlgI0KICAtIOWfuuWHhua1i+ivlee6s+WFpeS7k+W6kyBgdGVzdC9yb2J1c3RuZXNzLmpzYO+8iOWOn+WFiOWPquWcqCBwbGF5Z3JvdW5k77yM5Lya6KKr5b2T5Li05pe25paH5Lu25riF5o6J77yJCi0gMjAyNi0wOS0yNyDCtyDmjqjpgIEgR2l0SHVi77yIMTQ5NDk0OC90cmFjay1sYW5lLWd1YXJk77yJ5bm25Y+R5biD5Zyo57q/54mICiAg77yIaHR0cHM6Ly90cmFjay1sYW5lLWd1YXJkLmFwcC53b3JrYnVkZHkuaG9zdC/vvIxzaXRlcyDpnZnmgIHmiZjnrqHvvIkgwrcg5Zyo57q/54mI5LiOIEFQSyDlkIzkuIDlpZfliY3nq68KLSAyMDI2LTA5LTI4IMK3ICoqdjEuMi4wIOerluWxj+S4juWknOmXtOmHjeaehCoqIMK3IOi1t+WboO+8mueUqOaIt+ecn+acuuaIquWbvu+8iOWknOmXtOerluaMge+8ieaYvuekuiLlrozlhajml6Dms5Xkvb/nlKgi77yMCiAg6LeR6YGT5bCx5Zyo5YmN6Z2i5Y205oqlIuWBj+emuyA4MCUiCiAgLSDmoLnlm6AgMe+8iOWHoOS9le+8ie+8muerluaMgeaXtuW3peS9nOeUu+W4g+WPmCAxOTLDlzM0Me+8jOajgOa1i+W4puiQveWcqOeUu+mdouS4remDqCDigJTigJQg6YKj6YeM5piv6L+c5aSE6LeR6YGT44CBCiAgICDojYnlnarjgIHnkIPpl6jvvJvkuJTov5zlpITot5HpgZPkuI7ohJrkuIvot5HpgZPpmpTnnYDojYnlnarkupLkuI3ov57pgJrvvIzmnIDlpKfov57pgJrln5/kvJrpgInplJkKICAtIOagueWboCAy77yI6KOB5Ymq77yJ77ya6LeR6YGT5qiq6LSv55S76Z2i5pe26KGM6L6555WM6KKr55S76Z2i6L6557yY6KOB5Ymq77yM6KOB5Ymq5YC86KKr5b2T55yf6L6555WM77yMCiAgICDkvY3nva7kvLDorqHlrozlhajlpLHnnJ8KICAtIOS/ruazle+8muaUueOAjOS7jueUu+mdouW6lemDqOS4reWkruWQkeS4iuazm+a0quOAjeaPkOWPluS6uuiEmuS4i+eahOi3kemBk++8iOi/nOWkhOmalOiNieWdqueahOi3kemBk+S4jeWGjeW5suaJsO+8ie+8mwogICAg5qOA5rWL5bim6ZSa5a6a5bqV6YOo77yIMC40NX4wLjk377yJ77yb5bel5L2c55S75biD5oyJ6ZW/6L65IDE5MiDlvZLkuIDvvIjnq5blsY8gMTA4w5cxOTLvvInvvJsKICAgIOihjOi+ueeVjOiiq+ijgeWJqueahOihjOS4jeWPguS4juWumuS9je+8jOWFqOmDqOijgeWJquaXtuWIpOWumiLkvY3nva7kuI3lj6/nn6Ui5LiN5oql6K2m5bm25o+Q56S6Iuivt+aKrOmrmOaJi+acuiLvvJsKICAgIOeZveiJsuWDj+e0oOW5tuWFpei3kemBk+aOqeiGnO+8iOWQuOaUtuWknOmXtOi/h+abneW4puS4jueZvee6v++8ie+8m+W8r+mBk+ajgOa1i+aPkOekugogIC0g5Z+65YeG5omp5YiwIDE2IOWcuuaZr++8iOWQq+erluWxjyA0IOS4quOAgeWknOmXtOOAgeW8r+mBk+OAgeaIquWbvuWkjeeOsO+8ie+8mnYyIOWFqOmDqOmbtuivr+aKpembtuS4ouWkse+8mwogICAg57qv5pmD5YqoIDAg6K+v5oql77yb55yf5a6e5YGP56a7IDAuMzUgcyDmiqXorabvvJvmqKrnq5blsY/ljZXluKflnYcgfjEuMSBtcwotIDIwMjYtMDktMjggwrcg5o6o6YCBIEdpdEh1YiArIOWPkeW4gyBSZWxlYXNlIHYxLjIuMCDCtyDku6PnkIblr7kgZ2l0aHViLmNvbSDkuLvnq5nmlYXpmpwKICDvvIhDT05ORUNUIDUwMu+8jGFwaS5naXRodWIuY29tIOWNtOato+W4uO+8ie+8jGdpdCBwdXNoIOS4ieasoeWksei0peWQjuaUuei1sCAqKkdpdCBEYXRhIEFQSSoq77yaCiAgYGdpdCBscy10cmVlIC1yYCArIGJhc2U2NCDlhoXogZQgMjkg5paH5Lu2IOKGkiBgUE9TVCAvZ2l0L3RyZWVzYCgyMDEpIOKGkgogIGBQT1NUIC9naXQvY29tbWl0c2AoMjAxLCAxYjUwYTZjLCBwYXJlbnQ9YjkxNzFiMikg4oaSIGBQQVRDSCAvZ2l0L3JlZnMvaGVhZHMvbWFpbmAoMjAwKeOAggogIFJlbGVhc2UgaWQgMzk3OTgxMjUw77yMQVBLIDQwMSwzMzMgQiDkuIrkvKDmiJDlip/vvIhzdGF0ZT11cGxvYWRlZO+8jOWtl+iKguaVsOS4gOiHtO+8ieOAggogIOS4i+i9veWcsOWdgCBodHRwczovL2dpdGh1Yi5jb20vMTQ5NDk0OC90cmFjay1sYW5lLWd1YXJkL3JlbGVhc2VzL2Rvd25sb2FkL3YxLjIuMC9UcmFja0xhbmVHdWFyZC12MS4yLjAuYXBrCi0gMjAyNi0wOS0yOCDCtyAqKnYxLjMuMCDlhajlsY/lj4zluKYgKyDliY3nnrsgKyDlp7/mgIHkvKDmhJ/lmaggKyDpmpznoo3mo4DmtYsgKyDmqKrlsY/pu5jorqQqKgogIC0g5pW05bmF55S76Z2i6YO955So5LiK77ya6L+R5bim77yI6ISa5YmNIDY4JX45OCXvvInliKTlvZPliY3kvY3nva7vvIzov5zluKbvvIjliY3mlrkgMjYlfjU4Je+8ieeul+a8guenu+i2i+WKvwogIC0g6L+c5pmv5YmN556777ya6L+c5aSE6LeR6YGT5Lit5b+D55u45a+555S76Z2i5Lit5b+D55qE5YGP56e7546HIHRyZW5k77yM5LiO6L+R5bim5ZCM5ZCR5pe25oqY566X6L+b5YGP56e76YeP5o+Q5YmN6aKE6K2mCiAgICDvvIjkuIrpmZAgMC4xMO+8jOS4jei2s+S7peWNleeLrOinpuWPkeitpuWRiue6p++8iQogIC0g5paw5aKeIGB3ZWIvanMvc2Vuc29yLmpzYO+8mkRldmljZU9yaWVudGF0aW9uIOWnv+aAge+8iOS/r+S7sC/nv7vmu5ov5pa55L2N5Y+Y5YyW546H77yJ44CCCiAgICDnlKjpgJTkuKXmoLzpmZDlrprkuLrkuInku7bvvJrmsqHmnJ3kuIvlr7nlh4bot5HpgZPml7bmj5DnpLrjgIHmmYPliqjliafng4jml7blpJropoHmsYIgMiDluKfjgIHmqKrlkJHop5LpgJ/luqbmipjnrpfmvILnp7vjgIIKICAgICoq5L2N572u5Yik5a6a5LuN5Y+q55Sx55S76Z2i57uZ5Ye6KirvvIzlu4nku7cgTUVNUyDnmoTnu53lr7noiKrlkJHkuI3lj6/kv6HvvIzlj6rnlKjlj5jljJbnjocKICAtIOmanOeijS/ljaDnlKjnianmo4DmtYvvvJrot5HpgZPpnaLlhoXpnZ7ot5HpgZPoibLnmoTov57pgJrlnZfvvIjkurrlvbHjgIHooaPnianjgIHmsLTlnZHvvInvvIzov57nu60gNSDluKfmiY3mj5DnpLrvvIwKICAgIOeUu+mdoueUu+m7hOiJsuahhiArIOeKtuaAgeagj+aPkOekuuOAguS4jeWMuuWIhuexu+Wei+OAgeS4jea1i+i3nQogIC0g5L2/55So5pa55byP5Y+v5YiH5o2i77yI5qiq5bGPIC8g56uW5bGPIC8g6Ieq5Yqo77yJ77yMKirpu5jorqTmqKrlsY8qKuW5tuWcqOerluWxj+eUu+mdouaXtuaPkOekuuaoquaMgQogIC0g5Z+65YeG5omp5YiwIDE4IOWcuuaZr++8muaWsOWinuOAjOi/nOWkhOi3kemBk+WPs+WBj++8iOi2i+WKv++8ieOAjeS4juOAjOi3kemBk+S4iuacieWNoOeUqOeJqeOAje+8jAogICAg6LaL5Yq/IHRyZW5kPTAuMTExIOato+ehruivhuWIq+OAgeWNoOeUqOeJqSA0MC80MCDluKflkb3kuK3vvIzlhajpg6jlnLrmma/ku43pm7bor6/miqXpm7bkuKLlpLEKICAtIOW3suefpee8uuWPo++8mioq5Lyg5oSf5Zmo5LuO5pyq5Zyo55yf5py65LiK6aqM6K+B6L+HKirvvIjmqKHmi5/lmagv5peg5p2D6ZmQ546v5aKD5LiL6Ieq5Yqo56aB55So77yJ77yMCiAgICBpT1Mg6ZyA55So5oi35omL5Yq/5o6I5p2D77yb55yf5py65pWw5o2u5b6F55So5oi35b2V5bGP5ZCO5qCh5YeGCg==
+# PROJECT.md — TrackLaneGuard（跑道守卫）
+
+## 1. 定位
+
+**中文名：跑道守卫** —— 用手机摄像头实时识别红色塑胶跑道与白色分道线，在即将跑出跑道时通过耳机/扬声器的左右声像提示音、语音播报、震动和屏幕箭头，告诉使用者该往左还是往右修正。
+
+一套代码两种形态：`web/` 是完整前端（可作为 PWA 安装），`android/` 是极简 WebView 外壳，把 `web/` 打包进 APK 离线运行。
+
+## 2. 状态
+
+**可用（v1.3.0）** · 最后更新 2026-09-28
+
+- 算法：HSV 分割 + 水平闭运算 + 最大连通域 + 形状校验 + 分道线直线拟合 +
+  多证据置信度 + Alpha-Beta 跟踪器，三级提醒
+- 抗误判：合成基准 9 类干扰场景零误报零丢失；纯手持晃动误报 16/40 → 0
+- 打包：可产出可安装的 APK（debug 签名）
+- 未在真实跑道上做过长时间实测，阈值需现场标定
+
+## 3. 技术栈与关键依赖（精确版本）
+
+| 层 | 依赖 | 版本 | 许可 |
+|---|---|---|---|
+| 前端 | 原生 HTML5 / Canvas / Web Audio / getUserMedia | 无框架 | 本项目自研 |
+| 前端 | Service Worker + Web App Manifest（PWA） | — | 本项目自研 |
+| Android | compileSdk / targetSdk | 34 | — |
+| Android | minSdk | 24（Android 7.0） | — |
+| Android | Android Gradle Plugin | 8.5.2 | 构建期 |
+| Android | androidx.webkit:webkit | 1.8.0 | Apache-2.0 |
+| 构建 | Gradle | 8.7 | Apache-2.0 |
+| 构建 | JDK（Azul Zulu） | 17.0.11 | 构建期，不随 APK 分发 |
+| 构建 | Android build-tools | 34.0.0 | 构建期 |
+
+**零第三方运行时代码拷贝**：识别算法全部自研，未复制任何 GitHub 仓库源码。详见 `THIRD-PARTY-NOTICES.md`。
+
+## 4. 启动 / 构建 / 打包（可直接复制）
+
+```bash
+# 0) 首次准备工具链（本机无预装 JDK/SDK/Gradle）
+#    见第 6 节「已知的坑」，工具链放在 playground/android-toolchain/
+
+# 1) 本地预览前端（需 HTTPS 或 localhost 才能开相机）
+cd C:/AI Document/projects/track-lane-guard/web
+python -m http.server 8080
+# 浏览器打开 http://localhost:8080
+
+# 2) 打包 APK
+export JAVA_HOME="C:/AI Document/playground/android-toolchain/zulu17.50.19-ca-jdk17.0.11-win_x64"
+export ANDROID_HOME="C:/AI Document/playground/android-toolchain/android-sdk"
+export PATH="/usr/bin:/bin:/c/Windows/System32:$PATH"
+cd C:/AI Document/projects/track-lane-guard/android
+"C:/AI Document/playground/android-toolchain/gradle-8.7/bin/gradle" assembleRelease
+
+# 产物：android/app/build/outputs/apk/release/app-release.apk
+```
+
+```bash
+# 3) 跑抗干扰基准测试（不需要相机；改算法后先跑这个再打包）
+cd C:/AI Document/projects/track-lane-guard/test
+node robustness.js
+```
+
+## 5. 发布信息
+
+- GitHub 仓库：https://github.com/1494948/track-lane-guard （public，`main` 分支，已推送）
+- 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/
+- 分支：`main`
+- 产品名：跑道守卫 / TrackLaneGuard
+- 当前版本：v1.3.0（versionCode 4）
+- 产物命名规则：`releases/track-lane-guard/v<版本>/TrackLaneGuard-v<版本>.apk`
+- 签名：release 复用 `~/.android/debug.keystore`（自用分发，非商店上架签名）
+
+## 6. 已知的坑（本机特有）
+
+1. **本机没有预装 JDK / Android SDK / Gradle**，全部现装到
+   `C:/AI Document/playground/android-toolchain/`（约 2 GB，属于临时工具链，可随时删）。
+2. **工具链路径含空格**（`AI Document`）。`sdkmanager.bat` 经 `cmd //c` 直传带引号参数会被
+   MSYS 路径转换破坏 → **必须写成 .bat 文件再调 `cmd //c "xxx.bat"`**。
+3. **`sdkmanager --licenses` 会卡在交互输入**（管道喂 y 也无效）→ 直接往
+   `<sdk>/licenses/` 写哈希文件（见 `playground/android-toolchain/install_sdk.bat` 同目录脚本）。
+4. **Gradle 官方源 `services.gradle.org` 本机 SSL 握手失败（curl rc=35）** → 改用腾讯云镜像
+   `https://mirrors.cloud.tencent.com/gradle/gradle-8.7-bin.zip`。
+5. **`github.com` 用 curl 不通（返回 000）**，但 `git` 协议可通。下载 GitHub Release 资源会失败，
+   所以 JDK 选 Azul Zulu 直链而非 Adoptium（后者跳转 GitHub）。
+6. **原生 git 不认 `/c/...` 路径**，传路径参数一律写 `C:/...`；用 `C:/Program Files/Git/cmd/git.exe`。
+7. **WebView 必须用 https 源**才能 `getUserMedia`（相机）。因此用 `WebViewAssetLoader` 把
+   assets 映射为 `https://appassets.androidplatform.net/`，不要退回 `file:///android_asset/`。
+8. **Android 6+ 需先拿到 CAMERA 权限**，再在 `onPermissionRequest` 里 grant，否则 WebView 静默失败。
+9. **直连 `repo.maven.apache.org` 会出现 `Remote host terminated the handshake`**（JVM TLS 被重置，
+   curl 却是 200）→ `settings.gradle` 里把阿里云镜像排在 `google()` / `mavenCentral()` 前面。
+10. **release 签名用的 `~/.android/debug.keystore` 默认不存在**，会挂在
+    `:app:validateSigningRelease` → 用 keytool 生成一次即可（别名 `androiddebugkey`，口令 `android`）。
+11. **构建脚本走 `T:` 盘符**（`subst T: "C:\AI Document\playground\android-toolchain"`）：
+    工具链路径含空格，从 Git Bash 直传参数给 `cmd` 会被 MSYS 路径转换破坏。
+12. AGP 会尝试联网拉 SDK package manifest（失败也只报 Warning，不影响构建），
+    第一次构建会因此多等约 3 分钟。
+
+## 7. 变更记录
+
+- 2026-09-27 · 创建项目，实现前端识别算法（cv.js）、反馈（audio.js）、界面（app.js） · 首个可用版本
+- 2026-09-27 · 搭建 Android WebView 外壳并打通本机 APK 构建链路 · 兑现「生成 apk 文件」需求
+- 2026-09-27 · 补 PWA（manifest + service worker）与图标 · 便于不装 APK 时直接用浏览器
+- 2026-09-27 · 修复「白色分道线饱和度为 0 会被红色掩膜排除」的算法缺陷，白线改为独立掩膜 + 邻近跑道约束 · 合成测试 6 项断言全通过，单帧 0.61 ms
+- 2026-09-27 · 首次成功构建 APK 并归档到 `releases/track-lane-guard/v1.0.0/` · 386 KB，含完整离线前端
+- 2026-09-27 · **v1.1.0 抗误判重构**（cv.js v2）· 起因：用户反馈"容易误判"
+  - 加水平闭运算：填平分道线缝隙，避免连通域被切成一条条车道后跨车道跳变
+  - 加最大连通域：剔除零散红色物体（衣服、标志牌、相邻红场地）
+  - 加形状校验 + 多证据置信度：不可靠时显示「识别不稳定」而不乱报
+  - 分道线加行连续性 + 最小二乘直线拟合残差：剔除白斑、污渍、云
+  - 加 Alpha-Beta 跟踪器 + 残差门控 + 持续帧投票（默认 8 帧）
+  - 合成基准（`playground/track-lane-build/test_robust.js`）：9 类干扰场景零误报零丢失；
+    纯手持晃动误报 16/40 → 0；消融证明关掉持续帧投票误报回到 37、关掉闭运算抖动 σ 恶化 27 倍
+  - 基准测试纳入仓库 `test/robustness.js`（原先只在 playground，会被当临时文件清掉）
+- 2026-09-27 · 推送 GitHub（1494948/track-lane-guard）并发布在线版
+  （https://track-lane-guard.app.workbuddy.host/，sites 静态托管） · 在线版与 APK 同一套前端
+- 2026-09-28 · **v1.2.0 竖屏与夜间重构** · 起因：用户真机截图（夜间竖持）显示"完全无法使用"，
+  跑道就在前面却报"偏离 80%"
+  - 根因 1（几何）：竖持时工作画布变 192×341，检测带落在画面中部 —— 那里是远处跑道、
+    草坪、球门；且远处跑道与脚下跑道隔着草坪互不连通，最大连通域会选错
+  - 根因 2（裁剪）：跑道横贯画面时行边界被画面边缘裁剪，裁剪值被当真边界，
+    位置估计完全失真
+  - 修法：改「从画面底部中央向上泛洪」提取人脚下的跑道（远处隔草坪的跑道不再干扰）；
+    检测带锚定底部（0.45~0.97）；工作画布按长边 192 归一（竖屏 108×192）；
+    行边界被裁剪的行不参与定位，全部裁剪时判定"位置不可知"不报警并提示"请抬高手机"；
+    白色像素并入跑道掩膜（吸收夜间过曝带与白线）；弯道检测提示
+  - 基准扩到 16 场景（含竖屏 4 个、夜间、弯道、截图复现）：v2 全部零误报零丢失；
+    纯晃动 0 误报；真实偏离 0.35 s 报警；横竖屏单帧均 ~1.1 ms
+- 2026-09-28 · 推送 GitHub + 发布 Release v1.2.0 · 代理对 github.com 主站故障
+  （CONNECT 502，api.github.com 却正常），git push 三次失败后改走 **Git Data API**：
+  `git ls-tree -r` + base64 内联 29 文件 → `POST /git/trees`(201) →
+  `POST /git/commits`(201, 1b50a6c, parent=b9171b2) → `PATCH /git/refs/heads/main`(200)。
+  Release id 397981250，APK 401,333 B 上传成功（state=uploaded，字节数一致）。
+  下载地址 https://github.com/1494948/track-lane-guard/releases/download/v1.2.0/TrackLaneGuard-v1.2.0.apk
+- 2026-09-28 · **v1.3.0 全屏双带 + 前瞻 + 姿态传感器 + 障碍检测 + 横屏默认**
+  - 整幅画面都用上：近带（脚前 68%~98%）判当前位置，远带（前方 26%~58%）算漂移趋势
+  - 远景前瞻：远处跑道中心相对画面中心的偏移率 trend，与近带同向时折算进偏移量提前预警
+    （上限 0.10，不足以单独触发警告级）
+  - 新增 `web/js/sensor.js`：DeviceOrientation 姿态（俯仰/翻滚/方位变化率）。
+    用途严格限定为三件：没朝下对准跑道时提示、晃动剧烈时多要求 2 帧、横向角速度折算漂移。
+    **位置判定仍只由画面给出**，廉价 MEMS 的绝对航向不可信，只用变化率
+  - 障碍/占用物检测：跑道面内非跑道色的连通块（人影、衣物、水坑），连续 5 帧才提示，
+    画面画黄色框 + 状态栏提示。不区分类型、不测距
+  - 使用方式可切换（横屏 / 竖屏 / 自动），**默认横屏**并在竖屏画面时提示横持
+  - 基准扩到 18 场景：新增「远处跑道右偏（趋势）」与「跑道上有占用物」，
+    趋势 trend=0.111 正确识别、占用物 40/40 帧命中，全部场景仍零误报零丢失
+  - 已知缺口：**传感器从未在真机上验证过**（模拟器/无权限环境下自动禁用），
+    iOS 需用户手势授权；真机数据待用户录屏后校准

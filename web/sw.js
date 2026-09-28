@@ -1,1 +1,51 @@
-LyogU2VydmljZSBXb3JrZXLvvJrnvJPlrZjlupTnlKjlpJblo7PvvIzmlK/mjIHnprvnur/vvIjmt7vliqDliLDkuLvlsY/luZXlkI7ml6DnvZHnu5zkuZ/og73nlKjvvIkgKi8KdmFyIENBQ0hFID0gJ3RsZy12MSc7CnZhciBBU1NFVFMgPSBbCiAgJy4vJywKICAnLi9pbmRleC5odG1sJywKICAnLi9jc3Mvc3R5bGUuY3NzJywKICAnLi9qcy9jdi5qcycsCiAgJy4vanMvYXVkaW8uanMnLAogICcuL2pzL2FwcC5qcycsCiAgJy4vbWFuaWZlc3Qud2VibWFuaWZlc3QnLAogICcuL2ljb25zL2ljb24tMTkyLnBuZycsCiAgJy4vaWNvbnMvaWNvbi01MTIucG5nJwpdOwoKc2VsZi5hZGRFdmVudExpc3RlbmVyKCdpbnN0YWxsJywgZnVuY3Rpb24gKGUpIHsKICBlLndhaXRVbnRpbCgKICAgIGNhY2hlcy5vcGVuKENBQ0hFKS50aGVuKGZ1bmN0aW9uIChjKSB7CiAgICAgIHJldHVybiBjLmFkZEFsbChBU1NFVFMpLmNhdGNoKGZ1bmN0aW9uICgpIHsgLyog5Liq5Yir6LWE5rqQ5aSx6LSl5LiN5b2x5ZON5a6J6KOFICovIH0pOwogICAgfSkudGhlbihmdW5jdGlvbiAoKSB7IHJldHVybiBzZWxmLnNraXBXYWl0aW5nKCk7IH0pCiAgKTsKfSk7CgpzZWxmLmFkZEV2ZW50TGlzdGVuZXIoJ2FjdGl2YXRlJywgZnVuY3Rpb24gKGUpIHsKICBlLndhaXRVbnRpbCgKICAgIGNhY2hlcy5rZXlzKCkudGhlbihmdW5jdGlvbiAoa2V5cykgewogICAgICByZXR1cm4gUHJvbWlzZS5hbGwoa2V5cy5tYXAoZnVuY3Rpb24gKGspIHsKICAgICAgICByZXR1cm4gayA9PT0gQ0FDSEUgPyBudWxsIDogY2FjaGVzLmRlbGV0ZShrKTsKICAgICAgfSkpOwogICAgfSkudGhlbihmdW5jdGlvbiAoKSB7IHJldHVybiBzZWxmLmNsaWVudHMuY2xhaW0oKTsgfSkKICApOwp9KTsKCnNlbGYuYWRkRXZlbnRMaXN0ZW5lcignZmV0Y2gnLCBmdW5jdGlvbiAoZSkgewogIHZhciByZXEgPSBlLnJlcXVlc3Q7CiAgaWYgKHJlcS5tZXRob2QgIT09ICdHRVQnKSByZXR1cm47CiAgZS5yZXNwb25kV2l0aCgKICAgIGNhY2hlcy5tYXRjaChyZXEpLnRoZW4oZnVuY3Rpb24gKGhpdCkgewogICAgICBpZiAoaGl0KSByZXR1cm4gaGl0OwogICAgICByZXR1cm4gZmV0Y2gocmVxKS50aGVuKGZ1bmN0aW9uIChyZXMpIHsKICAgICAgICAvLyDlkIzmupDpnZnmgIHotYTmupDpobrluKblhaXnvJPlrZgKICAgICAgICBpZiAocmVzICYmIHJlcy5zdGF0dXMgPT09IDIwMCAmJiBuZXcgVVJMKHJlcS51cmwpLm9yaWdpbiA9PT0gc2VsZi5sb2NhdGlvbi5vcmlnaW4pIHsKICAgICAgICAgIHZhciBjb3B5ID0gcmVzLmNsb25lKCk7CiAgICAgICAgICBjYWNoZXMub3BlbihDQUNIRSkudGhlbihmdW5jdGlvbiAoYykgeyBjLnB1dChyZXEsIGNvcHkpOyB9KTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHJlczsKICAgICAgfSkuY2F0Y2goZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiBjYWNoZXMubWF0Y2goJy4vaW5kZXguaHRtbCcpOwogICAgICB9KTsKICAgIH0pCiAgKTsKfSk7Cg==
+/* Service Worker：缓存应用外壳，支持离线（添加到主屏幕后无网络也能用） */
+var CACHE = 'tlg-v1';
+var ASSETS = [
+  './',
+  './index.html',
+  './css/style.css',
+  './js/cv.js',
+  './js/audio.js',
+  './js/app.js',
+  './manifest.webmanifest',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
+];
+
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE).then(function (c) {
+      return c.addAll(ASSETS).catch(function () { /* 个别资源失败不影响安装 */ });
+    }).then(function () { return self.skipWaiting(); })
+  );
+});
+
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) {
+        return k === CACHE ? null : caches.delete(k);
+      }));
+    }).then(function () { return self.clients.claim(); })
+  );
+});
+
+self.addEventListener('fetch', function (e) {
+  var req = e.request;
+  if (req.method !== 'GET') return;
+  e.respondWith(
+    caches.match(req).then(function (hit) {
+      if (hit) return hit;
+      return fetch(req).then(function (res) {
+        // 同源静态资源顺带入缓存
+        if (res && res.status === 200 && new URL(req.url).origin === self.location.origin) {
+          var copy = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(req, copy); });
+        }
+        return res;
+      }).catch(function () {
+        return caches.match('./index.html');
+      });
+    })
+  );
+});

@@ -1,1 +1,115 @@
-LyoKICogc2Vuc29yLmpzIOKAlOKAlCDmiYvmnLrlp7/mgIHkvKDmhJ/lmajvvIjpmYDonrrku6ogLyDliqDpgJ/luqborqHvvInovoXliqkKICoKICog55So6YCU77yI6L6F5Yqp77yM5LiN5pu/5Luj6KeG6KeJ5Yik5a6a77yJ77yaCiAqICAgMS4g5ae/5oCB5o+Q56S677ya5omL5py65piv5ZCm5pyd5LiL5pa55a+5552A6LeR6YGT77yM5rKh5a+55YeG5pe25o+Q6YaS5L2/55So6ICFCiAqICAgMi4g5pmD5Yqo6K+G5Yir77ya57+75rua6KeS6YCf5bqm6L+H5aSn5pe25qCH6K6w5Li6IuaZg+WKqOS4rSLvvIznlKjkuo7op6Pph4rkuLrku4DkuYjliKTlrprkvJrov5/nlpEKICogICAzLiDliY3nnrvpooTmtYvvvJrmiormqKrlkJHop5LpgJ/luqbmipjnrpfmiJDnn63mnJ/mvILnp7votovlir/vvIzkuI7nlLvpnaLliY3nnrvlkIjlubblkI7mj5DliY3pooToraYKICoKICog6L6555WM77yI5b+F6aG76K+05riF77yJ77yaCiAqICAgLSDlu4nku7cgTUVNUyDpmYDonrrku6rmnInmvILnp7vvvIzoiKrlkJHop5IoYWxwaGEp57ud5a+55LiN5Y+v6Z2g77yM5Y+q5L2/55So5YW2Kirlj5jljJbnjocqKgogKiAgIC0g5LiN6IO95Yet5Lyg5oSf5Zmo5Yik5patIuS6uuWcqOWTqumHjCLvvIzkvY3nva7liKTlrprku43nhLblj6rnlLHnlLvpnaLnu5nlh7oKICogICAtIGlPUyAxMysg6ZyA6KaB55So5oi35omL5Yq/6YeM6LCD55SoIHJlcXVlc3RQZXJtaXNzaW9uKCnvvIzmsqHmjojmnYPlsLHoh6rliqjnpoHnlKgKICovCihmdW5jdGlvbiAoZ2xvYmFsKSB7CiAgJ3VzZSBzdHJpY3QnOwoKICB2YXIgVExHID0gZ2xvYmFsLlRMRyB8fCAoZ2xvYmFsLlRMRyA9IHt9KTsKCiAgZnVuY3Rpb24gU2Vuc29yKCkgewogICAgdGhpcy5lbmFibGVkID0gZmFsc2U7CiAgICB0aGlzLnN1cHBvcnRlZCA9IHR5cGVvZiBnbG9iYWwuRGV2aWNlT3JpZW50YXRpb25FdmVudCAhPT0gJ3VuZGVmaW5lZCc7CiAgICB0aGlzLnJvbGwgPSAwOyAgICAgIC8vIOW3puWPs+WAvuaWnO+8iOW6pu+8iQogICAgdGhpcy5waXRjaCA9IDA7ICAgICAvLyDliY3lkI7lgL7mlpzvvIjluqbvvIkKICAgIHRoaXMueWF3ID0gMDsgICAgICAgLy8g5pa55L2N77yI5bqm77yM57ud5a+55LiN5Y+v6Z2g77yM5Y+q5YGa5Y+Y5YyW546H77yJCiAgICB0aGlzLnlhd1JhdGUgPSAwOyAgIC8vIOaWueS9jeWPmOWMlueOh++8iOW6pi/np5LvvInvvIzlubPmu5EKICAgIHRoaXMucm9sbFJhdGUgPSAwOwogICAgdGhpcy5sYXN0WWF3ID0gMDsKICAgIHRoaXMubGFzdFRzID0gMDsKICAgIHRoaXMuc2hha2luZyA9IGZhbHNlOwogICAgdGhpcy5haW1pbmcgPSB0cnVlOyAvLyDmiYvmnLrmmK/lkKbmnJ3lkJHlnLDpnaIKICAgIHRoaXMuX29uT3JpZW50ID0gbnVsbDsKICB9CgogIGZ1bmN0aW9uIGVtYShwcmV2LCBuZXh0LCBhKSB7IHJldHVybiBwcmV2ICogKDEgLSBhKSArIG5leHQgKiBhOyB9CgogIFNlbnNvci5wcm90b3R5cGUuc3RhcnQgPSBmdW5jdGlvbiAoKSB7CiAgICB2YXIgc2VsZiA9IHRoaXM7CiAgICBpZiAoIXRoaXMuc3VwcG9ydGVkIHx8IHRoaXMuZW5hYmxlZCkgcmV0dXJuIGZhbHNlOwogICAgdGhpcy5fb25PcmllbnQgPSBmdW5jdGlvbiAoZSkgewogICAgICBpZiAoZS5nYW1tYSA9PT0gbnVsbCAmJiBlLmJldGEgPT09IG51bGwpIHJldHVybjsKICAgICAgdmFyIG5vdyA9IChnbG9iYWwucGVyZm9ybWFuY2UgJiYgZ2xvYmFsLnBlcmZvcm1hbmNlLm5vdykgPyBnbG9iYWwucGVyZm9ybWFuY2Uubm93KCkgOiBEYXRlLm5vdygpOwogICAgICAvLyDlsY/luZXmlrnlkJHvvJrmqKrlsY/ml7YgZ2FtbWEvYmV0YSDnmoTor63kuYnkvJrkuqTmjaLvvIzmjIkgc2NyZWVuLm9yaWVudGF0aW9uIOagoeatowogICAgICB2YXIgYW5nbGUgPSAwOwogICAgICBpZiAoZ2xvYmFsLnNjcmVlbiAmJiBnbG9iYWwuc2NyZWVuLm9yaWVudGF0aW9uICYmIHR5cGVvZiBnbG9iYWwuc2NyZWVuLm9yaWVudGF0aW9uLmFuZ2xlID09PSAnbnVtYmVyJykgewogICAgICAgIGFuZ2xlID0gZ2xvYmFsLnNjcmVlbi5vcmllbnRhdGlvbi5hbmdsZTsKICAgICAgfQogICAgICB2YXIgZyA9IGUuZ2FtbWEgfHwgMDsgICAvLyDlt6blj7PlgL7mlpwgLTkwLi45MAogICAgICB2YXIgYiA9IGUuYmV0YSB8fCAwOyAgICAvLyDliY3lkI7lgL7mlpwgLTE4MC4uMTgwCiAgICAgIHZhciBhID0gZS5hbHBoYSB8fCAwOyAgIC8vIOaWueS9jSAwLi4zNjAKCiAgICAgIGlmIChhbmdsZSA9PT0gOTApIHsgdmFyIHQxID0gZzsgZyA9IC1iOyBiID0gdDE7IH0KICAgICAgZWxzZSBpZiAoYW5nbGUgPT09IDI3MCB8fCBhbmdsZSA9PT0gLTkwKSB7IHZhciB0MiA9IGc7IGcgPSBiOyBiID0gLXQyOyB9CgogICAgICBzZWxmLnJvbGwgPSBlbWEoc2VsZi5yb2xsLCBnLCAwLjI1KTsKICAgICAgc2VsZi5waXRjaCA9IGVtYShzZWxmLnBpdGNoLCBiLCAwLjI1KTsKCiAgICAgIGlmIChzZWxmLmxhc3RUcykgewogICAgICAgIHZhciBkdCA9IE1hdGgubWF4KDAuMDE2LCAobm93IC0gc2VsZi5sYXN0VHMpIC8gMTAwMCk7CiAgICAgICAgdmFyIGRZYXcgPSBhIC0gc2VsZi5sYXN0WWF3OwogICAgICAgIGlmIChkWWF3ID4gMTgwKSBkWWF3IC09IDM2MDsKICAgICAgICBpZiAoZFlhdyA8IC0xODApIGRZYXcgKz0gMzYwOwogICAgICAgIHNlbGYueWF3UmF0ZSA9IGVtYShzZWxmLnlhd1JhdGUsIGRZYXcgLyBkdCwgMC4yKTsKICAgICAgICBzZWxmLnJvbGxSYXRlID0gZW1hKHNlbGYucm9sbFJhdGUsIChnIC0gc2VsZi5yb2xsKSAvIGR0LCAwLjIpOwogICAgICB9CiAgICAgIHNlbGYueWF3ID0gYTsKICAgICAgc2VsZi5sYXN0WWF3ID0gYTsKICAgICAgc2VsZi5sYXN0VHMgPSBub3c7CgogICAgICAvLyDmmYPliqjvvJrnv7vmu5rmiJbmlrnkvY3lj5jljJbnjofov4flpKcKICAgICAgc2VsZi5zaGFraW5nID0gTWF0aC5hYnMoc2VsZi5yb2xsUmF0ZSkgPiA1NSB8fCBNYXRoLmFicyhzZWxmLnlhd1JhdGUpID4gOTA7CiAgICAgIC8vIOeehOWHhu+8muaoquaMgeacneWJjeS4i+aWueaXtiBwaXRjaCDpgJrluLjokL3lnKggMjB+NzUg5bqm77yI5L+v6KeG5Zyw6Z2i77yJCiAgICAgIHNlbGYuYWltaW5nID0gc2VsZi5waXRjaCA+IDE1ICYmIHNlbGYucGl0Y2ggPCA4NTsKICAgIH07CiAgICBnbG9iYWwuYWRkRXZlbnRMaXN0ZW5lcignZGV2aWNlb3JpZW50YXRpb24nLCB0aGlzLl9vbk9yaWVudCwgdHJ1ZSk7CiAgICB0aGlzLmVuYWJsZWQgPSB0cnVlOwogICAgcmV0dXJuIHRydWU7CiAgfTsKCiAgLyoqIGlPUyAxMysg6ZyA6KaB55So5oi35omL5Yq/5YaF5o6I5p2D77yb5YW25a6D5bmz5Y+w55u05o6l6L+U5ZueIHRydWUgKi8KICBTZW5zb3IucHJvdG90eXBlLnJlcXVlc3RQZXJtaXNzaW9uID0gZnVuY3Rpb24gKCkgewogICAgdmFyIERPRSA9IGdsb2JhbC5EZXZpY2VPcmllbnRhdGlvbkV2ZW50OwogICAgaWYgKERPRSAmJiB0eXBlb2YgRE9FLnJlcXVlc3RQZXJtaXNzaW9uID09PSAnZnVuY3Rpb24nKSB7CiAgICAgIHZhciBzZWxmID0gdGhpczsKICAgICAgcmV0dXJuIERPRS5yZXF1ZXN0UGVybWlzc2lvbigpLnRoZW4oZnVuY3Rpb24gKHIpIHsKICAgICAgICByZXR1cm4gciA9PT0gJ2dyYW50ZWQnICYmIHNlbGYuc3RhcnQoKTsKICAgICAgfSkuY2F0Y2goZnVuY3Rpb24gKCkgeyByZXR1cm4gZmFsc2U7IH0pOwogICAgfQogICAgcmV0dXJuIFByb21pc2UucmVzb2x2ZSh0aGlzLnN0YXJ0KCkpOwogIH07CgogIFNlbnNvci5wcm90b3R5cGUuc3RvcCA9IGZ1bmN0aW9uICgpIHsKICAgIGlmICh0aGlzLl9vbk9yaWVudCkgewogICAgICBnbG9iYWwucmVtb3ZlRXZlbnRMaXN0ZW5lcignZGV2aWNlb3JpZW50YXRpb24nLCB0aGlzLl9vbk9yaWVudCwgdHJ1ZSk7CiAgICAgIHRoaXMuX29uT3JpZW50ID0gbnVsbDsKICAgIH0KICAgIHRoaXMuZW5hYmxlZCA9IGZhbHNlOwogIH07CgogIFNlbnNvci5wcm90b3R5cGUuc3RhdGUgPSBmdW5jdGlvbiAoKSB7CiAgICByZXR1cm4gewogICAgICBlbmFibGVkOiB0aGlzLmVuYWJsZWQsCiAgICAgIHN1cHBvcnRlZDogdGhpcy5zdXBwb3J0ZWQsCiAgICAgIHJvbGw6IHRoaXMucm9sbCwKICAgICAgcGl0Y2g6IHRoaXMucGl0Y2gsCiAgICAgIHlhd1JhdGU6IHRoaXMueWF3UmF0ZSwKICAgICAgcm9sbFJhdGU6IHRoaXMucm9sbFJhdGUsCiAgICAgIHNoYWtpbmc6IHRoaXMuc2hha2luZywKICAgICAgYWltaW5nOiB0aGlzLmFpbWluZywKICAgICAgLy8g5qiq5ZCR6KeS6YCf5bqm5oqY566X5oiQ5ryC56e76LaL5Yq/77yI5b6I5L+d5a6I77ya5ruh6YeP56iL57qmIMKxMC4zNe+8iQogICAgICBkcmlmdDogTWF0aC5tYXgoLTAuMzUsIE1hdGgubWluKDAuMzUsIHRoaXMueWF3UmF0ZSAvIDI2MCkpCiAgICB9OwogIH07CgogIFRMRy5TZW5zb3IgPSBTZW5zb3I7Cn0pKHdpbmRvdyk7Cg==
+/*
+ * sensor.js —— 手机姿态传感器（陀螺仪 / 加速度计）辅助
+ *
+ * 用途（辅助，不替代视觉判定）：
+ *   1. 姿态提示：手机是否朝下方对着跑道，没对准时提醒使用者
+ *   2. 晃动识别：翻滚角速度过大时标记为"晃动中"，用于解释为什么判定会迟疑
+ *   3. 前瞻预测：把横向角速度折算成短期漂移趋势，与画面前瞻合并后提前预警
+ *
+ * 边界（必须说清）：
+ *   - 廉价 MEMS 陀螺仪有漂移，航向角(alpha)绝对不可靠，只使用其**变化率**
+ *   - 不能凭传感器判断"人在哪里"，位置判定仍然只由画面给出
+ *   - iOS 13+ 需要用户手势里调用 requestPermission()，没授权就自动禁用
+ */
+(function (global) {
+  'use strict';
+
+  var TLG = global.TLG || (global.TLG = {});
+
+  function Sensor() {
+    this.enabled = false;
+    this.supported = typeof global.DeviceOrientationEvent !== 'undefined';
+    this.roll = 0;      // 左右倾斜（度）
+    this.pitch = 0;     // 前后倾斜（度）
+    this.yaw = 0;       // 方位（度，绝对不可靠，只做变化率）
+    this.yawRate = 0;   // 方位变化率（度/秒），平滑
+    this.rollRate = 0;
+    this.lastYaw = 0;
+    this.lastTs = 0;
+    this.shaking = false;
+    this.aiming = true; // 手机是否朝向地面
+    this._onOrient = null;
+  }
+
+  function ema(prev, next, a) { return prev * (1 - a) + next * a; }
+
+  Sensor.prototype.start = function () {
+    var self = this;
+    if (!this.supported || this.enabled) return false;
+    this._onOrient = function (e) {
+      if (e.gamma === null && e.beta === null) return;
+      var now = (global.performance && global.performance.now) ? global.performance.now() : Date.now();
+      // 屏幕方向：横屏时 gamma/beta 的语义会交换，按 screen.orientation 校正
+      var angle = 0;
+      if (global.screen && global.screen.orientation && typeof global.screen.orientation.angle === 'number') {
+        angle = global.screen.orientation.angle;
+      }
+      var g = e.gamma || 0;   // 左右倾斜 -90..90
+      var b = e.beta || 0;    // 前后倾斜 -180..180
+      var a = e.alpha || 0;   // 方位 0..360
+
+      if (angle === 90) { var t1 = g; g = -b; b = t1; }
+      else if (angle === 270 || angle === -90) { var t2 = g; g = b; b = -t2; }
+
+      self.roll = ema(self.roll, g, 0.25);
+      self.pitch = ema(self.pitch, b, 0.25);
+
+      if (self.lastTs) {
+        var dt = Math.max(0.016, (now - self.lastTs) / 1000);
+        var dYaw = a - self.lastYaw;
+        if (dYaw > 180) dYaw -= 360;
+        if (dYaw < -180) dYaw += 360;
+        self.yawRate = ema(self.yawRate, dYaw / dt, 0.2);
+        self.rollRate = ema(self.rollRate, (g - self.roll) / dt, 0.2);
+      }
+      self.yaw = a;
+      self.lastYaw = a;
+      self.lastTs = now;
+
+      // 晃动：翻滚或方位变化率过大
+      self.shaking = Math.abs(self.rollRate) > 55 || Math.abs(self.yawRate) > 90;
+      // 瞄准：横持朝前下方时 pitch 通常落在 20~75 度（俯视地面）
+      self.aiming = self.pitch > 15 && self.pitch < 85;
+    };
+    global.addEventListener('deviceorientation', this._onOrient, true);
+    this.enabled = true;
+    return true;
+  };
+
+  /** iOS 13+ 需要用户手势内授权；其它平台直接返回 true */
+  Sensor.prototype.requestPermission = function () {
+    var DOE = global.DeviceOrientationEvent;
+    if (DOE && typeof DOE.requestPermission === 'function') {
+      var self = this;
+      return DOE.requestPermission().then(function (r) {
+        return r === 'granted' && self.start();
+      }).catch(function () { return false; });
+    }
+    return Promise.resolve(this.start());
+  };
+
+  Sensor.prototype.stop = function () {
+    if (this._onOrient) {
+      global.removeEventListener('deviceorientation', this._onOrient, true);
+      this._onOrient = null;
+    }
+    this.enabled = false;
+  };
+
+  Sensor.prototype.state = function () {
+    return {
+      enabled: this.enabled,
+      supported: this.supported,
+      roll: this.roll,
+      pitch: this.pitch,
+      yawRate: this.yawRate,
+      rollRate: this.rollRate,
+      shaking: this.shaking,
+      aiming: this.aiming,
+      // 横向角速度折算成漂移趋势（很保守：满量程约 ±0.35）
+      drift: Math.max(-0.35, Math.min(0.35, this.yawRate / 260))
+    };
+  };
+
+  TLG.Sensor = Sensor;
+})(window);

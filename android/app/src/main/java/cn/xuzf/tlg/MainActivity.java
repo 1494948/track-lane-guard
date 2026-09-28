@@ -1,1 +1,163 @@
-cGFja2FnZSBjbi54dXpmLnRsZzsKCmltcG9ydCBhbmRyb2lkLk1hbmlmZXN0OwppbXBvcnQgYW5kcm9pZC5hbm5vdGF0aW9uLlN1cHByZXNzTGludDsKaW1wb3J0IGFuZHJvaWQuYXBwLkFjdGl2aXR5OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LnBtLlBhY2thZ2VNYW5hZ2VyOwppbXBvcnQgYW5kcm9pZC5vcy5CdWlsZDsKaW1wb3J0IGFuZHJvaWQub3MuQnVuZGxlOwppbXBvcnQgYW5kcm9pZC52aWV3LldpbmRvd01hbmFnZXI7CmltcG9ydCBhbmRyb2lkLndlYmtpdC5QZXJtaXNzaW9uUmVxdWVzdDsKaW1wb3J0IGFuZHJvaWQud2Via2l0LldlYkNocm9tZUNsaWVudDsKaW1wb3J0IGFuZHJvaWQud2Via2l0LldlYlJlc291cmNlUmVxdWVzdDsKaW1wb3J0IGFuZHJvaWQud2Via2l0LldlYlJlc291cmNlUmVzcG9uc2U7CmltcG9ydCBhbmRyb2lkLndlYmtpdC5XZWJTZXR0aW5nczsKaW1wb3J0IGFuZHJvaWQud2Via2l0LldlYlZpZXc7CmltcG9ydCBhbmRyb2lkLndlYmtpdC5XZWJWaWV3Q2xpZW50OwppbXBvcnQgYW5kcm9pZC53aWRnZXQuVG9hc3Q7CgppbXBvcnQgYW5kcm9pZHgud2Via2l0LldlYlZpZXdBc3NldExvYWRlcjsKCi8qKgogKiDmnoHnroDlpJblo7PvvJrnlKggV2ViVmlldyDmib/ovb0gd2ViLyDkuIvnmoTliY3nq6/jgIIKICoKICog5YWz6ZSu54K577yaCiAqICAxLiBnZXRVc2VyTWVkaWEg6KaB5rGC44CM5a6J5YWo5LiK5LiL5paH44CN77yM55u05o6l55SoIGZpbGU6Ly8vYW5kcm9pZF9hc3NldC8g5LiN5Y+v6Z2g77yMCiAqICAgICDlm6DmraTnlKggYW5kcm9pZHgud2Via2l0IOeahCBXZWJWaWV3QXNzZXRMb2FkZXIg5oqKIGFzc2V0cyDmmKDlsITmiJAKICogICAgIGh0dHBzOi8vYXBwYXNzZXRzLmFuZHJvaWRwbGF0Zm9ybS5uZXQvIOi/meS4quWuieWFqOa6kOOAggogKiAgMi4gV2ViVmlldyDnmoTnm7jmnLrmjojmnYPotbAgV2ViQ2hyb21lQ2xpZW50I29uUGVybWlzc2lvblJlcXVlc3TvvIwKICogICAgIOW/hemhu+WcqOW6lOeUqOW3suiOt+W+lyBDQU1FUkEg5p2D6ZmQ5ZCO5Li75YqoIGdyYW5044CCCiAqICAzLiBGTEFHX0tFRVBfU0NSRUVOX09O77ya6LeR5q2l6L+H56iL5Lit5bGP5bmV5bi45Lqu44CCCiAqLwpwdWJsaWMgY2xhc3MgTWFpbkFjdGl2aXR5IGV4dGVuZHMgQWN0aXZpdHkgewoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGludCBSRVFfQ0FNRVJBID0gMTAwMTsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBBUFBfVVJMID0KICAgICAgICAgICAgImh0dHBzOi8vYXBwYXNzZXRzLmFuZHJvaWRwbGF0Zm9ybS5uZXQvYXNzZXRzL2luZGV4Lmh0bWwiOwoKICAgIHByaXZhdGUgV2ViVmlldyB3ZWI7CgogICAgQFN1cHByZXNzTGludCgiU2V0SmF2YVNjcmlwdEVuYWJsZWQiKQogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvbkNyZWF0ZShCdW5kbGUgc2F2ZWRJbnN0YW5jZVN0YXRlKSB7CiAgICAgICAgc3VwZXIub25DcmVhdGUoc2F2ZWRJbnN0YW5jZVN0YXRlKTsKICAgICAgICBnZXRXaW5kb3coKS5hZGRGbGFncyhXaW5kb3dNYW5hZ2VyLkxheW91dFBhcmFtcy5GTEFHX0tFRVBfU0NSRUVOX09OKTsKCiAgICAgICAgd2ViID0gbmV3IFdlYlZpZXcodGhpcyk7CiAgICAgICAgc2V0Q29udGVudFZpZXcod2ViKTsKCiAgICAgICAgZmluYWwgV2ViVmlld0Fzc2V0TG9hZGVyIGFzc2V0TG9hZGVyID0gbmV3IFdlYlZpZXdBc3NldExvYWRlci5CdWlsZGVyKCkKICAgICAgICAgICAgICAgIC5zZXREb21haW4oImFwcGFzc2V0cy5hbmRyb2lkcGxhdGZvcm0ubmV0IikKICAgICAgICAgICAgICAgIC5hZGRQYXRoSGFuZGxlcigiL2Fzc2V0cy8iLCBuZXcgV2ViVmlld0Fzc2V0TG9hZGVyLkFzc2V0c1BhdGhIYW5kbGVyKHRoaXMpKQogICAgICAgICAgICAgICAgLmJ1aWxkKCk7CgogICAgICAgIFdlYlNldHRpbmdzIHMgPSB3ZWIuZ2V0U2V0dGluZ3MoKTsKICAgICAgICBzLnNldEphdmFTY3JpcHRFbmFibGVkKHRydWUpOwogICAgICAgIHMuc2V0RG9tU3RvcmFnZUVuYWJsZWQodHJ1ZSk7ICAgICAgICAgIC8vIOiuvue9rumhueimgeWGmSBsb2NhbFN0b3JhZ2UKICAgICAgICBzLnNldE1lZGlhUGxheWJhY2tSZXF1aXJlc1VzZXJHZXN0dXJlKGZhbHNlKTsKICAgICAgICBzLnNldFVzZVdpZGVWaWV3UG9ydCh0cnVlKTsKICAgICAgICBzLnNldExvYWRXaXRoT3ZlcnZpZXdNb2RlKHRydWUpOwogICAgICAgIHMuc2V0QWxsb3dGaWxlQWNjZXNzKGZhbHNlKTsKICAgICAgICBzLnNldEFsbG93Q29udGVudEFjY2VzcyhmYWxzZSk7CiAgICAgICAgcy5zZXRDYWNoZU1vZGUoV2ViU2V0dGluZ3MuTE9BRF9ERUZBVUxUKTsKCiAgICAgICAgd2ViLnNldFdlYlZpZXdDbGllbnQobmV3IFdlYlZpZXdDbGllbnQoKSB7CiAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICBwdWJsaWMgV2ViUmVzb3VyY2VSZXNwb25zZSBzaG91bGRJbnRlcmNlcHRSZXF1ZXN0KFdlYlZpZXcgdmlldywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBXZWJSZXNvdXJjZVJlcXVlc3QgcmVxdWVzdCkgewogICAgICAgICAgICAgICAgcmV0dXJuIGFzc2V0TG9hZGVyLnNob3VsZEludGVyY2VwdFJlcXVlc3QocmVxdWVzdC5nZXRVcmwoKSk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICBwdWJsaWMgYm9vbGVhbiBzaG91bGRPdmVycmlkZVVybExvYWRpbmcoV2ViVmlldyB2aWV3LCBXZWJSZXNvdXJjZVJlcXVlc3QgcmVxdWVzdCkgewogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOyAvLyDljZXpobXlupTnlKjvvIzkuI3ot7Plh7oKICAgICAgICAgICAgfQogICAgICAgIH0pOwoKICAgICAgICB3ZWIuc2V0V2ViQ2hyb21lQ2xpZW50KG5ldyBXZWJDaHJvbWVDbGllbnQoKSB7CiAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICBwdWJsaWMgdm9pZCBvblBlcm1pc3Npb25SZXF1ZXN0KGZpbmFsIFBlcm1pc3Npb25SZXF1ZXN0IHJlcXVlc3QpIHsKICAgICAgICAgICAgICAgIC8vIOacrOW6lOeUqOWPqueUqOWIsOebuOacuu+8m+WFtuS9meadg+mZkOS4gOW+i+aLkue7nQogICAgICAgICAgICAgICAgaWYgKEJ1aWxkLlZFUlNJT04uU0RLX0lOVCA+PSBCdWlsZC5WRVJTSU9OX0NPREVTLkxPTExJUE9QKSB7CiAgICAgICAgICAgICAgICAgICAgYm9vbGVhbiBuZWVkQ2FtZXJhID0gZmFsc2U7CiAgICAgICAgICAgICAgICAgICAgZm9yIChTdHJpbmcgcmVzIDogcmVxdWVzdC5nZXRSZXNvdXJjZXMoKSkgewogICAgICAgICAgICAgICAgICAgICAgICBpZiAoUGVybWlzc2lvblJlcXVlc3QuUkVTT1VSQ0VfVklERU9fQ0FQVFVSRS5lcXVhbHMocmVzKSkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgbmVlZENhbWVyYSA9IHRydWU7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgaWYgKG5lZWRDYW1lcmEgJiYgaGFzQ2FtZXJhUGVybWlzc2lvbigpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJlcXVlc3QuZ3JhbnQobmV3IFN0cmluZ1tde1Blcm1pc3Npb25SZXF1ZXN0LlJFU09VUkNFX1ZJREVPX0NBUFRVUkV9KTsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICByZXF1ZXN0LmRlbnkoKTsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgcmVxdWVzdC5kZW55KCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9KTsKCiAgICAgICAgaWYgKCFoYXNDYW1lcmFQZXJtaXNzaW9uKCkpIHsKICAgICAgICAgICAgcmVxdWVzdENhbWVyYSgpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHdlYi5sb2FkVXJsKEFQUF9VUkwpOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGJvb2xlYW4gaGFzQ2FtZXJhUGVybWlzc2lvbigpIHsKICAgICAgICBpZiAoQnVpbGQuVkVSU0lPTi5TREtfSU5UIDwgQnVpbGQuVkVSU0lPTl9DT0RFUy5NKSByZXR1cm4gdHJ1ZTsKICAgICAgICByZXR1cm4gY2hlY2tTZWxmUGVybWlzc2lvbihNYW5pZmVzdC5wZXJtaXNzaW9uLkNBTUVSQSkgPT0gUGFja2FnZU1hbmFnZXIuUEVSTUlTU0lPTl9HUkFOVEVEOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCByZXF1ZXN0Q2FtZXJhKCkgewogICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gQnVpbGQuVkVSU0lPTl9DT0RFUy5NKSB7CiAgICAgICAgICAgIHJlcXVlc3RQZXJtaXNzaW9ucyhuZXcgU3RyaW5nW117TWFuaWZlc3QucGVybWlzc2lvbi5DQU1FUkF9LCBSRVFfQ0FNRVJBKTsKICAgICAgICB9CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBvblJlcXVlc3RQZXJtaXNzaW9uc1Jlc3VsdChpbnQgcmVxdWVzdENvZGUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJpbmdbXSBwZXJtaXNzaW9ucywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGludFtdIGdyYW50UmVzdWx0cykgewogICAgICAgIHN1cGVyLm9uUmVxdWVzdFBlcm1pc3Npb25zUmVzdWx0KHJlcXVlc3RDb2RlLCBwZXJtaXNzaW9ucywgZ3JhbnRSZXN1bHRzKTsKICAgICAgICBpZiAocmVxdWVzdENvZGUgPT0gUkVRX0NBTUVSQSkgewogICAgICAgICAgICBib29sZWFuIG9rID0gZ3JhbnRSZXN1bHRzICE9IG51bGwgJiYgZ3JhbnRSZXN1bHRzLmxlbmd0aCA+IDAKICAgICAgICAgICAgICAgICAgICAmJiBncmFudFJlc3VsdHNbMF0gPT0gUGFja2FnZU1hbmFnZXIuUEVSTUlTU0lPTl9HUkFOVEVEOwogICAgICAgICAgICBpZiAoIW9rKSB7CiAgICAgICAgICAgICAgICBUb2FzdC5tYWtlVGV4dCh0aGlzLCAi6ZyA6KaB55u45py65p2D6ZmQ5omN6IO96K+G5Yir6LeR6YGT77yM6K+35Zyo57O757uf6K6+572u5Lit5byA5ZCv44CCIiwKICAgICAgICAgICAgICAgICAgICAgICAgVG9hc3QuTEVOR1RIX0xPTkcpLnNob3coKTsKICAgICAgICAgICAgfQogICAgICAgICAgICB3ZWIubG9hZFVybChBUFBfVVJMKTsKICAgICAgICB9CiAgICB9CgogICAgQFN1cHByZXNzTGludCgiTWlzc2luZ1N1cGVyQ2FsbCIpCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIG9uQmFja1ByZXNzZWQoKSB7CiAgICAgICAgaWYgKHdlYiAhPSBudWxsICYmIHdlYi5jYW5Hb0JhY2soKSkgewogICAgICAgICAgICB3ZWIuZ29CYWNrKCk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgZmluaXNoQWZmaW5pdHkoKTsKICAgICAgICB9CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvblBhdXNlKCkgewogICAgICAgIHN1cGVyLm9uUGF1c2UoKTsKICAgICAgICBpZiAod2ViICE9IG51bGwpIHdlYi5vblBhdXNlKCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvblJlc3VtZSgpIHsKICAgICAgICBzdXBlci5vblJlc3VtZSgpOwogICAgICAgIGlmICh3ZWIgIT0gbnVsbCkgd2ViLm9uUmVzdW1lKCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvbkRlc3Ryb3koKSB7CiAgICAgICAgaWYgKHdlYiAhPSBudWxsKSB7CiAgICAgICAgICAgIHdlYi5kZXN0cm95KCk7CiAgICAgICAgICAgIHdlYiA9IG51bGw7CiAgICAgICAgfQogICAgICAgIHN1cGVyLm9uRGVzdHJveSgpOwogICAgfQp9Cg==
+package cn.xuzf.tlg;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.WindowManager;
+import android.webkit.PermissionRequest;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
+
+import androidx.webkit.WebViewAssetLoader;
+
+/**
+ * 极简外壳：用 WebView 承载 web/ 下的前端。
+ *
+ * 关键点：
+ *  1. getUserMedia 要求「安全上下文」，直接用 file:///android_asset/ 不可靠，
+ *     因此用 androidx.webkit 的 WebViewAssetLoader 把 assets 映射成
+ *     https://appassets.androidplatform.net/ 这个安全源。
+ *  2. WebView 的相机授权走 WebChromeClient#onPermissionRequest，
+ *     必须在应用已获得 CAMERA 权限后主动 grant。
+ *  3. FLAG_KEEP_SCREEN_ON：跑步过程中屏幕常亮。
+ */
+public class MainActivity extends Activity {
+
+    private static final int REQ_CAMERA = 1001;
+    private static final String APP_URL =
+            "https://appassets.androidplatform.net/assets/index.html";
+
+    private WebView web;
+
+    @SuppressLint("SetJavaScriptEnabled")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        web = new WebView(this);
+        setContentView(web);
+
+        final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
+                .setDomain("appassets.androidplatform.net")
+                .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
+                .build();
+
+        WebSettings s = web.getSettings();
+        s.setJavaScriptEnabled(true);
+        s.setDomStorageEnabled(true);          // 设置项要写 localStorage
+        s.setMediaPlaybackRequiresUserGesture(false);
+        s.setUseWideViewPort(true);
+        s.setLoadWithOverviewMode(true);
+        s.setAllowFileAccess(false);
+        s.setAllowContentAccess(false);
+        s.setCacheMode(WebSettings.LOAD_DEFAULT);
+
+        web.setWebViewClient(new WebViewClient() {
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view,
+                                                              WebResourceRequest request) {
+                return assetLoader.shouldInterceptRequest(request.getUrl());
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return false; // 单页应用，不跳出
+            }
+        });
+
+        web.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onPermissionRequest(final PermissionRequest request) {
+                // 本应用只用到相机；其余权限一律拒绝
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    boolean needCamera = false;
+                    for (String res : request.getResources()) {
+                        if (PermissionRequest.RESOURCE_VIDEO_CAPTURE.equals(res)) {
+                            needCamera = true;
+                        }
+                    }
+                    if (needCamera && hasCameraPermission()) {
+                        request.grant(new String[]{PermissionRequest.RESOURCE_VIDEO_CAPTURE});
+                        return;
+                    }
+                    request.deny();
+                } else {
+                    request.deny();
+                }
+            }
+        });
+
+        if (!hasCameraPermission()) {
+            requestCamera();
+        } else {
+            web.loadUrl(APP_URL);
+        }
+    }
+
+    private boolean hasCameraPermission() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return true;
+        return checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void requestCamera() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, REQ_CAMERA);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String[] permissions,
+                                           int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQ_CAMERA) {
+            boolean ok = grantResults != null && grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            if (!ok) {
+                Toast.makeText(this, "需要相机权限才能识别跑道，请在系统设置中开启。",
+                        Toast.LENGTH_LONG).show();
+            }
+            web.loadUrl(APP_URL);
+        }
+    }
+
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed() {
+        if (web != null && web.canGoBack()) {
+            web.goBack();
+        } else {
+            finishAffinity();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (web != null) web.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (web != null) web.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (web != null) {
+            web.destroy();
+            web = null;
+        }
+        super.onDestroy();
+    }
+}

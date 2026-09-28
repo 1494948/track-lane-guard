@@ -1,1 +1,362 @@
-Lyog5oqX5bmy5omw5Z+65YeG5rWL6K+V77ya6YeP5YyW5ZCE54mI5pys6K+v5Yik6KGo546w44CC5LiN5L6d6LWW5rWP6KeI5Zmo5LiO55u45py644CCCiAqIOimhueblu+8muaoquWxjy/nq5blsY/jgIHlpJzpl7TnnKnlhYnjgIHlvK/pgZPjgIHov5zlpITpmpTojYnlnarot5HpgZPvvIjnnJ/lrp7kuovmlYXlpI3njrDvvInjgIIKICovCmNvbnN0IGZzID0gcmVxdWlyZSgnZnMnKTsKY29uc3QgcGF0aCA9IHJlcXVpcmUoJ3BhdGgnKTsKCmNvbnN0IFNSQyA9IHBhdGguam9pbihfX2Rpcm5hbWUsICcuLicsICd3ZWInLCAnanMnLCAnY3YuanMnKTsKZ2xvYmFsLndpbmRvdyA9IGdsb2JhbDsKZXZhbChmcy5yZWFkRmlsZVN5bmMoU1JDLCAndXRmOCcpKTsKY29uc3QgY3YgPSBnbG9iYWwud2luZG93LlRMRy5jdjsKCmNvbnN0IENGRyA9IHsKICBodWVDZW50ZXI6IDQsIGh1ZVdpZHRoOiAxNiwgc2F0TWluOiA1NSwgdmFsTWluOiA0NSwKICBsaW5lU2F0TWF4OiA4MCwgbGluZVZhbE1pbjogMTcwLAogIGJhbmRUb3A6IDAuNDUsIGJhbmRCb3R0b206IDAuOTcsIG1pbkNvdmVyYWdlOiAwLjA2LCBtaW5UcmFja1BpeGVsczogMC4wMiwKICBuZWFyVG9wOiAwLjY4LCBuZWFyQm90dG9tOiAwLjk4LCBmYXJUb3A6IDAuMjYsIGZhckJvdHRvbTogMC41OCwKICBvYnNNaW5BcmVhOiAwLjAwNCwKICBjbG9zZVJhZGl1czogMywgbGluZU1pblJvd1JhdGlvOiAwLjUsIGxpbmVNYXhSbXM6IDIuNiwKICBnYXRlOiAwLjI4LCBtYXhTcGVlZDogMC4wNiwKICBjYXV0aW9uOiAwLjE4LCBkYW5nZXI6IDAuMzQsIHN0YWJsZUZyYW1lczogOCwgbWluQ29uZmlkZW5jZTogMC40NQp9OwoKY29uc3QgR1JBU1MgPSBbNzAsIDEyMCwgNzBdLCBUUkFDSyA9IFsxODAsIDUwLCA0NV0sIExJTkUgPSBbMjQwLCAyNDAsIDI0MF07CmNvbnN0IEZBREVEID0gWzEyMiwgMTIyLCAxMjJdOwoKLyogLS0tLS0tLS0tLSDlnLrmma/nlJ/miJDvvIjlrr3pq5jlj6/lj4LmlbDljJbvvIzmlK/mjIHnq5blsY/vvIkgLS0tLS0tLS0tLSAqLwpmdW5jdGlvbiBtYWtlU2NlbmUobykgewogIGNvbnN0IFcgPSBvLncgfHwgMTkyLCBIID0gby5oIHx8IDEwODsKICBjb25zdCB5VG9wID0gTWF0aC5yb3VuZChIICogMC4zMCksIHlCb3QgPSBIIC0gMTsKICBjb25zdCBiYW5kWTAgPSBNYXRoLmZsb29yKEggKiBDRkcuYmFuZFRvcCksIGJhbmRZMSA9IE1hdGguZmxvb3IoSCAqIENGRy5iYW5kQm90dG9tKTsKICBjb25zdCB5TWlkQmFuZCA9IChiYW5kWTAgKyBiYW5kWTEpIC8gMjsKCiAgY29uc3QgZGF0YSA9IG5ldyBVaW50OENsYW1wZWRBcnJheShXICogSCAqIDQpOwogIGNvbnN0IGogPSBvLmppdHRlciA/IChNYXRoLnJhbmRvbSgpICogMiAtIDEpICogby5qaXR0ZXIgOiAwOwogIGNvbnN0IG9mZiA9IG8ub2Zmc2V0IHx8IDA7CiAgY29uc3QgdEwgPSBvLnRvcEwgKyBqICsgb2ZmLCB0UiA9IG8udG9wUiArIGogKyBvZmY7CiAgY29uc3QgYkwgPSBvLmJvdEwgKyBqICogMS42ICsgb2ZmICogMS42LCBiUiA9IG8uYm90UiArIGogKiAxLjYgKyBvZmYgKiAxLjY7CiAgY29uc3QgYnIgPSBvLmJyaWdodG5lc3MgfHwgMTsKCiAgY29uc3Qgc2NhbGUgPSAoYykgPT4gW01hdGgubWluKDI1NSwgY1swXSAqIGJyKSwgTWF0aC5taW4oMjU1LCBjWzFdICogYnIpLCBNYXRoLm1pbigyNTUsIGNbMl0gKiBicildOwogIGNvbnN0IGcgPSBzY2FsZShHUkFTUyksIHRrID0gc2NhbGUoVFJBQ0spLCBsbiA9IHNjYWxlKExJTkUpOwoKICAvLyDlvK/pgZPvvJrovrnnlYzpmo8geSDkuozmrKHlvK/mm7LvvIjmlbTkvZPlubPnp7vvvIzlrr3luqbkuI3lj5jvvIzlsYXkuK3ml7bnnJ/lgLzku43kuLogMC4177yJCiAgY29uc3QgYmVuZEMgPSBvLmJlbmQgfHwgMDsKICBjb25zdCBoYWxmQmFuZCA9IChiYW5kWTEgLSBiYW5kWTApIC8gMjsKICBjb25zdCBiZW5kQXQgPSAoeSkgPT4gYmVuZEMgKiBNYXRoLnBvdygoeSAtIHlNaWRCYW5kKSAvIGhhbGZCYW5kLCAyKTsKCiAgZnVuY3Rpb24gc2V0UHgoZGQsIHgsIHksIGMpIHsKICAgIGlmICh4IDwgMCB8fCB5IDwgMCB8fCB4ID49IFcgfHwgeSA+PSBIKSByZXR1cm47CiAgICBjb25zdCBpID0gKHkgKiBXICsgeCkgKiA0OwogICAgZGRbaV0gPSBjWzBdOyBkZFtpICsgMV0gPSBjWzFdOyBkZFtpICsgMl0gPSBjWzJdOyBkZFtpICsgM10gPSAyNTU7CiAgfQoKICAvLyDov5zlpITmqKrlkJHlgY/np7vvvJrmqKHmi5/ot5HpgZPlnKjliY3mlrnlkJHkuIDkvqflu7bkvLjvvIjmvILnp7votovlir/nmoTniannkIbmnaXmupDvvIkKICBjb25zdCBmYXJTaGlmdCA9IG8uZmFyU2hpZnQgfHwgMDsKICBjb25zdCBzaGlmdEF0ID0gKHkpID0+IGZhclNoaWZ0ICogKDEgLSAoeSAtIHlUb3ApIC8gKHlCb3QgLSB5VG9wKSk7CgogIGZvciAobGV0IHkgPSAwOyB5IDwgSDsgeSsrKSB7CiAgICBsZXQgTCA9IDAsIFIgPSAtMTsKICAgIGlmICh5ID49IHlUb3ApIHsKICAgICAgY29uc3QgdCA9ICh5IC0geVRvcCkgLyAoeUJvdCAtIHlUb3ApOwogICAgICBjb25zdCBiID0gYmVuZEF0KHkpOwogICAgICBMID0gdEwgKyAoYkwgLSB0TCkgKiB0ICsgYiArIHNoaWZ0QXQoeSk7CiAgICAgIFIgPSB0UiArIChiUiAtIHRSKSAqIHQgKyBiICsgc2hpZnRBdCh5KTsKICAgIH0KICAgIGZvciAobGV0IHggPSAwOyB4IDwgVzsgeCsrKSB7CiAgICAgIGxldCBjb2wgPSBnOwogICAgICBpZiAoeCA+PSBNYXRoLmZsb29yKEwpICYmIHggPD0gTWF0aC5jZWlsKFIpKSBjb2wgPSB0azsKICAgICAgaWYgKG8ubGluZXMgJiYgUiA+IEwpIHsKICAgICAgICBmb3IgKGNvbnN0IGYgb2Ygby5saW5lcykgewogICAgICAgICAgaWYgKE1hdGguYWJzKHggLSAoTCArIChSIC0gTCkgKiBmKSkgPD0gMS4yKSBjb2wgPSBsbjsKICAgICAgICB9CiAgICAgIH0KICAgICAgc2V0UHgoZGF0YSwgeCwgeSwgY29sKTsKICAgIH0KICAgIGlmIChvLmFkalJlZCAmJiB5ID49IHlUb3AgJiYgUiA+IDApIHsKICAgICAgZm9yIChsZXQgeCA9IE1hdGguY2VpbChSKSArIG8uYWRqR2FwOyB4IDwgTWF0aC5jZWlsKFIpICsgby5hZGpHYXAgKyBvLmFkalJlZDsgeCsrKSB7CiAgICAgICAgc2V0UHgoZGF0YSwgeCwgeSwgdGspOwogICAgICB9CiAgICB9CiAgfQoKICBpZiAoby5mYWRlZCkgewogICAgY29uc3QgW2N4MCwgY3kwLCBjdywgY2hdID0gby5mYWRlZDsKICAgIGZvciAobGV0IHkgPSBjeTA7IHkgPCBjeTAgKyBjaDsgeSsrKSBmb3IgKGxldCB4ID0gY3gwOyB4IDwgY3gwICsgY3c7IHgrKykgc2V0UHgoZGF0YSwgeCwgeSwgc2NhbGUoRkFERUQpKTsKICB9CiAgaWYgKG8uc3BlY2tzKSB7CiAgICBmb3IgKGNvbnN0IFtzeCwgc3ksIHN3LCBzaF0gb2Ygby5zcGVja3MpIHsKICAgICAgZm9yIChsZXQgeSA9IHN5OyB5IDwgc3kgKyBzaDsgeSsrKSBmb3IgKGxldCB4ID0gc3g7IHggPCBzeCArIHN3OyB4KyspIHNldFB4KGRhdGEsIHgsIHksIGxuKTsKICAgIH0KICB9CiAgLy8g6LeR6YGT6Z2i5LiK55qE5Y2g55So54mp77yI5Lq65b2xL+iho+eJqS/msLTlnZHvvInvvJrpnZ7nuqLpnZ7nmb3nmoTmmpflnZcKICBpZiAoby5vYnN0YWNsZSkgewogICAgY29uc3QgW294LCBveSwgb3csIG9oXSA9IG8ub2JzdGFjbGU7CiAgICBmb3IgKGxldCB5ID0gb3k7IHkgPCBveSArIG9oOyB5KyspIGZvciAobGV0IHggPSBveDsgeCA8IG94ICsgb3c7IHgrKykgc2V0UHgoZGF0YSwgeCwgeSwgWzk2LCA5NiwgOTZdKTsKICB9CiAgaWYgKG8ucmVkQmxvYikgewogICAgY29uc3QgW2J4LCBieSwgYncsIGJoXSA9IG8ucmVkQmxvYjsKICAgIGZvciAobGV0IHkgPSBieTsgeSA8IGJ5ICsgYmg7IHkrKykgZm9yIChsZXQgeCA9IGJ4OyB4IDwgYnggKyBidzsgeCsrKSBzZXRQeChkYXRhLCB4LCB5LCB0ayk7CiAgfQogIGlmIChvLndoaXRlQmxvYikgewogICAgY29uc3QgW2J4LCBieSwgYncsIGJoXSA9IG8ud2hpdGVCbG9iOwogICAgZm9yIChsZXQgeSA9IGJ5OyB5IDwgYnkgKyBiaDsgeSsrKSBmb3IgKGxldCB4ID0gYng7IHggPCBieCArIGJ3OyB4KyspIHNldFB4KGRhdGEsIHgsIHksIFsyNDUsIDI0NSwgMjQ1XSk7CiAgfQogIC8vIOi/nOWkhOmalOiNieWdqueahOWPpuS4gOautei3kemBk++8iOecn+WunuS6i+aVheWkjeeOsO+8muerluWxj+aXtueUu+mdouS4reS4iumDqOmCo+adoe+8iQogIGlmIChvLmZhclN0cmlwKSB7CiAgICBjb25zdCBbZnkwLCBmeTFdID0gby5mYXJTdHJpcDsKICAgIGZvciAobGV0IHkgPSBmeTA7IHkgPCBmeTE7IHkrKykgZm9yIChsZXQgeCA9IDA7IHggPCBXOyB4KyspIHNldFB4KGRhdGEsIHgsIHksIHRrKTsKICB9CiAgaWYgKG8ubm9pc2UpIHsKICAgIGNvbnN0IGNudCA9IE1hdGgucm91bmQoVyAqIEggKiBvLm5vaXNlKTsKICAgIGZvciAobGV0IGsgPSAwOyBrIDwgY250OyBrKyspIHsKICAgICAgY29uc3QgcCA9IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIFcgKiBIKSAqIDQ7CiAgICAgIGNvbnN0IHdoaXRlID0gTWF0aC5yYW5kb20oKSA8IDAuNTsKICAgICAgZGF0YVtwXSA9IHdoaXRlID8gMjUwIDogMjAwOwogICAgICBkYXRhW3AgKyAxXSA9IHdoaXRlID8gMjUwIDogNTU7CiAgICAgIGRhdGFbcCArIDJdID0gd2hpdGUgPyAyNTAgOiA1MDsKICAgIH0KICB9CgogIC8vIOecn+WAvO+8muajgOa1i+W4puS4ree6v+WkhOOAgeS4jeWQq+aKluWKqOS4juW5s+enu+eahOWHoOS9le+8iOWxheS4reWcuuaZr+aBkuS4uiAwLjXvvIkKICBjb25zdCB0bSA9ICh5TWlkQmFuZCAtIHlUb3ApIC8gKHlCb3QgLSB5VG9wKTsKICBjb25zdCBMbSA9IG8udG9wTCArIChvLmJvdEwgLSBvLnRvcEwpICogdG0sIFJtID0gby50b3BSICsgKG8uYm90UiAtIG8udG9wUikgKiB0bTsKICByZXR1cm4geyBpbWc6IHsgZGF0YSwgd2lkdGg6IFcsIGhlaWdodDogSCB9LCB0cnV0aDogKFcgLyAyIC0gTG0pIC8gKFJtIC0gTG0pIH07Cn0KCi8qIC0tLS0tLS0tLS0gdjEg5pen566X5rOV5a+554WnIC0tLS0tLS0tLS0gKi8KZnVuY3Rpb24gbGVnYWN5QW5hbHl6ZShpbWcsIGNmZykgewogIGNvbnN0IHcgPSBpbWcud2lkdGgsIGggPSBpbWcuaGVpZ2h0LCBkID0gaW1nLmRhdGE7CiAgY29uc3QgcmVkID0gbmV3IFVpbnQ4QXJyYXkodyAqIGgpLCB3aGl0ZSA9IG5ldyBVaW50OEFycmF5KHcgKiBoKTsKICBsZXQgcmVkQ291bnQgPSAwOwogIGNvbnN0IHJlZENvbCA9IG5ldyBJbnQzMkFycmF5KHcpOwogIGNvbnN0IHkwID0gTWF0aC5mbG9vcihoICogY2ZnLmJhbmRUb3ApLCB5MSA9IE1hdGguZmxvb3IoaCAqIGNmZy5iYW5kQm90dG9tKTsKICBmb3IgKGxldCBpID0gMCwgcCA9IDA7IGkgPCB3ICogaDsgaSsrLCBwICs9IDQpIHsKICAgIGNvbnN0IGhzdiA9IGN2LnJnYlRvSHN2KGRbcF0sIGRbcCArIDFdLCBkW3AgKyAyXSk7CiAgICBjb25zdCBIMiA9IGhzdlswXSwgUyA9IGhzdlsxXSwgViA9IGhzdlsyXTsKICAgIGlmIChjdi5odWVEaXN0KEgyLCBjZmcuaHVlQ2VudGVyKSA8PSBjZmcuaHVlV2lkdGggJiYgUyA+PSBjZmcuc2F0TWluICYmIFYgPj0gY2ZnLnZhbE1pbikgewogICAgICByZWRbaV0gPSAxOyByZWRDb3VudCsrOwogICAgICBjb25zdCB4ID0gaSAlIHcsIHkgPSAoaSAvIHcpIHwgMDsKICAgICAgaWYgKHkgPj0geTAgJiYgeSA8IHkxKSByZWRDb2xbeF0rKzsKICAgIH0KICAgIGlmIChTIDw9IGNmZy5saW5lU2F0TWF4ICYmIFYgPj0gY2ZnLmxpbmVWYWxNaW4pIHdoaXRlW2ldID0gMTsKICB9CiAgY29uc3QgY292ID0gcmVkQ291bnQgLyAodyAqIGgpOwogIGlmIChjb3YgPCBjZmcubWluQ292ZXJhZ2UpIHJldHVybiB7IG9rOiBmYWxzZSwgcDogMC41IH07CiAgY29uc3QgbmVhciA9IG5ldyBJbnQzMkFycmF5KHcpOwogIGZvciAobGV0IHggPSAwOyB4IDwgdzsgeCsrKSB7CiAgICBsZXQgbSA9IDA7CiAgICBmb3IgKGxldCBrID0gLTU7IGsgPD0gNTsgaysrKSB7IGNvbnN0IGogPSB4ICsgazsgaWYgKGogPj0gMCAmJiBqIDwgdyAmJiByZWRDb2xbal0gPiBtKSBtID0gcmVkQ29sW2pdOyB9CiAgICBuZWFyW3hdID0gbTsKICB9CiAgY29uc3QgbmVlZCA9IE1hdGgubWF4KDIsIE1hdGgucm91bmQoKHkxIC0geTApICogMC4yMCkpOwogIGNvbnN0IHdjID0gbmV3IEludDMyQXJyYXkodyk7CiAgZm9yIChsZXQgeSA9IHkwOyB5IDwgeTE7IHkrKykgZm9yIChsZXQgeCA9IDA7IHggPCB3OyB4KyspIHsKICAgIGlmICh3aGl0ZVt5ICogdyArIHhdICYmIG5lYXJbeF0gPj0gbmVlZCkgd2NbeF0rKzsKICB9CiAgY29uc3Qgc20gPSBuZXcgRmxvYXQzMkFycmF5KHcpOwogIGZvciAobGV0IHggPSAwOyB4IDwgdzsgeCsrKSB7CiAgICBsZXQgcyA9IDAsIGMgPSAwOwogICAgZm9yIChsZXQgayA9IC0yOyBrIDw9IDI7IGsrKykgeyBjb25zdCBqID0geCArIGs7IGlmIChqID49IDAgJiYgaiA8IHcpIHsgcyArPSB3Y1tqXTsgYysrOyB9IH0KICAgIHNtW3hdID0gcyAvIGM7CiAgfQogIGxldCBteGMgPSAwOyBmb3IgKGxldCB4ID0gMDsgeCA8IHc7IHgrKykgaWYgKHNtW3hdID4gbXhjKSBteGMgPSBzbVt4XTsKICBjb25zdCBwZWFrcyA9IFtdOwogIGZvciAobGV0IHggPSAxOyB4IDwgdyAtIDE7IHgrKykgewogICAgaWYgKHNtW3hdID49IHNtW3ggLSAxXSAmJiBzbVt4XSA+IHNtW3ggKyAxXSAmJiBzbVt4XSA+PSBteGMgKiAwLjM1ICYmIHNtW3hdID49ICh5MSAtIHkwKSAqIDAuMjIpIHBlYWtzLnB1c2goeyB4LCB2OiBzbVt4XSB9KTsKICB9CiAgcGVha3Muc29ydCgoYSwgYikgPT4gYi52IC0gYS52KTsKICBsZXQgbCA9IG51bGwsIHIgPSBudWxsLCBjeCA9IHcgLyAyOwogIGZvciAoY29uc3QgcGsgb2YgcGVha3MpIHsKICAgIGlmIChway54IDwgY3ggLSAyICYmIGwgPT09IG51bGwpIGwgPSBway54OwogICAgZWxzZSBpZiAocGsueCA+IGN4ICsgMiAmJiByID09PSBudWxsKSByID0gcGsueDsKICB9CiAgaWYgKGwgIT09IG51bGwgJiYgciAhPT0gbnVsbCAmJiByIC0gbCA+PSB3ICogMC4wOCkgcmV0dXJuIHsgb2s6IHRydWUsIG1vZGU6ICdsaW5lcycsIHA6IChjeCAtIGwpIC8gKHIgLSBsKSB9OwogIGxldCBzdCA9IC0xLCBzcCA9IG51bGwsIGJzID0gLUluZmluaXR5OwogIGNvbnN0IHRociA9IE1hdGgubWF4KDEsIG14YyAqIDAuMzUpOwogIGZvciAobGV0IHggPSAwOyB4IDwgdzsgeCsrKSB7CiAgICBpZiAobmVhclt4XSA+PSB0aHIpIHsgaWYgKHN0IDwgMCkgc3QgPSB4OyB9IGVsc2UgaWYgKHN0ID49IDApIHsKICAgICAgY29uc3QgYSA9IHN0LCBiID0geCAtIDE7CiAgICAgIGNvbnN0IGNvbnQgPSBjeCA+PSBhICYmIGN4IDw9IGI7CiAgICAgIGNvbnN0IGRpc3QgPSBjeCA8IGEgPyBhIC0gY3ggOiAoY3ggPiBiID8gY3ggLSBiIDogMCk7CiAgICAgIGNvbnN0IHNjID0gKGNvbnQgPyAxMDAwMCA6IDApIC0gZGlzdCAqIDEwICsgKGIgLSBhKTsKICAgICAgaWYgKHNjID4gYnMpIHsgYnMgPSBzYzsgc3AgPSBbYSwgYl07IH0KICAgICAgc3QgPSAtMTsKICAgIH0KICB9CiAgaWYgKHN0ID49IDApIHsgY29uc3Qgc2MgPSBjeCA+PSBzdCA/IDEwMDAwIDogMDsgaWYgKHNjID4gYnMpIHNwID0gW3N0LCB3IC0gMV07IH0KICBpZiAoIXNwIHx8IHNwWzFdIC0gc3BbMF0gPCB3ICogMC4xMikgcmV0dXJuIHsgb2s6IGZhbHNlLCBwOiAwLjUgfTsKICByZXR1cm4geyBvazogdHJ1ZSwgbW9kZTogJ2VkZ2VzJywgcDogKGN4IC0gc3BbMF0pIC8gKHNwWzFdIC0gc3BbMF0pIH07Cn0KCi8qIC0tLS0tLS0tLS0g6K+E5rWLIC0tLS0tLS0tLS0gKi8KZnVuY3Rpb24gc3RhdChhcnIpIHsKICBjb25zdCBtID0gYXJyLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApIC8gYXJyLmxlbmd0aDsKICBjb25zdCBzZCA9IE1hdGguc3FydChhcnIucmVkdWNlKChhLCBiKSA9PiBhICsgKGIgLSBtKSAqIChiIC0gbSksIDApIC8gYXJyLmxlbmd0aCk7CiAgcmV0dXJuIHsgbWVhbjogbSwgc2Q6IHNkIH07Cn0KCmZ1bmN0aW9uIGV2YWx1YXRlKGdlbiwgZnJhbWVzLCBsZWdhY3kpIHsKICBjb25zdCB0ciA9IG5ldyBjdi5UcmFja2VyKCk7CiAgY29uc3QgcHMgPSBbXSwgY29uZnMgPSBbXTsKICBsZXQgbWlzcyA9IDAsIGFsYXJtcyA9IDAsIGZpcnN0QWxhcm0gPSAtMSwgY3VydmVGcmFtZXMgPSAwLCBmbG9vZEZyYW1lcyA9IDA7CiAgbGV0IG9ic0ZyYW1lcyA9IDAsIHRyZW5kU3VtID0gMCwgdHJlbmROID0gMDsKICBsZXQgcHJldiA9IDAuNSwgc2FtZURpciA9IDAsIGxhc3RTaWduID0gMDsKICBmb3IgKGxldCBpID0gMDsgaSA8IGZyYW1lczsgaSsrKSB7CiAgICBjb25zdCBzID0gZ2VuKGkpOwogICAgbGV0IGx2ID0gMDsKICAgIGlmIChsZWdhY3kpIHsKICAgICAgY29uc3QgciA9IGxlZ2FjeUFuYWx5emUocy5pbWcsIENGRyk7CiAgICAgIGlmICghci5vaykgeyBtaXNzKys7IHBzLnB1c2gocHJldik7IGNvbnRpbnVlOyB9CiAgICAgIHByZXYgPSBwcmV2ICogMC42ICsgci5wICogMC40OwogICAgICBwcy5wdXNoKHByZXYpOwogICAgICBjb25zdCBkID0gcHJldiAtIDAuNTsKICAgICAgY29uc3Qgc2lnbiA9IE1hdGguYWJzKGQpIDwgMC4wNCA/IDAgOiAoZCA+IDAgPyAxIDogLTEpOwogICAgICBpZiAoc2lnbiAhPT0gMCAmJiBzaWduID09PSBsYXN0U2lnbikgc2FtZURpcisrOyBlbHNlIHNhbWVEaXIgPSBzaWduICE9PSAwID8gMSA6IDA7CiAgICAgIGxhc3RTaWduID0gc2lnbjsKICAgICAgY29uc3QgYWQgPSBNYXRoLmFicyhkKTsKICAgICAgbHYgPSBzYW1lRGlyID49IDEgPyAoYWQgPj0gQ0ZHLmRhbmdlciA/IDIgOiAoYWQgPj0gQ0ZHLmNhdXRpb24gPyAxIDogMCkpIDogMDsKICAgIH0gZWxzZSB7CiAgICAgIGNvbnN0IHIgPSBjdi5hbmFseXplKHMuaW1nLCBDRkcpOwogICAgICBpZiAoIXIub2spIG1pc3MrKzsKICAgICAgaWYgKHIuY3VydmUpIGN1cnZlRnJhbWVzKys7CiAgICAgIGlmIChyLnZpYUZsb29kKSBmbG9vZEZyYW1lcysrOwogICAgICBpZiAoci5vYnN0YWNsZXMgJiYgci5vYnN0YWNsZXMubGVuZ3RoKSBvYnNGcmFtZXMrKzsKICAgICAgaWYgKHIudHJlbmQgIT09IHVuZGVmaW5lZCkgeyB0cmVuZFN1bSArPSByLnRyZW5kOyB0cmVuZE4rKzsgfQogICAgICBjb25zdCBzdCA9IHRyLnVwZGF0ZShyLCBDRkcpOwogICAgICBwcy5wdXNoKHN0LnApOyBjb25mcy5wdXNoKHN0LmNvbmYpOwogICAgICBjb25zdCB0cnVzdGVkID0gc3QubWlzcyA9PT0gMCAmJiBzdC5jb25mID49IENGRy5taW5Db25maWRlbmNlICYmIHN0LnNhbWVEaXIgPj0gQ0ZHLnN0YWJsZUZyYW1lczsKICAgICAgY29uc3QgYWQgPSBNYXRoLmFicyhzdC5wIC0gMC41KTsKICAgICAgbHYgPSB0cnVzdGVkID8gKGFkID49IENGRy5kYW5nZXIgPyAyIDogKGFkID49IENGRy5jYXV0aW9uID8gMSA6IDApKSA6IDA7CiAgICB9CiAgICBpZiAobHYgPiAwKSB7IGFsYXJtcysrOyBpZiAoZmlyc3RBbGFybSA8IDApIGZpcnN0QWxhcm0gPSBpOyB9CiAgfQogIGNvbnN0IHMgPSBzdGF0KHBzKTsKICByZXR1cm4gewogICAgZXJyOiBNYXRoLmFicyhzLm1lYW4gLSAwLjUpLCBzZDogcy5zZCwgbWlzcywgYWxhcm1zLCBmaXJzdEFsYXJtLAogICAgY29uZjogY29uZnMubGVuZ3RoID8gc3RhdChjb25mcykubWVhbiA6IDAsIG1lYW46IHMubWVhbiwKICAgIGN1cnZlRnJhbWVzLCBmbG9vZEZyYW1lcywgb2JzRnJhbWVzLAogICAgdHJlbmQ6IHRyZW5kTiA/IHRyZW5kU3VtIC8gdHJlbmROIDogMAogIH07Cn0KCmNvbnN0IEZSQU1FUyA9IDQwOwoKLyogLS0tLS0tLS0tLSDlnLrmma/lrprkuYkgLS0tLS0tLS0tLSAqLwpjb25zdCBIID0gKGV4dHJhKSA9PiBPYmplY3QuYXNzaWduKHsKICB3OiAxOTIsIGg6IDEwOCwgdG9wTDogNzAsIHRvcFI6IDEyMiwgYm90TDogOCwgYm90UjogMTg0LAogIGxpbmVzOiBbMC4yNSwgMC43NV0sIGppdHRlcjogMS4yCn0sIGV4dHJhKTsKCmNvbnN0IFBfQ0VOVEVSID0geyB3OiAxMDgsIGg6IDE5MiwgdG9wTDogNDEsIHRvcFI6IDc5LCBib3RMOiAxMCwgYm90UjogOTAsIGxpbmVzOiBbMC4yNSwgMC43NV0sIGppdHRlcjogMS4yIH07CmNvbnN0IFBfUklHSFQgPSB7IHc6IDEwOCwgaDogMTkyLCB0b3BMOiA2NSwgdG9wUjogMTAzLCBib3RMOiA0MCwgYm90UjogMTA4LCBsaW5lczogWzAuMjUsIDAuNzVdLCBqaXR0ZXI6IDEuMiB9OwoKY29uc3QgU1BFQyA9IFsKICBbNTIsIDU4LCA1LCA3XSwgWzEyMCwgNjIsIDYsIDZdLCBbNzYsIDc0LCA0LCA4XSwKICBbMTQwLCA4MCwgNSwgNV0sIFs0MCwgODgsIDYsIDZdLCBbMTAwLCA5MiwgNSwgN10sIFsxNjAsIDY4LCA0LCA2XSwgWzY0LCAxMDAsIDUsIDVdCl07CgovLyBb5ZCN56ewLCDlnLrmma8sIOacn+acmzogJ3NhZmUnIC8gJ2FsYXJtLXJpZ2h0JyAvICdhbGFybS1sZWZ0Jywg5qCH6K6w5qOA5p+lXQpjb25zdCBzY2VuZXMgPSBbCiAgWyfmqKrlsY/Ct+W5suWHgCcsIEgoe30pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfnmb3noo7mlpEnLCBIKHsgc3BlY2tzOiBTUEVDIH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfnm7jpgrvnuqLlnLrlnLAnLCBIKHsgYWRqUmVkOiAzNCwgYWRqR2FwOiA4IH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfkuK3lv4PopKroibLlnZcnLCBIKHsgZmFkZWQ6IFs3OCwgNTgsIDM2LCAzMF0gfSksICdzYWZlJ10sCiAgWyfmqKrlsY/Ct+akkuebkOWZquWjsDUlJywgSCh7IG5vaXNlOiAwLjA1IH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfnuqLlubLmibDlnZcnLCBIKHsgcmVkQmxvYjogWzEwLCA0LCAzNCwgMjJdIH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfnmb3lubLmibDlnZcnLCBIKHsgd2hpdGVCbG9iOiBbMTIwLCAyLCA2MCwgMTZdIH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrflgY/mmpcwLjU1eCcsIEgoeyBicmlnaHRuZXNzOiAwLjU1IH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfml6DliIbpgZPnur8nLCBIKHsgbGluZXM6IFtdIH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrfov5zlpITpmpTojYnlnarot5HpgZMnLCBIKHsgZmFyU3RyaXA6IFs4LCAyNl0gfSksICdzYWZlJ10sCiAgWyfmqKrlsY/Ct+WknOmXtCvov4fmm50r55yp5YWJJywgSCh7IGJyaWdodG5lc3M6IDAuNTUsIHNwZWNrczogU1BFQywgd2hpdGVCbG9iOiBbMTMwLCAyLCA1NSwgMThdIH0pLCAnc2FmZSddLAogIFsn5qiq5bGPwrflvK/pgZMnLCBIKHsgYmVuZDogMjAgfSksICdzYWZlJywgJ2N1cnZlJ10sCiAgWyfmqKrlsY/Ct+i/nOWkhOi3kemBk+WPs+WBjyjotovlir8pJywgSCh7IGZhclNoaWZ0OiAyNiB9KSwgJ3NhZmUnLCAndHJlbmQtcmlnaHQnXSwKICBbJ+aoquWxj8K36LeR6YGT5LiK5pyJ5Y2g55So54mpJywgSCh7IG9ic3RhY2xlOiBbOTIsIDYyLCAxNiwgMjBdIH0pLCAnc2FmZScsICdvYnN0YWNsZSddLAogIFsn56uW5bGPwrflsYXkuK0nLCBQX0NFTlRFUiwgJ3NhZmUnXSwKICBbJ+erluWxj8K36L+c5aSE6ZqU6I2J5Z2q6LeR6YGTKOaIquWbvuWkjeeOsCknLCBPYmplY3QuYXNzaWduKHt9LCBQX0NFTlRFUiwgeyBmYXJTdHJpcDogWzIwLCA1MF0gfSksICdzYWZlJ10sCiAgWyfnq5blsY/Ct+WknOmXtCcsIE9iamVjdC5hc3NpZ24oe30sIFBfQ0VOVEVSLCB7IGJyaWdodG5lc3M6IDAuNTUsIHdoaXRlQmxvYjogWzYwLCAyLCA0MCwgMTZdIH0pLCAnc2FmZSddLAogIFsn56uW5bGPwrflgY/lj7PlupTmiqXorablvoDlj7MnLCBQX1JJR0hULCAnYWxhcm0tcmlnaHQnXQpdOwoKY29uc29sZS5sb2coJz09PSDlnLrmma/nn6npmLXvvIjmr4/lnLrmma8gNDAg5bin77yM5ZCr5omL5oyB5oqW5Yqo77yJPT09Jyk7CmNvbnNvbGUubG9nKCflnLrmma8nLnBhZEVuZCgyNikgKyAnfCB2MiDor6/lt64gIOivr+aKpSAg5Lii5aSxIHwgdjEg6K+v5beuICDor6/miqUgIOS4ouWksScpOwpjb25zb2xlLmxvZygnLScucmVwZWF0KDcyKSk7CgpsZXQgcGFzcyA9IHRydWU7CmNvbnN0IHJlc3VsdHMgPSBbXTsKZm9yIChjb25zdCBbbmFtZSwgYmFzZSwgZXhwZWN0LCB0YWddIG9mIHNjZW5lcykgewogIGNvbnN0IGdlbiA9ICgpID0+IG1ha2VTY2VuZShiYXNlKTsKICBjb25zdCBhID0gZXZhbHVhdGUoZ2VuLCBGUkFNRVMsIGZhbHNlKTsKICBjb25zdCBiID0gZXZhbHVhdGUoZ2VuLCBGUkFNRVMsIHRydWUpOwogIHJlc3VsdHMucHVzaChbbmFtZSwgYSwgYiwgZXhwZWN0LCB0YWddKTsKICBjb25zb2xlLmxvZygKICAgIG5hbWUucGFkRW5kKDI0KSArICd8ICcgKwogICAgYS5lcnIudG9GaXhlZCgzKS5wYWRTdGFydCg2KSArICcgJyArIFN0cmluZyhhLmFsYXJtcykucGFkU3RhcnQoNSkgKyAnICcgKyBTdHJpbmcoYS5taXNzKS5wYWRTdGFydCg1KSArICcgfCAnICsKICAgIGIuZXJyLnRvRml4ZWQoMykucGFkU3RhcnQoNikgKyAnICcgKyBTdHJpbmcoYi5hbGFybXMpLnBhZFN0YXJ0KDUpICsgJyAnICsgU3RyaW5nKGIubWlzcykucGFkU3RhcnQoNSkKICApOwoKICBpZiAoZXhwZWN0ID09PSAnc2FmZScpIHsKICAgIGlmIChhLmFsYXJtcyA+IDApIHsgY29uc29sZS5sb2coJyAg4pyXIHYyIOivr+aKpSAnICsgYS5hbGFybXMgKyAnIOW4pycpOyBwYXNzID0gZmFsc2U7IH0KICAgIGlmIChhLm1pc3MgPiAwKSB7IGNvbnNvbGUubG9nKCcgIOKclyB2MiDkuKLlpLEgJyArIGEubWlzcyArICcg5binJyk7IHBhc3MgPSBmYWxzZTsgfQogICAgaWYgKGEuZXJyID4gMC4wNikgeyBjb25zb2xlLmxvZygnICDinJcgdjIg5L2N572u6K+v5beuICcgKyBhLmVyci50b0ZpeGVkKDMpKTsgcGFzcyA9IGZhbHNlOyB9CiAgfSBlbHNlIGlmIChleHBlY3QgPT09ICdhbGFybS1yaWdodCcpIHsKICAgIGlmIChhLmZpcnN0QWxhcm0gPCAwKSB7IGNvbnNvbGUubG9nKCcgIOKclyDor6XmiqXorabljbTmsqHmiqUnKTsgcGFzcyA9IGZhbHNlOyB9CiAgICBlbHNlIGlmIChhLmZpcnN0QWxhcm0gPiAxMikgeyBjb25zb2xlLmxvZygnICDinJcg5oql6K2m6L+H5oWi77yI56ysICcgKyBhLmZpcnN0QWxhcm0gKyAnIOW4p++8iScpOyBwYXNzID0gZmFsc2U7IH0KICAgIGlmIChhLm1lYW4gPj0gMC40NSkgeyBjb25zb2xlLmxvZygnICDinJcg5pa55ZCR5Yik5a6a6ZSZ6K+vIHA9JyArIGEubWVhbi50b0ZpeGVkKDMpKTsgcGFzcyA9IGZhbHNlOyB9CiAgfQogIGlmICh0YWcgPT09ICdjdXJ2ZScgJiYgYS5jdXJ2ZUZyYW1lcyA8IEZSQU1FUyAqIDAuNSkgewogICAgY29uc29sZS5sb2coJyAg4pyXIOW8r+mBk+acquiiq+agh+iusO+8iOS7hSAnICsgYS5jdXJ2ZUZyYW1lcyArICcvJyArIEZSQU1FUyArICcg5bin77yJJyk7IHBhc3MgPSBmYWxzZTsKICB9CiAgaWYgKHRhZyA9PT0gJ3RyZW5kLXJpZ2h0JykgewogICAgLy8g6L+c5aSE6LeR6YGT5Y+z5YGPIOKGkiB0cmVuZCDlupTkuLrmraPvvIzkuJTov5HluKblsYXkuK3kuI3og73or6/miqUKICAgIGlmICghKGEudHJlbmQgPiAwLjA0KSkgeyBjb25zb2xlLmxvZygnICDinJcg5pyq6K+G5Yir5Ye66L+c5aSE5Y+z5YGP6LaL5Yq/IHRyZW5kPScgKyBhLnRyZW5kLnRvRml4ZWQoMykpOyBwYXNzID0gZmFsc2U7IH0KICAgIGVsc2UgY29uc29sZS5sb2coJyAg4pyTIOi/nOWkhOi2i+WKv+ivhuWIq++8mnRyZW5kPScgKyBhLnRyZW5kLnRvRml4ZWQoMykgKyAn77yI5q2jPeaPkOekuuW+gOWPs++8ie+8jOi/keW4pumbtuivr+aKpScpOwogIH0KICBpZiAodGFnID09PSAnb2JzdGFjbGUnKSB7CiAgICBpZiAoYS5vYnNGcmFtZXMgPCBGUkFNRVMgKiAwLjgpIHsKICAgICAgY29uc29sZS5sb2coJyAg4pyXIOWNoOeUqOeJqeacquiiq+ajgOa1i++8iCcgKyBhLm9ic0ZyYW1lcyArICcvJyArIEZSQU1FUyArICcg5bin77yJJyk7IHBhc3MgPSBmYWxzZTsKICAgIH0gZWxzZSBjb25zb2xlLmxvZygnICDinJMg5Y2g55So54mp5qOA5rWL77yaJyArIGEub2JzRnJhbWVzICsgJy8nICsgRlJBTUVTICsgJyDluKflkb3kuK0nKTsKICB9Cn0KCmNvbnNvbGUubG9nKCdcbj09PSDms5vmtKrkuI7lvK/pgZPmo4DmtYvnlJ/mlYjmg4XlhrUgPT09Jyk7CmZvciAoY29uc3QgW25hbWUsIGFdIG9mIHJlc3VsdHMpIHsKICBpZiAobmFtZS5pbmRleE9mKCfov5zlpIQnKSA+PSAwIHx8IG5hbWUuaW5kZXhPZign5byv6YGTJykgPj0gMCkgewogICAgY29uc29sZS5sb2coJyAgJyArIG5hbWUgKyAn77ya5rOb5rSqICcgKyBhLmZsb29kRnJhbWVzICsgJy8nICsgRlJBTUVTICsgJyDluKfvvIzlvK/pgZPmoIforrAgJyArIGEuY3VydmVGcmFtZXMgKyAnLycgKyBGUkFNRVMgKyAnIOW4pycpOwogIH0KfQpjb25zdCBmYXJTY2VuZSA9IHJlc3VsdHMuZmluZCgoW25dKSA9PiBuLmluZGV4T2YoJ+aIquWbvuWkjeeOsCcpID49IDApOwppZiAoZmFyU2NlbmUgJiYgZmFyU2NlbmVbMV0uZmxvb2RGcmFtZXMgPCBGUkFNRVMpIHsKICBjb25zb2xlLmxvZygnICDinJcg5oiq5Zu+5aSN546w5Zy65pmv5pyq56iz5a6a6LWw5rOb5rSq6Lev5b6EJyk7IHBhc3MgPSBmYWxzZTsKfQoKY29uc29sZS5sb2coJ1xuPT09IOecn+WunuWBj+emu++8iOaoquWxj++8ie+8muW6lOWwveW/q+aKpeitpuS4lOaWueWQkeato+ehriA9PT0nKTsKY29uc3QgZHJpZnQgPSAoKSA9PiBtYWtlU2NlbmUoSCh7IHRvcEw6IDMwLCB0b3BSOiA4MiwgYm90TDogLTMyLCBib3RSOiAxNDQgfSkpOwpjb25zdCByZCA9IGV2YWx1YXRlKGRyaWZ0LCBGUkFNRVMsIGZhbHNlKTsKY29uc29sZS5sb2coJyAg6aaW5oql5bin5bqPICcgKyByZC5maXJzdEFsYXJtICsgJ++8jOW5s+WdhyBwICcgKyByZC5tZWFuLnRvRml4ZWQoMykpOwppZiAocmQuZmlyc3RBbGFybSA8IDAgfHwgcmQuZmlyc3RBbGFybSA+IDEyKSB7IGNvbnNvbGUubG9nKCcgIOKclyDmiqXorabnvLrlpLHmiJbov4fmhaInKTsgcGFzcyA9IGZhbHNlOyB9CmlmIChyZC5tZWFuIDwgMC42KSB7IGNvbnNvbGUubG9nKCcgIOKclyDmlrnlkJHliKTlrprplJnor68nKTsgcGFzcyA9IGZhbHNlOyB9Cgpjb25zb2xlLmxvZygnXG49PT0g57qv6I2J5Zyw77yI5peg6LeR6YGT77yJPT09Jyk7CmxldCBmcCA9IDA7CmNvbnN0IHRyMCA9IG5ldyBjdi5UcmFja2VyKCk7CmZvciAobGV0IGkgPSAwOyBpIDwgMjA7IGkrKykgewogIGNvbnN0IHMgPSBtYWtlU2NlbmUoeyB3OiAxOTIsIGg6IDEwOCwgdG9wTDogMCwgdG9wUjogLTEsIGJvdEw6IDAsIGJvdFI6IC0xLCBsaW5lczogW10gfSk7CiAgY29uc3Qgc3QgPSB0cjAudXBkYXRlKGN2LmFuYWx5emUocy5pbWcsIENGRyksIENGRyk7CiAgY29uc3QgdHJ1c3RlZCA9IHN0Lm1pc3MgPT09IDAgJiYgc3QuY29uZiA+PSBDRkcubWluQ29uZmlkZW5jZSAmJiBzdC5zYW1lRGlyID49IENGRy5zdGFibGVGcmFtZXM7CiAgaWYgKHRydXN0ZWQgJiYgTWF0aC5hYnMoc3QucCAtIDAuNSkgPj0gQ0ZHLmNhdXRpb24pIGZwKys7Cn0KY29uc29sZS5sb2coJyAg6K+v5oql5bin5pWwICcgKyBmcCArICfvvIjlupTkuLogMO+8iScpOwppZiAoZnAgPiAwKSBwYXNzID0gZmFsc2U7Cgpjb25zb2xlLmxvZygnXG49PT0g5oCn6IO977yI5qiq5bGP5LiO56uW5bGP77yJPT09Jyk7CmZvciAoY29uc3QgW25tLCBiYXNlXSBvZiBbWyfmqKrlsY8nLCBIKHt9KV0sIFsn56uW5bGPJywgUF9DRU5URVJdXSkgewogIGNvbnN0IGltZyA9IG1ha2VTY2VuZShiYXNlKS5pbWc7CiAgY29uc3QgdDAgPSBEYXRlLm5vdygpOwogIGZvciAobGV0IGkgPSAwOyBpIDwgMjAwOyBpKyspIGN2LmFuYWx5emUoaW1nLCBDRkcpOwogIGNvbnNvbGUubG9nKCcgICcgKyBubSArICcgJyArIGltZy53aWR0aCArICd4JyArIGltZy5oZWlnaHQgKyAnIOWNleW4pyAnICsKICAgICgoRGF0ZS5ub3coKSAtIHQwKSAvIDIwMCkudG9GaXhlZCgyKSArICcgbXMnKTsKfQoKY29uc29sZS5sb2cocGFzcyA/ICdcbuWFqOmDqOmAmui/hycgOiAnXG7lrZjlnKjmnKrpgJrov4fpobknKTsKcHJvY2Vzcy5leGl0KHBhc3MgPyAwIDogMSk7Cg==
+/* 抗干扰基准测试：量化各版本误判表现。不依赖浏览器与相机。
+ * 覆盖：横屏/竖屏、夜间眩光、弯道、远处隔草坪跑道（真实事故复现）。
+ */
+const fs = require('fs');
+const path = require('path');
+
+const SRC = path.join(__dirname, '..', 'web', 'js', 'cv.js');
+global.window = global;
+eval(fs.readFileSync(SRC, 'utf8'));
+const cv = global.window.TLG.cv;
+
+const CFG = {
+  hueCenter: 4, hueWidth: 16, satMin: 55, valMin: 45,
+  lineSatMax: 80, lineValMin: 170,
+  bandTop: 0.45, bandBottom: 0.97, minCoverage: 0.06, minTrackPixels: 0.02,
+  nearTop: 0.68, nearBottom: 0.98, farTop: 0.26, farBottom: 0.58,
+  obsMinArea: 0.004,
+  closeRadius: 3, lineMinRowRatio: 0.5, lineMaxRms: 2.6,
+  gate: 0.28, maxSpeed: 0.06,
+  caution: 0.18, danger: 0.34, stableFrames: 8, minConfidence: 0.45
+};
+
+const GRASS = [70, 120, 70], TRACK = [180, 50, 45], LINE = [240, 240, 240];
+const FADED = [122, 122, 122];
+
+/* ---------- 场景生成（宽高可参数化，支持竖屏） ---------- */
+function makeScene(o) {
+  const W = o.w || 192, H = o.h || 108;
+  const yTop = Math.round(H * 0.30), yBot = H - 1;
+  const bandY0 = Math.floor(H * CFG.bandTop), bandY1 = Math.floor(H * CFG.bandBottom);
+  const yMidBand = (bandY0 + bandY1) / 2;
+
+  const data = new Uint8ClampedArray(W * H * 4);
+  const j = o.jitter ? (Math.random() * 2 - 1) * o.jitter : 0;
+  const off = o.offset || 0;
+  const tL = o.topL + j + off, tR = o.topR + j + off;
+  const bL = o.botL + j * 1.6 + off * 1.6, bR = o.botR + j * 1.6 + off * 1.6;
+  const br = o.brightness || 1;
+
+  const scale = (c) => [Math.min(255, c[0] * br), Math.min(255, c[1] * br), Math.min(255, c[2] * br)];
+  const g = scale(GRASS), tk = scale(TRACK), ln = scale(LINE);
+
+  // 弯道：边界随 y 二次弯曲（整体平移，宽度不变，居中时真值仍为 0.5）
+  const bendC = o.bend || 0;
+  const halfBand = (bandY1 - bandY0) / 2;
+  const bendAt = (y) => bendC * Math.pow((y - yMidBand) / halfBand, 2);
+
+  function setPx(dd, x, y, c) {
+    if (x < 0 || y < 0 || x >= W || y >= H) return;
+    const i = (y * W + x) * 4;
+    dd[i] = c[0]; dd[i + 1] = c[1]; dd[i + 2] = c[2]; dd[i + 3] = 255;
+  }
+
+  // 远处横向偏移：模拟跑道在前方向一侧延伸（漂移趋势的物理来源）
+  const farShift = o.farShift || 0;
+  const shiftAt = (y) => farShift * (1 - (y - yTop) / (yBot - yTop));
+
+  for (let y = 0; y < H; y++) {
+    let L = 0, R = -1;
+    if (y >= yTop) {
+      const t = (y - yTop) / (yBot - yTop);
+      const b = bendAt(y);
+      L = tL + (bL - tL) * t + b + shiftAt(y);
+      R = tR + (bR - tR) * t + b + shiftAt(y);
+    }
+    for (let x = 0; x < W; x++) {
+      let col = g;
+      if (x >= Math.floor(L) && x <= Math.ceil(R)) col = tk;
+      if (o.lines && R > L) {
+        for (const f of o.lines) {
+          if (Math.abs(x - (L + (R - L) * f)) <= 1.2) col = ln;
+        }
+      }
+      setPx(data, x, y, col);
+    }
+    if (o.adjRed && y >= yTop && R > 0) {
+      for (let x = Math.ceil(R) + o.adjGap; x < Math.ceil(R) + o.adjGap + o.adjRed; x++) {
+        setPx(data, x, y, tk);
+      }
+    }
+  }
+
+  if (o.faded) {
+    const [cx0, cy0, cw, ch] = o.faded;
+    for (let y = cy0; y < cy0 + ch; y++) for (let x = cx0; x < cx0 + cw; x++) setPx(data, x, y, scale(FADED));
+  }
+  if (o.specks) {
+    for (const [sx, sy, sw, sh] of o.specks) {
+      for (let y = sy; y < sy + sh; y++) for (let x = sx; x < sx + sw; x++) setPx(data, x, y, ln);
+    }
+  }
+  // 跑道面上的占用物（人影/衣物/水坑）：非红非白的暗块
+  if (o.obstacle) {
+    const [ox, oy, ow, oh] = o.obstacle;
+    for (let y = oy; y < oy + oh; y++) for (let x = ox; x < ox + ow; x++) setPx(data, x, y, [96, 96, 96]);
+  }
+  if (o.redBlob) {
+    const [bx, by, bw, bh] = o.redBlob;
+    for (let y = by; y < by + bh; y++) for (let x = bx; x < bx + bw; x++) setPx(data, x, y, tk);
+  }
+  if (o.whiteBlob) {
+    const [bx, by, bw, bh] = o.whiteBlob;
+    for (let y = by; y < by + bh; y++) for (let x = bx; x < bx + bw; x++) setPx(data, x, y, [245, 245, 245]);
+  }
+  // 远处隔草坪的另一段跑道（真实事故复现：竖屏时画面中上部那条）
+  if (o.farStrip) {
+    const [fy0, fy1] = o.farStrip;
+    for (let y = fy0; y < fy1; y++) for (let x = 0; x < W; x++) setPx(data, x, y, tk);
+  }
+  if (o.noise) {
+    const cnt = Math.round(W * H * o.noise);
+    for (let k = 0; k < cnt; k++) {
+      const p = Math.floor(Math.random() * W * H) * 4;
+      const white = Math.random() < 0.5;
+      data[p] = white ? 250 : 200;
+      data[p + 1] = white ? 250 : 55;
+      data[p + 2] = white ? 250 : 50;
+    }
+  }
+
+  // 真值：检测带中线处、不含抖动与平移的几何（居中场景恒为 0.5）
+  const tm = (yMidBand - yTop) / (yBot - yTop);
+  const Lm = o.topL + (o.botL - o.topL) * tm, Rm = o.topR + (o.botR - o.topR) * tm;
+  return { img: { data, width: W, height: H }, truth: (W / 2 - Lm) / (Rm - Lm) };
+}
+
+/* ---------- v1 旧算法对照 ---------- */
+function legacyAnalyze(img, cfg) {
+  const w = img.width, h = img.height, d = img.data;
+  const red = new Uint8Array(w * h), white = new Uint8Array(w * h);
+  let redCount = 0;
+  const redCol = new Int32Array(w);
+  const y0 = Math.floor(h * cfg.bandTop), y1 = Math.floor(h * cfg.bandBottom);
+  for (let i = 0, p = 0; i < w * h; i++, p += 4) {
+    const hsv = cv.rgbToHsv(d[p], d[p + 1], d[p + 2]);
+    const H2 = hsv[0], S = hsv[1], V = hsv[2];
+    if (cv.hueDist(H2, cfg.hueCenter) <= cfg.hueWidth && S >= cfg.satMin && V >= cfg.valMin) {
+      red[i] = 1; redCount++;
+      const x = i % w, y = (i / w) | 0;
+      if (y >= y0 && y < y1) redCol[x]++;
+    }
+    if (S <= cfg.lineSatMax && V >= cfg.lineValMin) white[i] = 1;
+  }
+  const cov = redCount / (w * h);
+  if (cov < cfg.minCoverage) return { ok: false, p: 0.5 };
+  const near = new Int32Array(w);
+  for (let x = 0; x < w; x++) {
+    let m = 0;
+    for (let k = -5; k <= 5; k++) { const j = x + k; if (j >= 0 && j < w && redCol[j] > m) m = redCol[j]; }
+    near[x] = m;
+  }
+  const need = Math.max(2, Math.round((y1 - y0) * 0.20));
+  const wc = new Int32Array(w);
+  for (let y = y0; y < y1; y++) for (let x = 0; x < w; x++) {
+    if (white[y * w + x] && near[x] >= need) wc[x]++;
+  }
+  const sm = new Float32Array(w);
+  for (let x = 0; x < w; x++) {
+    let s = 0, c = 0;
+    for (let k = -2; k <= 2; k++) { const j = x + k; if (j >= 0 && j < w) { s += wc[j]; c++; } }
+    sm[x] = s / c;
+  }
+  let mxc = 0; for (let x = 0; x < w; x++) if (sm[x] > mxc) mxc = sm[x];
+  const peaks = [];
+  for (let x = 1; x < w - 1; x++) {
+    if (sm[x] >= sm[x - 1] && sm[x] > sm[x + 1] && sm[x] >= mxc * 0.35 && sm[x] >= (y1 - y0) * 0.22) peaks.push({ x, v: sm[x] });
+  }
+  peaks.sort((a, b) => b.v - a.v);
+  let l = null, r = null, cx = w / 2;
+  for (const pk of peaks) {
+    if (pk.x < cx - 2 && l === null) l = pk.x;
+    else if (pk.x > cx + 2 && r === null) r = pk.x;
+  }
+  if (l !== null && r !== null && r - l >= w * 0.08) return { ok: true, mode: 'lines', p: (cx - l) / (r - l) };
+  let st = -1, sp = null, bs = -Infinity;
+  const thr = Math.max(1, mxc * 0.35);
+  for (let x = 0; x < w; x++) {
+    if (near[x] >= thr) { if (st < 0) st = x; } else if (st >= 0) {
+      const a = st, b = x - 1;
+      const cont = cx >= a && cx <= b;
+      const dist = cx < a ? a - cx : (cx > b ? cx - b : 0);
+      const sc = (cont ? 10000 : 0) - dist * 10 + (b - a);
+      if (sc > bs) { bs = sc; sp = [a, b]; }
+      st = -1;
+    }
+  }
+  if (st >= 0) { const sc = cx >= st ? 10000 : 0; if (sc > bs) sp = [st, w - 1]; }
+  if (!sp || sp[1] - sp[0] < w * 0.12) return { ok: false, p: 0.5 };
+  return { ok: true, mode: 'edges', p: (cx - sp[0]) / (sp[1] - sp[0]) };
+}
+
+/* ---------- 评测 ---------- */
+function stat(arr) {
+  const m = arr.reduce((a, b) => a + b, 0) / arr.length;
+  const sd = Math.sqrt(arr.reduce((a, b) => a + (b - m) * (b - m), 0) / arr.length);
+  return { mean: m, sd: sd };
+}
+
+function evaluate(gen, frames, legacy) {
+  const tr = new cv.Tracker();
+  const ps = [], confs = [];
+  let miss = 0, alarms = 0, firstAlarm = -1, curveFrames = 0, floodFrames = 0;
+  let obsFrames = 0, trendSum = 0, trendN = 0;
+  let prev = 0.5, sameDir = 0, lastSign = 0;
+  for (let i = 0; i < frames; i++) {
+    const s = gen(i);
+    let lv = 0;
+    if (legacy) {
+      const r = legacyAnalyze(s.img, CFG);
+      if (!r.ok) { miss++; ps.push(prev); continue; }
+      prev = prev * 0.6 + r.p * 0.4;
+      ps.push(prev);
+      const d = prev - 0.5;
+      const sign = Math.abs(d) < 0.04 ? 0 : (d > 0 ? 1 : -1);
+      if (sign !== 0 && sign === lastSign) sameDir++; else sameDir = sign !== 0 ? 1 : 0;
+      lastSign = sign;
+      const ad = Math.abs(d);
+      lv = sameDir >= 1 ? (ad >= CFG.danger ? 2 : (ad >= CFG.caution ? 1 : 0)) : 0;
+    } else {
+      const r = cv.analyze(s.img, CFG);
+      if (!r.ok) miss++;
+      if (r.curve) curveFrames++;
+      if (r.viaFlood) floodFrames++;
+      if (r.obstacles && r.obstacles.length) obsFrames++;
+      if (r.trend !== undefined) { trendSum += r.trend; trendN++; }
+      const st = tr.update(r, CFG);
+      ps.push(st.p); confs.push(st.conf);
+      const trusted = st.miss === 0 && st.conf >= CFG.minConfidence && st.sameDir >= CFG.stableFrames;
+      const ad = Math.abs(st.p - 0.5);
+      lv = trusted ? (ad >= CFG.danger ? 2 : (ad >= CFG.caution ? 1 : 0)) : 0;
+    }
+    if (lv > 0) { alarms++; if (firstAlarm < 0) firstAlarm = i; }
+  }
+  const s = stat(ps);
+  return {
+    err: Math.abs(s.mean - 0.5), sd: s.sd, miss, alarms, firstAlarm,
+    conf: confs.length ? stat(confs).mean : 0, mean: s.mean,
+    curveFrames, floodFrames, obsFrames,
+    trend: trendN ? trendSum / trendN : 0
+  };
+}
+
+const FRAMES = 40;
+
+/* ---------- 场景定义 ---------- */
+const H = (extra) => Object.assign({
+  w: 192, h: 108, topL: 70, topR: 122, botL: 8, botR: 184,
+  lines: [0.25, 0.75], jitter: 1.2
+}, extra);
+
+const P_CENTER = { w: 108, h: 192, topL: 41, topR: 79, botL: 10, botR: 90, lines: [0.25, 0.75], jitter: 1.2 };
+const P_RIGHT = { w: 108, h: 192, topL: 65, topR: 103, botL: 40, botR: 108, lines: [0.25, 0.75], jitter: 1.2 };
+
+const SPEC = [
+  [52, 58, 5, 7], [120, 62, 6, 6], [76, 74, 4, 8],
+  [140, 80, 5, 5], [40, 88, 6, 6], [100, 92, 5, 7], [160, 68, 4, 6], [64, 100, 5, 5]
+];
+
+// [名称, 场景, 期望: 'safe' / 'alarm-right' / 'alarm-left', 标记检查]
+const scenes = [
+  ['横屏·干净', H({}), 'safe'],
+  ['横屏·白碎斑', H({ specks: SPEC }), 'safe'],
+  ['横屏·相邻红场地', H({ adjRed: 34, adjGap: 8 }), 'safe'],
+  ['横屏·中心褪色块', H({ faded: [78, 58, 36, 30] }), 'safe'],
+  ['横屏·椒盐噪声5%', H({ noise: 0.05 }), 'safe'],
+  ['横屏·红干扰块', H({ redBlob: [10, 4, 34, 22] }), 'safe'],
+  ['横屏·白干扰块', H({ whiteBlob: [120, 2, 60, 16] }), 'safe'],
+  ['横屏·偏暗0.55x', H({ brightness: 0.55 }), 'safe'],
+  ['横屏·无分道线', H({ lines: [] }), 'safe'],
+  ['横屏·远处隔草坪跑道', H({ farStrip: [8, 26] }), 'safe'],
+  ['横屏·夜间+过曝+眩光', H({ brightness: 0.55, specks: SPEC, whiteBlob: [130, 2, 55, 18] }), 'safe'],
+  ['横屏·弯道', H({ bend: 20 }), 'safe', 'curve'],
+  ['横屏·远处跑道右偏(趋势)', H({ farShift: 26 }), 'safe', 'trend-right'],
+  ['横屏·跑道上有占用物', H({ obstacle: [92, 62, 16, 20] }), 'safe', 'obstacle'],
+  ['竖屏·居中', P_CENTER, 'safe'],
+  ['竖屏·远处隔草坪跑道(截图复现)', Object.assign({}, P_CENTER, { farStrip: [20, 50] }), 'safe'],
+  ['竖屏·夜间', Object.assign({}, P_CENTER, { brightness: 0.55, whiteBlob: [60, 2, 40, 16] }), 'safe'],
+  ['竖屏·偏右应报警往右', P_RIGHT, 'alarm-right']
+];
+
+console.log('=== 场景矩阵（每场景 40 帧，含手持抖动）===');
+console.log('场景'.padEnd(26) + '| v2 误差  误报  丢失 | v1 误差  误报  丢失');
+console.log('-'.repeat(72));
+
+let pass = true;
+const results = [];
+for (const [name, base, expect, tag] of scenes) {
+  const gen = () => makeScene(base);
+  const a = evaluate(gen, FRAMES, false);
+  const b = evaluate(gen, FRAMES, true);
+  results.push([name, a, b, expect, tag]);
+  console.log(
+    name.padEnd(24) + '| ' +
+    a.err.toFixed(3).padStart(6) + ' ' + String(a.alarms).padStart(5) + ' ' + String(a.miss).padStart(5) + ' | ' +
+    b.err.toFixed(3).padStart(6) + ' ' + String(b.alarms).padStart(5) + ' ' + String(b.miss).padStart(5)
+  );
+
+  if (expect === 'safe') {
+    if (a.alarms > 0) { console.log('  ✗ v2 误报 ' + a.alarms + ' 帧'); pass = false; }
+    if (a.miss > 0) { console.log('  ✗ v2 丢失 ' + a.miss + ' 帧'); pass = false; }
+    if (a.err > 0.06) { console.log('  ✗ v2 位置误差 ' + a.err.toFixed(3)); pass = false; }
+  } else if (expect === 'alarm-right') {
+    if (a.firstAlarm < 0) { console.log('  ✗ 该报警却没报'); pass = false; }
+    else if (a.firstAlarm > 12) { console.log('  ✗ 报警过慢（第 ' + a.firstAlarm + ' 帧）'); pass = false; }
+    if (a.mean >= 0.45) { console.log('  ✗ 方向判定错误 p=' + a.mean.toFixed(3)); pass = false; }
+  }
+  if (tag === 'curve' && a.curveFrames < FRAMES * 0.5) {
+    console.log('  ✗ 弯道未被标记（仅 ' + a.curveFrames + '/' + FRAMES + ' 帧）'); pass = false;
+  }
+  if (tag === 'trend-right') {
+    // 远处跑道右偏 → trend 应为正，且近带居中不能误报
+    if (!(a.trend > 0.04)) { console.log('  ✗ 未识别出远处右偏趋势 trend=' + a.trend.toFixed(3)); pass = false; }
+    else console.log('  ✓ 远处趋势识别：trend=' + a.trend.toFixed(3) + '（正=提示往右），近带零误报');
+  }
+  if (tag === 'obstacle') {
+    if (a.obsFrames < FRAMES * 0.8) {
+      console.log('  ✗ 占用物未被检测（' + a.obsFrames + '/' + FRAMES + ' 帧）'); pass = false;
+    } else console.log('  ✓ 占用物检测：' + a.obsFrames + '/' + FRAMES + ' 帧命中');
+  }
+}
+
+console.log('\n=== 泛洪与弯道检测生效情况 ===');
+for (const [name, a] of results) {
+  if (name.indexOf('远处') >= 0 || name.indexOf('弯道') >= 0) {
+    console.log('  ' + name + '：泛洪 ' + a.floodFrames + '/' + FRAMES + ' 帧，弯道标记 ' + a.curveFrames + '/' + FRAMES + ' 帧');
+  }
+}
+const farScene = results.find(([n]) => n.indexOf('截图复现') >= 0);
+if (farScene && farScene[1].floodFrames < FRAMES) {
+  console.log('  ✗ 截图复现场景未稳定走泛洪路径'); pass = false;
+}
+
+console.log('\n=== 真实偏离（横屏）：应尽快报警且方向正确 ===');
+const drift = () => makeScene(H({ topL: 30, topR: 82, botL: -32, botR: 144 }));
+const rd = evaluate(drift, FRAMES, false);
+console.log('  首报帧序 ' + rd.firstAlarm + '，平均 p ' + rd.mean.toFixed(3));
+if (rd.firstAlarm < 0 || rd.firstAlarm > 12) { console.log('  ✗ 报警缺失或过慢'); pass = false; }
+if (rd.mean < 0.6) { console.log('  ✗ 方向判定错误'); pass = false; }
+
+console.log('\n=== 纯草地（无跑道）===');
+let fp = 0;
+const tr0 = new cv.Tracker();
+for (let i = 0; i < 20; i++) {
+  const s = makeScene({ w: 192, h: 108, topL: 0, topR: -1, botL: 0, botR: -1, lines: [] });
+  const st = tr0.update(cv.analyze(s.img, CFG), CFG);
+  const trusted = st.miss === 0 && st.conf >= CFG.minConfidence && st.sameDir >= CFG.stableFrames;
+  if (trusted && Math.abs(st.p - 0.5) >= CFG.caution) fp++;
+}
+console.log('  误报帧数 ' + fp + '（应为 0）');
+if (fp > 0) pass = false;
+
+console.log('\n=== 性能（横屏与竖屏）===');
+for (const [nm, base] of [['横屏', H({})], ['竖屏', P_CENTER]]) {
+  const img = makeScene(base).img;
+  const t0 = Date.now();
+  for (let i = 0; i < 200; i++) cv.analyze(img, CFG);
+  console.log('  ' + nm + ' ' + img.width + 'x' + img.height + ' 单帧 ' +
+    ((Date.now() - t0) / 200).toFixed(2) + ' ms');
+}
+
+console.log(pass ? '\n全部通过' : '\n存在未通过项');
+process.exit(pass ? 0 : 1);

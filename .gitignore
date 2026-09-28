@@ -1,1 +1,19 @@
-IyBOb2RlIC8g5YmN56uvCm5vZGVfbW9kdWxlcy8KKi5sb2cKLkRTX1N0b3JlCgojIEFuZHJvaWQgLyBHcmFkbGUg5p6E5bu65Lqn54mpCmFuZHJvaWQvLmdyYWRsZS8KYW5kcm9pZC9idWlsZC8KYW5kcm9pZC9hcHAvYnVpbGQvCmFuZHJvaWQvbG9jYWwucHJvcGVydGllcwphbmRyb2lkLy5pZGVhLwoqLmltbAoqLmFwawoqLmFhYgoqLmprcwoqLmtleXN0b3JlCgojIOWIhuWPkeWMheW9kuaho+WcqCByZWxlYXNlcy/vvIjmoLnnm67lvZXvvInvvIzkuI3ov5vku5PlupMKcmVsZWFzZXMvCg==
+# Node / 前端
+node_modules/
+*.log
+.DS_Store
+
+# Android / Gradle 构建产物
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# 分发包归档在 releases/（根目录），不进仓库
+releases/

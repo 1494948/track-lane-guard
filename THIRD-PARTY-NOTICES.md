@@ -1,1 +1,57 @@
-IyDnrKzkuInmlrnkuI7mjojmnYPor7TmmI4KCiMjIOe7k+iuuuWFiOihjAoKKirmnKzpobnnm67nmoTor4bliKvnrpfms5XkuLrlrozlhajoh6rnoJTlrp7njrDvvIzmsqHmnInlpI3liLbjgIHnspjotLTjgIHmlLnnvJbku7vkvZXnrKzkuInmlrnku5PlupPnmoTmupDku6PnoIHjgIIqKgrmiYDmnInnrKzkuInmlrnmiJDliIblj6rlh7rnjrDlnKjjgIzmnoTlu7rmnJ/kvp3otZbjgI3lkozjgIzlj4LogIPov4fnmoTlhazlvIDnrpfms5XmgJ3mg7PjgI3kuKTnsbvvvIzkuJTlhajpg6jkuLogcGVybWlzc2l2ZSDorrjlj6/vvIwK5Y+v6Ieq55Sx55So5LqO5pys6aG555uu77yI5YyF5ous6Zet5rqQ5LiO5ZWG5Lia5YiG5Y+R77yJ44CCCgojIyDkuIDjgIHmupDnoIHmjojmnYMKCnwg5paH5Lu2IHwg5p2l5rqQIHwg6K645Y+vIHwKfC0tLXwtLS18LS0tfAp8IGB3ZWIvanMvY3YuanNgIHwg6Ieq56CUIHwgTUlU77yI5pys6aG555uu77yJIHwKfCBgd2ViL2pzL2F1ZGlvLmpzYCB8IOiHqueglCB8IE1JVO+8iOacrOmhueebru+8iSB8CnwgYHdlYi9qcy9hcHAuanNgIHwg6Ieq56CUIHwgTUlU77yI5pys6aG555uu77yJIHwKfCBgd2ViL2luZGV4Lmh0bWxg44CBYHdlYi9jc3Mvc3R5bGUuY3NzYOOAgWB3ZWIvc3cuanNg44CBYHdlYi9tYW5pZmVzdC53ZWJtYW5pZmVzdGAgfCDoh6rnoJQgfCBNSVTvvIjmnKzpobnnm67vvIkgfAp8IGBhbmRyb2lkL2FwcC9zcmMvbWFpbi9qYXZhL2NuL3h1emYvdGxnL01haW5BY3Rpdml0eS5qYXZhYCB8IOiHqueglCB8IE1JVO+8iOacrOmhueebru+8iSB8CnwgYHdlYi9pY29ucy8qYOOAgWBhbmRyb2lkLy4uLi9taXBtYXAtKi9pY19sYXVuY2hlci5wbmdgIHwg6Ieq56CU77yI6ISa5pys57uY5Yi277yJIHwgTUlU77yI5pys6aG555uu77yJIHwKCuacquS9v+eUqOS7u+S9leesrOS4ieaWueWtl+S9k+OAgeWbvuagh+W6k+OAgVVJIOahhuaetuaIliBKUyDlupPvvJvmnKrlvJXlhaUgT3BlbkNWLmpzIOetiei/kOihjOaXtuS6jOi/m+WItu+8jArku6Xpgb/lhY3kvZPnp6/kuI7orrjlj6/lkIjop4TlpI3mnYLluqbigJTigJTmiYDpnIDnmoQgSFNWIOWIhuWJsuS4juebtOaWueWbvui/kOeul+Wdh+S4uuWHoOWNgeihjOmHj+e6p+eahOWOn+eUn+WunueOsOOAggoKIyMg5LqM44CB5Y+C6ICD6L+H55qE5YWs5byA566X5rOV5oCd5oOz77yI5LuF5oCd5oOz77yM5pyq5aSN55So5Luj56CB77yJCgrnrpfms5XmgJ3mg7PmnKzouqvkuI3lj5fniYjmnYPkv53miqTvvJvku6XkuIvku5PlupPku4XnlKjkuo7noa7orqTlt6XnqIvlrp7ot7XkuK3nmoTlj4LmlbDnu4/pqozvvIzmnKzpobnnm67mnKrlj5bnlKjlhbbku7vkvZXku6PnoIHvvJoKCnwg5Y+C6ICD5a+56LGhIHwg6K645Y+vIHwg5YCf6Ym05YaF5a65IHwKfC0tLXwtLS18LS0tfAp8IOi9pumBk+e6v+ajgOa1i+eahOe7j+WFuCBPcGVuQ1Yg5rWB56iL77yIQ2FubnkgKyBST0kgKyBIb3VnaO+8iSB8IOmAmueUqOWFrOW8gOaWueazlSB8IFJPSSDkuI7ov5Hmma/luKblj5bms5UgfAp8IGBBYmhpLTg5OS9MYW5lLURldGVjdGlvbmDvvIjpmIjlgLwg4oaSIOmAj+inhuWPmOaNoiDihpIg5YiX55u05pa55Zu+IOKGkiDlubPlnYcg4oaSIOaYvuekuu+8iSB8IE1JVCB8IOOAjOWIl+ebtOaWueWbvuWzsOWAvOWumuS9jei9pumBk+e6v+OAjeeahOaAnei3ryB8CnwgYFJpc2hhYmhTaW5naDA5MDcvTGFuZURldGVjdGlvbmAgfCBNSVQgfCBIU1Yg6ZiI5YC8ICsgSG91Z2gg55qE57uE5ZCI5pa55byP5Y+C6ICDIHwKfCBgYWRpdGh5YXByYW5hdi9Sb2FkLUxhbmUtRGV0ZWN0aW9uYCB8IE1JVCB8IOS9jueul+WKm+iuvuWkh+S4iuWBmuWunuaXtui9pumBk+ajgOa1i+eahOWPluiIjSB8CgrmnKzpobnnm67kuI7ov5nkupvlrp7njrDnmoTlhbPplK7lt67lvILvvJoKCjEuIOS4jeWBmiBDYW5ueSAvIEhvdWdo77yM5pS555SoKirliJfnm7Tmlrnlm77ls7DlgLwqKu+8jOeul+WKm+S7jiB+MTAgbXMg57qn6ZmN5YiwIH4xIG1zIOe6p++8jOmAgumFjeaJi+acuiBXZWJWaWV377ybCjIuIOS4jeWBmumAj+inhuWPmOaNou+8iOmcgOimgeagh+WumuebuOacuuWGheWPguS4juWuieijheinkuW6pu+8ie+8jOaUueeUqCoq6L+R5pmv5bimICsg55u45a+55L2N572uIHAqKiDnmoTlhY3moIflrprmlrnmoYjvvJsKMy4g5aKe5Yqg5LqGKirliIbpgZPnur/kuI3lj6/op4Hml7bpgIDljJbliLDot5HpgZPpnaLovrnnlYwqKueahOWFnOW6lei3r+W+hOOAggoKIyMg5LiJ44CB5p6E5bu65pyf5L6d6LWW77yI5LiN6ZqPIEFQSyDliIblj5HvvIzku4XlnKjmnKzmnLrnvJbor5Hml7bkvb/nlKjvvIkKCnwg5L6d6LWWIHwg54mI5pysIHwg6K645Y+vIHwKfC0tLXwtLS18LS0tfAp8IEFuZHJvaWQgR3JhZGxlIFBsdWdpbiB8IDguNS4yIHwgQXBhY2hlLTIuMO+8iOWQqyBHb29nbGUg6ZmE5Yqg5p2h5qy+77yM5LuF57qm5p2fIEdvb2dsZSBQbGF5IOacjeWKoe+8iSB8CnwgYW5kcm9pZHgud2Via2l0OndlYmtpdCB8IDEuOC4wIHwgQXBhY2hlLTIuMO+8iCoq6ZqPIEFQSyDliIblj5EqKu+8jOW3suWcqOatpOWjsOaYju+8iSB8CnwgR3JhZGxlIHwgOC43IHwgQXBhY2hlLTIuMCB8CnwgQXp1bCBadWx1IEpESyB8IDE3LjAuMTEgfCBHUEx2MiArIENsYXNzcGF0aCBFeGNlcHRpb27vvIjku4XnvJbor5HmnJ/kvb/nlKjvvIzkuI3miZPljIXov5sgQVBL77yJIHwKfCBBbmRyb2lkIFNESyBQbGF0Zm9ybSAvIEJ1aWxkLVRvb2xzIHwgMzQgLyAzNC4wLjAgfCBBbmRyb2lkIFNESyDorrjlj6/ljY/orq4gfAoKYGFuZHJvaWR4LndlYmtpdDp3ZWJraXRgIOaYr+acrCBBUEsg5LitKirllK/kuIAqKuiiq+aJk+WMhei/m+S6p+eJqeeahOesrOS4ieaWueS7o+egge+8iEFBUu+8ie+8jOmHh+eUqCBBcGFjaGUtMi4w77yMCuWFgeiuuOWVhuS4muS9v+eUqO+8jOS9v+eUqOaXtumcgOWcqOWIhuWPkeivtOaYjuS4reS/neeVmeiuuOWPr+WjsOaYjuKAlOKAlOacrOaWh+S7tuWNs+S4uuivpeWjsOaYjuOAggoKIyMg5Zub44CB6ZyA6KaB55So5oi35Zyo5oSP55qE5ZCI6KeE54K5CgotIOiLpeaXpeWQjuS4iuaetuW6lOeUqOWVhuW6l++8jOW7uuiuruaKiuacrOaWh+S7tuS4gOW5tuaUvuWFpeOAjOW8gOa6kOiuuOWPr+OAjemhtemdouOAggotIOiLpeimgeaUueeUqOiHquW3seeahOetvuWQjeivgeS5puWIhuWPke+8jOabv+aNoiBgYW5kcm9pZC9hcHAvYnVpbGQuZ3JhZGxlYCDkuK3nmoQgYHNpZ25pbmdDb25maWdzLnJlbGVhc2Vg44CCCi0g5pys6aG555uu5L2/55So5pGE5YOP5aS077yM5LuF5Zyo6K6+5aSH5pys5Zyw5YGa5a6e5pe25YiG5p6Q77yaKirkuI3ph4fpm4bjgIHkuI3kuIrkvKDjgIHkuI3lrZjlgqjku7vkvZXnlLvpnaIqKuOAggo=
+# 第三方与授权说明
+
+## 结论先行
+
+**本项目的识别算法为完全自研实现，没有复制、粘贴、改编任何第三方仓库的源代码。**
+所有第三方成分只出现在「构建期依赖」和「参考过的公开算法思想」两类，且全部为 permissive 许可，
+可自由用于本项目（包括闭源与商业分发）。
+
+## 一、源码授权
+
+| 文件 | 来源 | 许可 |
+|---|---|---|
+| `web/js/cv.js` | 自研 | MIT（本项目） |
+| `web/js/audio.js` | 自研 | MIT（本项目） |
+| `web/js/app.js` | 自研 | MIT（本项目） |
+| `web/index.html`、`web/css/style.css`、`web/sw.js`、`web/manifest.webmanifest` | 自研 | MIT（本项目） |
+| `android/app/src/main/java/cn/xuzf/tlg/MainActivity.java` | 自研 | MIT（本项目） |
+| `web/icons/*`、`android/.../mipmap-*/ic_launcher.png` | 自研（脚本绘制） | MIT（本项目） |
+
+未使用任何第三方字体、图标库、UI 框架或 JS 库；未引入 OpenCV.js 等运行时二进制，
+以避免体积与许可合规复杂度——所需的 HSV 分割与直方图运算均为几十行量级的原生实现。
+
+## 二、参考过的公开算法思想（仅思想，未复用代码）
+
+算法思想本身不受版权保护；以下仓库仅用于确认工程实践中的参数经验，本项目未取用其任何代码：
+
+| 参考对象 | 许可 | 借鉴内容 |
+|---|---|---|
+| 车道线检测的经典 OpenCV 流程（Canny + ROI + Hough） | 通用公开方法 | ROI 与近景带取法 |
+| `Abhi-899/Lane-Detection`（阈值 → 透视变换 → 列直方图 → 平均 → 显示） | MIT | 「列直方图峰值定位车道线」的思路 |
+| `RishabhSingh0907/LaneDetection` | MIT | HSV 阈值 + Hough 的组合方式参考 |
+| `adithyapranav/Road-Lane-Detection` | MIT | 低算力设备上做实时车道检测的取舍 |
+
+本项目与这些实现的关键差异：
+
+1. 不做 Canny / Hough，改用**列直方图峰值**，算力从 ~10 ms 级降到 ~1 ms 级，适配手机 WebView；
+2. 不做透视变换（需要标定相机内参与安装角度），改用**近景带 + 相对位置 p** 的免标定方案；
+3. 增加了**分道线不可见时退化到跑道面边界**的兜底路径。
+
+## 三、构建期依赖（不随 APK 分发，仅在本机编译时使用）
+
+| 依赖 | 版本 | 许可 |
+|---|---|---|
+| Android Gradle Plugin | 8.5.2 | Apache-2.0（含 Google 附加条款，仅约束 Google Play 服务） |
+| androidx.webkit:webkit | 1.8.0 | Apache-2.0（**随 APK 分发**，已在此声明） |
+| Gradle | 8.7 | Apache-2.0 |
+| Azul Zulu JDK | 17.0.11 | GPLv2 + Classpath Exception（仅编译期使用，不打包进 APK） |
+| Android SDK Platform / Build-Tools | 34 / 34.0.0 | Android SDK 许可协议 |
+
+`androidx.webkit:webkit` 是本 APK 中**唯一**被打包进产物的第三方代码（AAR），采用 Apache-2.0，
+允许商业使用，使用时需在分发说明中保留许可声明——本文件即为该声明。
+
+## 四、需要用户在意的合规点
+
+- 若日后上架应用商店，建议把本文件一并放入「开源许可」页面。
+- 若要改用自己的签名证书分发，替换 `android/app/build.gradle` 中的 `signingConfigs.release`。
+- 本项目使用摄像头，仅在设备本地做实时分析：**不采集、不上传、不存储任何画面**。
