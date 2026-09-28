@@ -3,6 +3,12 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!--
+      INTERNET 仅用于「数据采集 → 上传到云端」这一个由使用者显式点击、且需先登录的功能。
+      跑道识别本身完全在本机运行：不联网、不上传任何画面。
+      未点击「上传到云端」时，应用不会发起任何网络请求。
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <!-- 摄像头不是硬性要求，避免在无后置摄像头的设备上被商店过滤 -->

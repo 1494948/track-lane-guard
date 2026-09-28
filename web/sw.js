@@ -1,11 +1,15 @@
 /* Service Worker：缓存应用外壳，支持离线（添加到主屏幕后无网络也能用） */
-var CACHE = 'tlg-v1';
+var CACHE = 'tlg-v2';
 var ASSETS = [
   './',
   './index.html',
   './css/style.css',
   './js/cv.js',
+  './js/sensor.js',
   './js/audio.js',
+  './js/recorder.js',
+  './js/cloud.js',
+  './js/dataset.js',
   './js/app.js',
   './manifest.webmanifest',
   './icons/icon-192.png',

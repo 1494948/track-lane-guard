@@ -8,7 +8,7 @@
 
 ## 2. 状态
 
-**可用（v1.3.0）** · 最后更新 2026-09-28
+**可用（v1.4.0）** · 最后更新 2026-09-28
 
 - 算法：HSV 分割 + 水平闭运算 + 最大连通域 + 形状校验 + 分道线直线拟合 +
   多证据置信度 + Alpha-Beta 跟踪器，三级提醒
@@ -29,6 +29,7 @@
 | 构建 | Gradle | 8.7 | Apache-2.0 |
 | 构建 | JDK（Azul Zulu） | 17.0.11 | 构建期，不随 APK 分发 |
 | 构建 | Android build-tools | 34.0.0 | 构建期 |
+| 云端（可选） | WorkBuddy 云服务 · Storage | — | 需登录，按需加载 SDK |
 
 **零第三方运行时代码拷贝**：识别算法全部自研，未复制任何 GitHub 仓库源码。详见 `THIRD-PARTY-NOTICES.md`。
 
@@ -65,7 +66,7 @@ node robustness.js
 - 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/
 - 分支：`main`
 - 产品名：跑道守卫 / TrackLaneGuard
-- 当前版本：v1.3.0（versionCode 4）
+- 当前版本：v1.4.0（versionCode 5）
 - 产物命名规则：`releases/track-lane-guard/v<版本>/TrackLaneGuard-v<版本>.apk`
 - 签名：release 复用 `~/.android/debug.keystore`（自用分发，非商店上架签名）
 
@@ -159,3 +160,19 @@ node robustness.js
     3. 判断文件是否被 base64 化：文件大小约为原文的 4/3、内容只含 `A-Za-z0-9+/=`
     4. 修复脚本（已用完删除）：扫描 git ls-files，base64 解码 + PNG/文本头校验后写回
   - 事后核验：GitHub 上 `android/settings.gradle` 为 893 B，与本地一致（base64 版会是 1192 B）
+- 2026-09-28 · **v1.4.0 数据采集与云端优化闭环**
+  - 新增 `web/js/recorder.js`：同意流程（localStorage 记录）+ 抽帧（每 2s，双路 JPEG）+
+    每 250ms 记录算法输出 + 使用者标注（「我在跑道中间」「我正在偏出」，覆盖最近 6s）+
+    上限 400 条自动裁剪 + 打包成 `tlg-samples-v1` JSON
+  - 新增 `web/js/cloud.js`：SDK **按需**从 CDN 加载（不点云端就不联网，保证离线可用）；
+    登录用邮箱验证码（视障使用者不必记密码）；上传路径只由 SDK 的 `userPath()` 生成，
+    代码里不手工传 token/uid
+  - 新增 `web/js/dataset.js`：采集面板 UI，所有按钮带文字标签与 aria，状态用文字表达；
+    同意弹窗逐条说明采集内容与用途；采集中顶部常驻红色提示条
+  - 云服务：复用已激活的「跑道守卫」应用（`wbapp_iT1tS5xC3TzTR11gP3299m`），
+    Storage 模块，路径 `users/<uid>/tlg-samples/<时间戳>.json`，每账号隔离
+  - `AndroidManifest.xml` 新增 `INTERNET` 权限，**仅**用于上传功能，已在注释里写明
+  - 新增 `PRIVACY.md`（隐私说明）与 `test/collector.js`（27 项离线测试，含
+    「未同意时绝不采集」「全程零网络请求」两条隐私底线断言）
+  - **已知缺口**：云端上传链路**未在真机验证**（需真实邮箱登录），代码按官方 SDK 文档编写；
+    抽帧为 canvas 截图而非 MediaRecorder 视频流（体积可控、隐私更小，代价是没有连续录像）

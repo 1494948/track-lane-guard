@@ -214,3 +214,51 @@ input[type=range] {
 .chk input { width: 20px; height: 20px; accent-color: var(--accent); }
 .seg { display: flex; gap: 6px; }
 .seg button { flex: 1 1 0; min-width: 0; padding: 10px 4px; font-size: 13px; }
+
+/* ---- 数据采集与优化 ---- */
+#dataset {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+}
+#dataset h3 { margin: 0 0 8px; font-size: 15px; }
+.dsNote { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 0 0 10px; }
+.dsRow { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.dsRow button { flex: 1 1 45%; }
+.dsRow input {
+  flex: 1 1 45%; min-width: 0; padding: 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: #0f1115; color: var(--text); font-size: 14px;
+}
+.dsStat { font-size: 12px; color: var(--muted); margin: 6px 0 0; line-height: 1.6; }
+.dsCloud { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.dsOverlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, .74);
+  display: flex; align-items: center; justify-content: center; padding: 18px; z-index: 50;
+}
+.dsDialog {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; max-width: 520px; max-height: 88vh; overflow: auto;
+}
+.dsDialog h3 { margin: 0 0 6px; font-size: 15px; }
+.dsConsentText {
+  white-space: pre-wrap; font-size: 13px; line-height: 1.7;
+  color: var(--text); font-family: inherit; margin: 8px 0 14px;
+}
+
+/* 采集中的常驻提示：固定顶部，必须醒目 */
+#collectBanner {
+  display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 40;
+  padding: 8px 12px; font-size: 12px; line-height: 1.5;
+  background: rgba(255, 59, 48, .22); border-bottom: 1px solid var(--danger);
+  color: var(--text); backdrop-filter: blur(4px);
+}
+body[data-collecting="on"] #collectBanner { display: block; }
+body[data-collecting="on"] #app { padding-top: calc(env(safe-area-inset-top) + 46px); }
+.recDot {
+  display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--danger); margin-right: 6px; vertical-align: middle;
+  animation: recPulse 1.2s ease-in-out infinite;
+}
+@keyframes recPulse { 0%, 100% { opacity: 1; } 50% { opacity: .2; } }

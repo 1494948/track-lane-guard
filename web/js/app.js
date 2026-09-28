@@ -49,6 +49,10 @@
   var sensor = TLG.Sensor ? new TLG.Sensor() : null;
   var obsFrames = 0;
   var lastObstacle = null;
+  // 数据采集与云端（默认关闭，见 recorder.js / dataset.js）
+  var recorder = TLG.Recorder ? new TLG.Recorder() : null;
+  var cloud = TLG.Cloud ? new TLG.Cloud() : null;
+  var dataset = null;
   var running = false;
   var stream = null;
   var video = null;
@@ -478,6 +482,15 @@
     setStatus(level, dir, res);
     render(res);
     if (cfg.debug) cv.renderMaskImage(maskCtx, res);
+
+    // 采集（未开启时 recorder.tick 内部直接返回，无额外开销）
+    if (recorder && recorder.enabled) {
+      recorder.tick({
+        viewCanvas: viewCanvas, workCanvas: workCanvas,
+        res: res, st: lastSt, level: level, dir: dir,
+        sensor: sensorState()
+      });
+    }
   }
 
   /* ---------- 渲染 ---------- */
@@ -775,6 +788,25 @@
     syncDebugVisibility();
     fpsText = '待启动';
     setStatus(0, 0, null);
+
+    // 数据采集面板（默认关闭，需明确同意才采集）
+    var dsHost = $('dataset');
+    if (dsHost && TLG.Dataset && recorder && cloud) {
+      dataset = new TLG.Dataset({
+        recorder: recorder,
+        cloud: cloud,
+        version: '1.4.0',
+        buildMeta: function () {
+          return {
+            cfg: cfg,
+            orientation: cfg.orientation,
+            videoSize: (video ? (video.videoWidth || 0) + 'x' + (video.videoHeight || 0) : ''),
+            workCanvas: workCanvas ? (workCanvas.width + 'x' + workCanvas.height) : ''
+          };
+        }
+      });
+      dataset.mount(dsHost);
+    }
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
