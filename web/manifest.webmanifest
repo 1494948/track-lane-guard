@@ -1,17 +1,1 @@
-{
-  "name": "跑道守卫 TrackLaneGuard",
-  "short_name": "跑道守卫",
-  "description": "用手机摄像头识别红色跑道，偏离跑道时通过耳机/扬声器与画面箭头提示左右修正方向。",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "landscape",
-  "background_color": "#0f1115",
-  "theme_color": "#0f1115",
-  "lang": "zh-CN",
-  "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
-  ]
-}
+ew0KICAibmFtZSI6ICLot5HpgZPlrojljasgVHJhY2tMYW5lR3VhcmQiLA0KICAic2hvcnRfbmFtZSI6ICLot5HpgZPlrojljasiLA0KICAiZGVzY3JpcHRpb24iOiAi55So5omL5py65pGE5YOP5aS06K+G5Yir57qi6Imy6LeR6YGT77yM5YGP56a76LeR6YGT5pe26YCa6L+H6ICz5py6L+aJrOWjsOWZqOS4jueUu+mdoueureWktOaPkOekuuW3puWPs+S/ruato+aWueWQkeOAgiIsDQogICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwNCiAgInNjb3BlIjogIi4vIiwNCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsDQogICJvcmllbnRhdGlvbiI6ICJsYW5kc2NhcGUiLA0KICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGYxMTE1IiwNCiAgInRoZW1lX2NvbG9yIjogIiMwZjExMTUiLA0KICAibGFuZyI6ICJ6aC1DTiIsDQogICJpY29ucyI6IFsNCiAgICB7ICJzcmMiOiAiaWNvbnMvaWNvbi0xOTIucG5nIiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkiIH0sDQogICAgeyAic3JjIjogImljb25zL2ljb24tNTEyLnBuZyIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IiB9LA0KICAgIHsgInNyYyI6ICJpY29ucy9pY29uLW1hc2thYmxlLTUxMi5wbmciLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogIm1hc2thYmxlIiB9DQogIF0NCn0NCg==
