@@ -144,3 +144,18 @@ node robustness.js
     趋势 trend=0.111 正确识别、占用物 40/40 帧命中，全部场景仍零误报零丢失
   - 已知缺口：**传感器从未在真机上验证过**（模拟器/无权限环境下自动禁用），
     iOS 需用户手势授权；真机数据待用户录屏后校准
+  - Release v1.3.0（id 398224918），APK 406,366 B 已上传：
+    https://github.com/1494948/track-lane-guard/releases/download/v1.3.0/TrackLaneGuard-v1.3.0.apk
+- 2026-09-28 · **事故与修复：工作区 30 个文件被整体 base64 化**
+  - 经过：代理故障期间用 Git Data API 推送，本地与服务端历史出现分叉
+    （服务端 commit 与本地 commit 内容相同但 sha 不同）；rebase 冲突后
+    执行 `git reset --hard FETCH_HEAD`，把服务端那份**整体 base64 编码的树**
+    拉回工作区 → 所有文本/PNG 变成 base64 文本 → gradle 无法解析 settings.gradle
+  - 修复：写脚本按 base64 解码**原样还原** 30 个文件（含 PNG，PNG 头校验通过），
+    18 场景基准测试复跑全通过，然后正常 `git push` 覆盖服务端坏内容（`dc3faea`）
+  - **教训**：
+    1. 本地与服务端分叉时，**不要 `reset --hard` 到远端** —— 先比对内容再决定
+    2. 用 API 推代码后，本地要**立即 fetch 对齐**，别让分叉留着
+    3. 判断文件是否被 base64 化：文件大小约为原文的 4/3、内容只含 `A-Za-z0-9+/=`
+    4. 修复脚本（已用完删除）：扫描 git ls-files，base64 解码 + PNG/文本头校验后写回
+  - 事后核验：GitHub 上 `android/settings.gradle` 为 893 B，与本地一致（base64 版会是 1192 B）
