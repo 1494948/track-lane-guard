@@ -8,7 +8,7 @@
 
 ## 2. 状态
 
-**可用（v1.4.0）** · 最后更新 2026-09-28
+**可用（v1.5.0）** · 最后更新 2026-09-29
 
 - 算法：HSV 分割 + 水平闭运算 + 最大连通域 + 形状校验 + 分道线直线拟合 +
   多证据置信度 + Alpha-Beta 跟踪器，三级提醒
@@ -66,7 +66,10 @@ node robustness.js
 - 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/
 - 分支：`main`
 - 产品名：跑道守卫 / TrackLaneGuard
-- 当前版本：v1.4.0（versionCode 5）
+- 当前版本：v1.5.0（versionCode 6）
+- 应用图标：`playground/track-lane-build/gen_icons.py`（纯标准库手写 PNG，一次渲染主图
+  后盒式下采样到各尺寸）。造型为**原创**「胖鲸鱼 + 跑道」，不是 DeepSeek 官方 logo 的复制件
+  —— 官方标识属其商标，公开发布时用原创图形更稳妥
 - 产物命名规则：`releases/track-lane-guard/v<版本>/TrackLaneGuard-v<版本>.apk`
 - 签名：release 复用 `~/.android/debug.keystore`（自用分发，非商店上架签名）
 
@@ -176,3 +179,12 @@ node robustness.js
     「未同意时绝不采集」「全程零网络请求」两条隐私底线断言）
   - **已知缺口**：云端上传链路**未在真机验证**（需真实邮箱登录），代码按官方 SDK 文档编写；
     抽帧为 canvas 截图而非 MediaRecorder 视频流（体积可控、隐私更小，代价是没有连续录像）
+- 2026-09-29 · **v1.5.0 界面改版 + 新图标**
+  - `web/css/style.css` 全量重做：分层深色表面（极细描边代替重阴影）、蓝色光晕背景、
+    与图标同族的强调色、统一的圆角与间距节奏、按钮/滑杆/复选/分段选择的现代化样式；
+    面板改毛玻璃。**所有类名与选择器保持不变**，`app.js` 未改一行
+  - 无障碍底线保留并强化：状态文字 22px、点击区 ≥48px、`:focus-visible` 描边、
+    `prefers-reduced-motion` 降级
+  - 图标重做为「胖鲸鱼 + 跑道」：深蓝渐变底 + 白色胖鲸（渐变身体/腹部/高光眼）+ 背鳍尾鳍
+    + 下方红色跑道带与白色分道线；192/512/maskable + Android 五档 mipmap 一次生成
+  - 渲染脚本改用**主图一次渲染 + 盒式下采样**，避免每个尺寸重复计算
