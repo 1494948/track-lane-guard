@@ -504,3 +504,164 @@ body[data-collecting="on"] #app { padding-top: calc(env(safe-area-inset-top) + 5
   transition: opacity .25s var(--ease);
 }
 #bandNote.on { opacity: 1; }
+
+/* ============================================================
+   布局由脚本驱动（写在 body[data-layout] 上）
+   放在媒体查询之后 → 手动选择「横屏 / 竖屏」会覆盖屏幕实际朝向。
+   这样"切了横屏没反应"的问题不再出现，也不依赖系统的自动旋转开关。
+   ============================================================ */
+body[data-layout="landscape"] #app {
+  grid-template-areas:
+    "stage info"
+    "stage ctrl"
+    "stage mask";
+  grid-template-columns: minmax(0, 1fr) clamp(272px, 33vw, 400px);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  padding: calc(env(safe-area-inset-top) + 10px) 12px calc(env(safe-area-inset-bottom) + 12px);
+}
+body[data-layout="landscape"][data-collecting="on"] #app {
+  padding-top: calc(env(safe-area-inset-top) + 46px);
+}
+body[data-layout="landscape"] #stage { min-height: 0; }
+body[data-layout="landscape"] #infoCol { min-height: 0; }
+body[data-layout="landscape"] #ctrlCol {
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 2px;
+}
+body[data-layout="landscape"] #maskWrap { min-height: 0; }
+body[data-layout="landscape"] .status { min-height: 56px; font-size: 20px; padding: 10px 14px; }
+body[data-layout="landscape"] .meta { font-size: 12px; }
+body[data-layout="landscape"] .ctrls { gap: 8px; }
+body[data-layout="landscape"] .ctrls button { min-height: 46px; font-size: 14.5px; }
+body[data-layout="landscape"] .tips { font-size: 11.5px; }
+body[data-layout="landscape"] #mask { max-height: 18vh; object-fit: contain; }
+body[data-layout="landscape"] #panel { width: min(460px, 58vw); }
+
+/* 手动竖屏：即使屏幕横着也按竖排走 */
+body[data-layout="portrait"] #app {
+  grid-template-areas:
+    "info"
+    "stage"
+    "ctrl"
+    "mask";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(200px, 1fr) auto auto;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+body[data-layout="portrait"] #ctrlCol { overflow: visible; }
+body[data-layout="portrait"] .tips { display: block; font-size: 12.5px; }
+
+@media (max-height: 470px) {
+  body[data-layout="landscape"] .status { min-height: 48px; font-size: 18px; }
+  body[data-layout="landscape"] .tips { display: none; }
+  body[data-layout="landscape"] #mask { max-height: 14vh; }
+}
+
+/* ============================================================
+   画面显示模式：正常 / 全屏 / 隐藏
+   隐藏时只是不显示画面，识别照旧在后台跑（省电、也保护隐私）
+   ============================================================ */
+.viewToggle { display: flex; gap: 8px; }
+.viewToggle button { flex: 1 1 0; }
+
+/* 全屏：画面铺满，状态悬浮顶部、按钮悬浮底部 */
+body[data-view="fullscreen"] #app {
+  grid-template-areas: "stage";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0;
+  gap: 0;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+body[data-view="fullscreen"] #stage {
+  border: 0;
+  border-radius: 0;
+  min-height: 0;
+}
+body[data-view="fullscreen"] #infoCol,
+body[data-view="fullscreen"] #ctrlCol,
+body[data-view="fullscreen"] #maskWrap {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  z-index: 40;
+  padding: 10px;
+  border-radius: var(--r-lg);
+  background: rgba(9, 12, 18, .74);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line-2);
+}
+body[data-view="fullscreen"] #infoCol { top: 12px; }
+body[data-view="fullscreen"] #ctrlCol {
+  bottom: 12px;
+  max-height: 46vh;
+  overflow-y: auto;
+}
+body[data-view="fullscreen"] #maskWrap { display: none; }
+body[data-view="fullscreen"] #ctrlCol > .tips,
+body[data-view="fullscreen"] #ctrlCol > #dataset { display: none; }
+body[data-view="fullscreen"] .status { min-height: 46px; font-size: 19px; }
+body[data-view="fullscreen"] .ctrls button { min-height: 44px; }
+
+/* 隐藏画面：只剩状态与按钮，识别照常 */
+body[data-view="hidden"] #stage { display: none; }
+body[data-view="hidden"] #app {
+  grid-template-areas:
+    "info"
+    "ctrl"
+    "mask";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+body[data-view="hidden"] #ctrlCol { overflow-y: auto; min-height: 0; }
+body[data-view="hidden"] .status {
+  min-height: 96px;
+  font-size: 30px;
+  justify-content: center;
+}
+body[data-view="hidden"] .status .dot { width: 20px; height: 20px; }
+body[data-view="hidden"] #maskWrap { display: none; }
+body[data-view="hidden"] .tips { display: none; }
+
+/* 窄屏时按钮排两列，别挤成一团 */
+@media (max-width: 420px) {
+  .ctrls button { flex: 1 1 44%; }
+}
+
+/* ---------- 网页版兜底：没有 Android 原生旋转时，把界面整体转 90° ----------
+   生效条件由脚本判断（data-rotated="1"）：没有原生桥接、且界面期望横屏
+   而视口还是竖的。APK 里原生已把屏幕转好，这里不会触发。
+   用法：把手机顺时针转 90°（顶部朝右）看就是正的。 */
+body[data-rotated="1"] { overflow: hidden; }
+body[data-rotated="1"] #app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+}
+/* 旋转后底部横幅也要跟着转 */
+body[data-rotated="1"] #collectBanner {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 100vh;
+  transform: rotate(90deg) translateY(100%);
+  transform-origin: bottom right;
+}

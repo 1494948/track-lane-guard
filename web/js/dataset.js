@@ -132,8 +132,11 @@
       this.say('已停止采集。数据仍保存在本机，可随时导出或删除。');
       return;
     }
+    // 注意：必须用闭包包一层。直接写 `go = this.askConsent` 会在调用时丢掉 this，
+    // askConsent 内部的 self 变成 undefined，点「同意」后抛异常 → resolve 永不执行
+    // → 采集永远启动不了（这就是「点了开始采集没反应」的根因）。
     var go = function () { return Promise.resolve(true); };
-    if (!this.recorder.consented) go = this.askConsent;
+    if (!this.recorder.consented) go = function () { return self.askConsent(); };
     go().then(function (ok) {
       if (!ok) { self.say('未开启采集。'); return; }
       self.recorder.start();

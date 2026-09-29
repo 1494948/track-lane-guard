@@ -37,6 +37,31 @@ public class MainActivity extends Activity {
 
     private WebView web;
 
+    /**
+     * 暴露给网页的方向开关：landscape / portrait / auto。
+     * 只改屏幕方向，不做别的 —— 网页里识别逻辑仍按画面实际比例自动适配。
+     */
+    private class OrientationBridge {
+        @android.webkit.JavascriptInterface
+        public void setOrientation(final String mode) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if ("landscape".equals(mode)) {
+                        setRequestedOrientation(
+                                android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+                    } else if ("portrait".equals(mode)) {
+                        setRequestedOrientation(
+                                android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+                    } else {
+                        setRequestedOrientation(
+                                android.content.pm.ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+                    }
+                }
+            });
+        }
+    }
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +70,11 @@ public class MainActivity extends Activity {
 
         web = new WebView(this);
         setContentView(web);
+
+        // 让前端可以主动把整个应用转成横屏/竖屏。
+        // 意义：系统的"自动旋转"开关常常是关着的，那就只有网页布局变、屏幕不转，
+        // 使用者会觉得"切了横屏没用"。这里由应用自己控制，不依赖系统开关。
+        web.addJavascriptInterface(new OrientationBridge(), "TLGAndroid");
 
         final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
                 .setDomain("appassets.androidplatform.net")

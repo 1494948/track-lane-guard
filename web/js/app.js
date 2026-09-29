@@ -33,6 +33,7 @@
     obsMinArea: 0.004,   // 障碍最小面积（占整帧比例）
     lookahead: true,     // 远景前瞻：远处跑道已偏时提前预警
     showBands: true,     // 画面上标出远带/近带与前瞻趋势（能直观看到整屏都在用）
+    viewMode: 'normal',  // 显示模式：normal 标准 / fullscreen 视频全屏 / hidden 隐藏视频（仍识别）
     obstacleAlert: true, // 跑道面内占用物（人影/衣物/水坑）提醒
     sensor: true,        // 姿态传感器辅助（不支持时自动禁用）
     orientation: 'landscape', // 使用方式：横屏（默认）/ 竖屏 / 自动
@@ -54,6 +55,7 @@
   var recorder = TLG.Recorder ? new TLG.Recorder() : null;
   var cloud = TLG.Cloud ? new TLG.Cloud() : null;
   var dataset = null;
+  var viewMode = cfg.viewMode || 'normal';   // normal | fullscreen | hidden（隐藏画面时识别照常跑，跟随配置持久化）
   var running = false;
   var stream = null;
   var video = null;
@@ -119,6 +121,8 @@
     el.calibTip = $('calibTip');
     el.settingsBody = $('settingsBody');
     el.bandNote = $('bandNote');
+    el.btnFull = $('btnFull');
+    el.btnHide = $('btnHide');
 
     workCanvas = document.createElement('canvas');
     workCtx = workCanvas.getContext('2d', { willReadFrequently: true });
@@ -164,6 +168,12 @@
     { val: 'auto', label: '自动' }
   ];
 
+  var VIEWMODES = [
+    { val: 'normal', label: '标准' },
+    { val: 'fullscreen', label: '视频全屏' },
+    { val: 'hidden', label: '隐藏视频' }
+  ];
+
   function pct(v) { return Math.round(v * 100) + '%'; }
 
   function buildSettings() {
@@ -178,10 +188,19 @@
       html += '<label class="chk"><input type="checkbox" data-key="' + t.key + '"' +
         (cfg[t.key] ? ' checked' : '') + '><span>' + t.label + '</span></label>';
     });
-    html += '<div class="row" style="margin-top:10px"><div class="rowHead"><span>使用方式</span></div><div class="seg" id="segOrient">';
+    html += '<div class="row" style="margin-top:10px"><div class="rowHead"><span>使用方式</span>' +
+      '<b>横屏时整个界面都会转成横屏</b></div><div class="seg" id="segOrient">';
     ORIENTATIONS.forEach(function (o) {
       html += '<button type="button" data-orient="' + o.val + '"' +
         (cfg.orientation === o.val ? ' class="active"' : '') + '>' + o.label + '</button>';
+    });
+    html += '</div></div>';
+
+    html += '<div class="row"><div class="rowHead"><span>显示模式</span>' +
+      '<b>隐藏视频时仍在识别</b></div><div class="seg" id="segView">';
+    VIEWMODES.forEach(function (v) {
+      html += '<button type="button" data-view="' + v.val + '"' +
+        (cfg.viewMode === v.val ? ' class="active"' : '') + '>' + v.label + '</button>';
     });
     html += '</div></div>';
     el.settingsBody.innerHTML = html;
@@ -195,6 +214,12 @@
         applyCfg();
         saveCfg();
         applyOrientation();
+      });
+    });
+
+    el.settingsBody.querySelectorAll('button[data-view]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setViewMode(btn.dataset.view);
       });
     });
 
@@ -245,20 +270,49 @@
    * 若设定期望与实际画面不一致（例如选了横屏却竖着拿），仍按实际比例工作，
    * 但会提示改正、并在判定时提高置信度门槛（更保守），避免拿错参数硬报。
    */
+  /**
+   * 布局方向由脚本决定并写到 body[data-layout]，不再依赖屏幕朝向的媒体查询 ——
+   * 否则在系统关闭"自动旋转"时，选横屏只会换一句提示，界面纹丝不动。
+   * auto 模式才跟随视口朝向。
+   */
+  function computeLayout() {
+    var land;
+    if (cfg.orientation === 'landscape') land = true;
+    else if (cfg.orientation === 'portrait') land = false;
+    else land = (window.innerWidth || 0) >= (window.innerHeight || 0);
+    document.body.setAttribute('data-layout', land ? 'landscape' : 'portrait');
+    return land;
+  }
+
   function applyOrientation() {
     var vw = video ? (video.videoWidth || 0) : 0;
     var vh = video ? (video.videoHeight || 0) : 0;
-    var isLand = vw ? (vw >= vh) : true;
-    var land = isLand;
+    var isLandFrame = vw ? (vw >= vh) : true;
     orientationMismatch = false;
 
-    if (cfg.orientation === 'landscape') {
-      land = true;
-      orientationMismatch = vw > 0 && !isLand;
-    } else if (cfg.orientation === 'portrait') {
-      land = false;
-      orientationMismatch = vw > 0 && isLand;
+    // 让系统屏幕也跟着转 —— 不依赖系统"自动旋转"开关，也不依赖用户怎么拿手机。
+    // 屏幕转了，相机输出方向会一起变，识别用的画面比例自然与所选模式一致。
+    if (window.TLGAndroid && window.TLGAndroid.setOrientation) {
+      try { window.TLGAndroid.setOrientation(cfg.orientation); } catch (e) { /* 网页版无此接口 */ }
     }
+
+    var landWanted = computeLayout();
+
+    // 网页版没有 Android 原生桥接，系统不会跟着转 —— 用 CSS 把整个界面旋转兜底。
+    // 原生旋转生效后视口已经是横的，这里算出来就是 false，不会叠加。
+    var hasNative = !!(window.TLGAndroid && window.TLGAndroid.setOrientation);
+    var vpPortrait = (window.innerHeight || 0) >= (window.innerWidth || 0);
+    var needRotate = !hasNative && (landWanted === vpPortrait);
+    document.body.setAttribute('data-rotated', needRotate ? '1' : '0');
+
+    if (cfg.orientation === 'landscape') {
+      orientationMismatch = vw > 0 && !isLandFrame;
+    } else if (cfg.orientation === 'portrait') {
+      orientationMismatch = vw > 0 && isLandFrame;
+    }
+
+    // 带参数按"画面实际比例"取（旋转生效后画面比例会跟着变），而不是按设置值硬套
+    var land = isLandFrame;
 
     if (land) {
       cfg.nearTop = 0.68; cfg.nearBottom = 0.98;
@@ -280,6 +334,34 @@
 
   function sensorState() {
     return sensor ? sensor.state() : null;
+  }
+
+  /**
+   * 画面显示模式：正常 / 全屏 / 隐藏。
+   * 隐藏时只是不显示画面 —— 识别依赖的是后台的 video 元素与工作画布，
+   * 与是否显示 viewCanvas 无关，所以隐藏后判定、语音、震动全部照常。
+   */
+  function applyView() {
+    document.body.setAttribute('data-view', viewMode);
+    cfg.viewMode = viewMode;   // 持久化：重开应用仍是上次选的模式
+    saveCfg();
+    if (el.btnFull) el.btnFull.textContent = viewMode === 'fullscreen' ? '退出全屏' : '全屏画面';
+    if (el.btnHide) el.btnHide.textContent = viewMode === 'hidden' ? '显示画面' : '隐藏画面';
+    // 两个入口（快捷按钮 / 设置里的分段）共用同一个状态，这里把分段高亮同步过来
+    if (el.settingsBody) {
+      el.settingsBody.querySelectorAll('button[data-view]').forEach(function (b) {
+        b.className = (b.dataset.view === viewMode) ? 'active' : '';
+      });
+    }
+  }
+
+  function setViewMode(mode) {
+    viewMode = mode;
+    applyView();
+  }
+
+  function toggleView(mode) {
+    setViewMode(viewMode === mode ? 'normal' : mode);
   }
 
   function startSensor() {
@@ -512,8 +594,10 @@
     lastObstacle = (obsFrames >= 5 && obs) ? obs : null;
 
     setStatus(level, dir, res);
-    render(res);
-    if (cfg.debug) cv.renderMaskImage(maskCtx, res);
+    // 隐藏画面时跳过绘制：判定靠的是后台 video 与工作画布，与是否显示无关，
+    // 少画一帧就等于省一点电
+    if (viewMode !== 'hidden') render(res);
+    if (cfg.debug && viewMode !== 'hidden') cv.renderMaskImage(maskCtx, res);
 
     // 采集（未开启时 recorder.tick 内部直接返回，无额外开销）
     if (recorder && recorder.enabled) {
@@ -827,9 +911,13 @@
   /* ---------- 事件绑定 ---------- */
 
   function bind() {
-    // 旋转手机时实时切换带位参数（横/竖屏用不同的远带与近带）
-    window.addEventListener('resize', function () { if (running) applyOrientation(); });
-    window.addEventListener('orientationchange', function () { if (running) applyOrientation(); });
+    // 旋转手机 / 改窗口大小时重算布局与带位参数（横竖屏的远带近带不同）
+    window.addEventListener('resize', function () { applyOrientation(); });
+    window.addEventListener('orientationchange', function () { applyOrientation(); });
+    if (el.btnFull) el.btnFull.addEventListener('click', function () { toggleView('fullscreen'); });
+    if (el.btnHide) el.btnHide.addEventListener('click', function () { toggleView('hidden'); });
+
+    applyView();   // 恢复上次的显示模式（标准 / 视频全屏 / 隐藏视频）
 
     el.btnStart.addEventListener('click', start);
     el.btnStop.addEventListener('click', stop);
@@ -880,6 +968,8 @@
     bind();
     applyCfg();
     syncDebugVisibility();
+    applyView();
+    applyOrientation();
     fpsText = '待启动';
     setStatus(0, 0, null);
 
@@ -889,7 +979,7 @@
       dataset = new TLG.Dataset({
         recorder: recorder,
         cloud: cloud,
-        version: '1.6.0',
+        version: '1.7.0',
         buildMeta: function () {
           return {
             cfg: cfg,
