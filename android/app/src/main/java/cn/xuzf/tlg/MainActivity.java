@@ -32,8 +32,20 @@ import androidx.webkit.WebViewAssetLoader;
 public class MainActivity extends Activity {
 
     private static final int REQ_CAMERA = 1001;
-    private static final String APP_URL =
-            "https://appassets.androidplatform.net/assets/index.html";
+
+    /**
+     * 资产域必须与「应用发布域名」一致，这是云端能否用的关键。
+     *
+     * 云服务会校验请求的 Origin 必须等于应用发布域名，否则一律拒绝 ——
+     * 若沿用默认的 appassets.androidplatform.net，页面里发往 /.cloud/** 的请求
+     * 会带着错误的 Origin，表现就是「上传到云端」报 Failed to fetch。
+     *
+     * 用发布域名后两种请求各走各的，互不干扰：
+     *   · https://<HOST>/assets/**  → WebViewAssetLoader 拦截，读 APK 里的本地文件（离线可用）
+     *   · https://<HOST>/.cloud/**  → 不匹配 /assets/ 前缀，走真实网络，Origin 正确
+     */
+    private static final String HOST = "track-lane-guard.app.workbuddy.host";
+    private static final String APP_URL = "https://" + HOST + "/assets/index.html";
 
     private WebView web;
 
@@ -77,7 +89,7 @@ public class MainActivity extends Activity {
         web.addJavascriptInterface(new OrientationBridge(), "TLGAndroid");
 
         final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
-                .setDomain("appassets.androidplatform.net")
+                .setDomain(HOST)   // 与发布域名一致，详见 HOST 处的说明
                 .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
                 .build();
 

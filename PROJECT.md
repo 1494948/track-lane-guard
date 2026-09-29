@@ -200,3 +200,20 @@ node robustness.js
   - 可视化：画面上画出远带（蓝）与近带（绿）框、远处跑道中心点、漂移趋势箭头，
     右上角角标显示「远带趋势 +0.11　近带位置 0.48」，设置里可关（`showBands`）
   - 新增 `#infoCol` / `#ctrlCol` 两个包裹容器（所有元素 id 未变，`app.js` 只加了绘制逻辑）
+- 2026-09-29 · **v1.7.0 横屏真正旋转 + 全屏/隐藏画面 + 采集同意修复**
+  - 用户反馈"还是没有任何改变"，核对后两个原因：
+    1. **横屏强制、全屏/隐藏视频的实现（约 300 行，含 `MainActivity` 原生方向桥接、
+       `btnFull`/`btnHide`、CSS `[data-layout]`/`[data-view]`）此前既未提交、
+       也未进入任何一次 APK 构建** —— 旧包里一行都没有，自然看不到变化
+    2. **采集同意流程在代码层面卡死**：`go = this.askConsent` 丢失 `this` →
+       `askConsent` 内 `self` 为 undefined → 点「同意」后先关弹窗再抛异常 →
+       `resolve(true)` 永不执行 → `recorder.start()` 永不调用
+  - 修法：同意流程改闭包调用；横屏交给 Android 原生 `setRequestedOrientation`
+    （不依赖系统自动旋转开关，`configChanges` 已配好，旋转不重建页面、不丢标定）；
+    网页版无原生桥接时用 CSS 旋转 90° 兜底（`data-rotated` 由脚本判断）
+  - 整合：删除我重复实现的 `applyLayout`（与已有 `computeLayout` 冲突，且属性值
+    `land`/`port` 与 CSS 期望的 `landscape`/`portrait` 不匹配会互相抵消）；
+    全屏/隐藏的两个入口（快捷按钮 + 设置分段）统一到同一状态源并持久化
+  - **重要提醒**：本项目曾被另一个会话并行编辑（约 300 行未提交改动）。
+    同一项目不要同时开多个会话修改，否则会出现"改了半天没生效"或互相覆盖；
+    动手前先 `git status` 看一眼

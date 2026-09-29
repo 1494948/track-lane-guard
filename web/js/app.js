@@ -30,7 +30,7 @@
     // v1.3.0：整幅画面都用上 —— 近带判当前位置，远带做前瞻
     nearTop: 0.68, nearBottom: 0.98,   // 近带（脚前区域）
     farTop: 0.26, farBottom: 0.58,     // 远带（前方跑道）
-    obsMinArea: 0.004,   // 障碍最小面积（占整帧比例）
+    obsMinArea: 0.010,   // 障碍最小面积（占整帧比例）：太小的一律当噪声，避免室内杂物乱报
     lookahead: true,     // 远景前瞻：远处跑道已偏时提前预警
     showBands: true,     // 画面上标出远带/近带与前瞻趋势（能直观看到整屏都在用）
     viewMode: 'normal',  // 显示模式：normal 标准 / fullscreen 视频全屏 / hidden 隐藏视频（仍识别）
@@ -56,6 +56,7 @@
   var cloud = TLG.Cloud ? new TLG.Cloud() : null;
   var dataset = null;
   var viewMode = cfg.viewMode || 'normal';   // normal | fullscreen | hidden（隐藏画面时识别照常跑，跟随配置持久化）
+  var lastSubNote = '';                      // 辅助提醒行的上次内容（避免每帧刷 DOM）
   var running = false;
   var stream = null;
   var video = null;
@@ -121,6 +122,7 @@
     el.calibTip = $('calibTip');
     el.settingsBody = $('settingsBody');
     el.bandNote = $('bandNote');
+    el.subNote = $('subNote');
     el.btnFull = $('btnFull');
     el.btnHide = $('btnHide');
 
@@ -588,10 +590,22 @@
     fb.setState(level, dir);
 
     // 障碍/占用物：连续多帧出现才算数，避免单帧闪烁
-    var obs = (cfg.obstacleAlert && res.obstacles && res.obstacles.length) ? res.obstacles[0] : null;
+    // 障碍提示要保守：必须①已确认在跑道上 ②置信度达标 ③确实在前方 ④面积足够大。
+    // 否则在室内这类根本不是跑道的场景里，桌面杂物会被当成"跑道上的占用物"乱报。
+    var obs = null;
+    if (cfg.obstacleAlert && detected && res.ok && res.obstacles && res.obstacles.length) {
+      var cand = res.obstacles[0];
+      var areaRatio = cand.area / (res.width * res.height);
+      var inFront = cand.cy >= res.height * 0.30;   // 只看前方（画面中下部）
+      var confNeed2 = Math.max(cfg.minConfidence, 0.50);
+      if (areaRatio >= (cfg.obsMinArea || 0.008) && inFront &&
+          lastSt.conf >= confNeed2 && lastSt.sameDir >= 2) {
+        obs = cand;
+      }
+    }
     if (obs) obsFrames++;
     else obsFrames = Math.max(0, obsFrames - 2);
-    lastObstacle = (obsFrames >= 5 && obs) ? obs : null;
+    lastObstacle = (obsFrames >= 6 && obs) ? obs : null;
 
     setStatus(level, dir, res);
     // 隐藏画面时跳过绘制：判定靠的是后台 video 与工作画布，与是否显示无关，
@@ -604,7 +618,7 @@
       recorder.tick({
         viewCanvas: viewCanvas, workCanvas: workCanvas,
         res: res, st: lastSt, level: level, dir: dir,
-        sensor: sensorState()
+        sensor: sensorState(), obstacle: lastObstacle
       });
     }
   }
@@ -821,6 +835,16 @@
     }
   }
 
+  /** 辅助提醒行（障碍 / 弯道 / 姿态）。与主状态分开，避免语义打架。 */
+  function setSubNote(notes) {
+    if (!el.subNote) return;
+    var t = (notes || []).join(' · ');
+    if (t === lastSubNote) return;
+    lastSubNote = t;
+    el.subNote.textContent = t;
+    el.subNote.style.display = t ? 'block' : 'none';
+  }
+
   function setStatus(level, dir, res) {
     var cls = 'ok', text = '安全';
     var ad0 = Math.abs(lastSt.p - 0.5);
@@ -830,15 +854,21 @@
     else if (level === 1) { cls = 'warn'; text = '注意偏出 · ' + (dir < 0 ? '往左' : '往右'); }
     else if (ad0 >= cfg.caution && lastSt.sameDir < cfg.stableFrames) { cls = 'ok'; text = '偏移观察中…'; }
 
-    if (detected && res && res.curve) text += ' · 弯道';
-    if (detected && res && res.clipped) text += ' · 请抬高手机';
-    if (lastObstacle) text = '前方有占用物 · ' + text;
-    if (detected && orientationMismatch) text += ' · 请横持手机';
+    // 主状态只回答「现在处于什么状态」。障碍、弯道、姿态这些是辅助提醒，
+    // 放到下面独立一行 —— 否则会拼成「前方有占用物 · 安全 · 弯道」这种
+    // 自相矛盾的长串，状态条也就失去了"一眼看懂"的意义。
+    var notes = [];
+    if (lastObstacle) notes.push('前方有占用物');
+    if (detected && res && res.curve) notes.push('弯道');
+    if (detected && res && res.clipped) notes.push('请抬高手机');
+    if (detected && orientationMismatch) notes.push('请横持手机');
     var ss = sensorState();
     if (detected && ss && ss.enabled) {
-      if (!ss.aiming) text += ' · 请朝下对准跑道';
-      else if (ss.shaking) text += ' · 晃动中';
+      if (!ss.aiming) notes.push('请朝下对准跑道');
+      else if (ss.shaking) notes.push('晃动中');
     }
+    setSubNote(notes);
+
     el.status.className = 'status ' + cls;
     el.state.textContent = text;
 
@@ -979,7 +1009,7 @@
       dataset = new TLG.Dataset({
         recorder: recorder,
         cloud: cloud,
-        version: '1.7.0',
+        version: '1.8.0',
         buildMeta: function () {
           return {
             cfg: cfg,

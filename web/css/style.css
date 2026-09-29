@@ -665,3 +665,18 @@ body[data-rotated="1"] #collectBanner {
   transform: rotate(90deg) translateY(100%);
   transform-origin: bottom right;
 }
+
+/* ---------- 辅助提醒行（障碍 / 弯道 / 姿态）----------
+   与主状态分开显示：主状态回答「现在什么状态」，这一行回答「还有什么要注意」。 */
+.subNote {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: var(--r-md);
+  background: rgba(251, 191, 36, .10);
+  border: 1px solid rgba(251, 191, 36, .30);
+  color: #ffd98a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+body[data-layout="landscape"] .subNote { font-size: 13px; padding: 6px 10px; }

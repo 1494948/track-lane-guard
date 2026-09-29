@@ -50,6 +50,15 @@
       '  <button type="button" id="dsLabelCenter" aria-label="记录：我现在在跑道中间">我在跑道中间</button>' +
       '  <button type="button" id="dsLabelOff" aria-label="记录：我正在偏出跑道">我正在偏出</button>' +
       '</div>' +
+      '<p class="dsNote">下方四个按钮只在你看到「前方有占用物」时按 —— ' +
+      '用来告诉算法跑道上那个东西究竟是什么。攒够数量后可以训练分类模型，' +
+      '让提示从「有占用物」变成「前面有人」。</p>' +
+      '<div class="dsRow" id="dsObsRow">' +
+      '  <button type="button" data-obs="person" aria-label="标注跑道上那个东西是人">是人</button>' +
+      '  <button type="button" data-obs="shadow" aria-label="标注那是影子">是影子</button>' +
+      '  <button type="button" data-obs="water" aria-label="标注那是积水">是积水</button>' +
+      '  <button type="button" data-obs="debris" aria-label="标注那是杂物">是杂物</button>' +
+      '</div>' +
       '<div class="dsRow">' +
       '  <button type="button" id="dsExport" aria-label="把采集数据导出到手机">导出到手机</button>' +
       '  <button type="button" id="dsUpload" aria-label="把采集数据上传到云端">上传到云端</button>' +
@@ -74,6 +83,10 @@
     this.el.toggle.addEventListener('click', function () { self.toggleCollect(); });
     this.el.center.addEventListener('click', function () { self.mark('center'); });
     this.el.off.addEventListener('click', function () { self.mark('off'); });
+
+    container.querySelectorAll('button[data-obs]').forEach(function (btn) {
+      btn.addEventListener('click', function () { self.markObstacle(btn.dataset.obs); });
+    });
     this.el.export.addEventListener('click', function () { self.exportLocal(); });
     this.el.upload.addEventListener('click', function () { self.uploadCloud(); });
     this.el.clear.addEventListener('click', function () { self.clearAll(); });
@@ -153,6 +166,24 @@
     this.say(n > 0
       ? '已标注最近约 6 秒的 ' + n + ' 条记录为「' + (kind === 'center' ? '在跑道中间' : '正在偏出') + '」。'
       : '这段时间没有可标注的记录，请稍后再试。');
+    this.refresh();
+  };
+
+  var OBS_NAME = { person: '人', shadow: '影子', water: '积水', debris: '杂物' };
+
+  /**
+   * 标注「前方有占用物」具体是什么。这是训练障碍分类模型的数据来源 ——
+   * 规则算法能发现"那里有个东西"，但分不出是人还是影子，那个只能靠模型。
+   */
+  Dataset.prototype.markObstacle = function (kind) {
+    if (!this.recorder.enabled) {
+      this.say('请先点「开始采集」，标注才会生效。');
+      return;
+    }
+    var n = this.recorder.labelObstacle(kind);
+    this.say(n > 0
+      ? '已把最近检测到的 ' + n + ' 个占用物标为「' + (OBS_NAME[kind] || kind) + '」。'
+      : '最近几秒没有检测到占用物，等出现「前方有占用物」提示时再按。');
     this.refresh();
   };
 

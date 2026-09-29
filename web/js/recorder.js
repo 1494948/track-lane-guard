@@ -38,6 +38,7 @@
     this.frameW = 240;        // 抽帧宽度（JPEG）
     this.quality = 0.6;
     this.labelWindowMs = 6000;// 标注往前覆盖的时长
+    this.obstacleLabelWindowMs = 4000; // 障碍类别标注往前覆盖的时长
     this.peakMs = 250;        // 采集中每帧记录算法输出的间隔
     this.lastPeak = 0;
     this._shot = null;
@@ -163,6 +164,15 @@
       viaFlood: !!r.viaFlood,
       obstacles: (r.obstacles || []).length,
       obsArea: r.obstacles && r.obstacles[0] ? r.obstacles[0].area : 0,
+      // 被判定为障碍的框（供离线裁剪出 ROI 做分类训练）。整帧已经存了，
+      // 这里只记位置，不额外存图，省空间。
+      obsBox: ctx.obstacle ? {
+        x0: ctx.obstacle.x0, x1: ctx.obstacle.x1,
+        y0: ctx.obstacle.y0, y1: ctx.obstacle.y1,
+        area: ctx.obstacle.area
+      } : null,
+      // 障碍类别人工标签：person / shadow / water / debris / mark / other
+      obsLabel: null,
       // 传感器（未启用时为 null）
       roll: ctx.sensor ? round3(ctx.sensor.roll) : null,
       pitch: ctx.sensor ? round3(ctx.sensor.pitch) : null,
@@ -208,6 +218,27 @@
       if (t - s.t > this.labelWindowMs) break;
       if (s.label) continue;
       s.label = kind;
+      n++;
+    }
+    this.notify();
+    return n;
+  };
+
+  /**
+   * 标注最近检测到的障碍属于哪一类。
+   * 纯颜色/形状规则分不出"人 / 影子 / 水坑 / 杂物"，要分类必须靠模型，
+   * 而模型的训练数据只能从真实场景里攒 —— 这个标注就是攒数据的入口。
+   * @param {string} kind person | shadow | water | debris | mark | other
+   */
+  Recorder.prototype.labelObstacle = function (kind) {
+    if (!this.samples.length) return 0;
+    var t = nowMs() - this.t0;
+    var n = 0;
+    for (var i = this.samples.length - 1; i >= 0; i--) {
+      var s = this.samples[i];
+      if (t - s.t > this.obstacleLabelWindowMs) break;
+      if (!s.obsBox || s.obsLabel) continue;
+      s.obsLabel = kind;
       n++;
     }
     this.notify();
