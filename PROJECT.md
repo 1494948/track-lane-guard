@@ -63,7 +63,9 @@ node robustness.js
 ## 5. 发布信息
 
 - GitHub 仓库：https://github.com/1494948/track-lane-guard （public，`main` 分支，已推送）
-- 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/
+- 在线版（PWA，HTTPS，免安装）：https://track-lane-guard.app.workbuddy.host/ （已同步到 v1.8.0）
+- 云服务：applicationId `wbapp_iT1tS5xC3TzTR11gP3299m`，数据面同域 `/.cloud/**`。
+  **重新发布时必须带这个 appId**，否则域名变了会让云服务的 Origin 校验失败
 - 分支：`main`
 - 产品名：跑道守卫 / TrackLaneGuard
 - 当前版本：v1.5.0（versionCode 6）
