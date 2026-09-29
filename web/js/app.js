@@ -32,6 +32,7 @@
     farTop: 0.26, farBottom: 0.58,     // 远带（前方跑道）
     obsMinArea: 0.004,   // 障碍最小面积（占整帧比例）
     lookahead: true,     // 远景前瞻：远处跑道已偏时提前预警
+    showBands: true,     // 画面上标出远带/近带与前瞻趋势（能直观看到整屏都在用）
     obstacleAlert: true, // 跑道面内占用物（人影/衣物/水坑）提醒
     sensor: true,        // 姿态传感器辅助（不支持时自动禁用）
     orientation: 'landscape', // 使用方式：横屏（默认）/ 竖屏 / 自动
@@ -117,6 +118,7 @@
     el.hint = $('hint');
     el.calibTip = $('calibTip');
     el.settingsBody = $('settingsBody');
+    el.bandNote = $('bandNote');
 
     workCanvas = document.createElement('canvas');
     workCtx = workCanvas.getContext('2d', { willReadFrequently: true });
@@ -149,6 +151,7 @@
     { key: 'tts', label: '语音播报「往左/往右」' },
     { key: 'vibrate', label: '震动提醒' },
     { key: 'lookahead', label: '远景前瞻（提前预警）' },
+    { key: 'showBands', label: '在画面上标出远带 / 近带' },
     { key: 'obstacleAlert', label: '跑道占用物提醒（人影/杂物）' },
     { key: 'sensor', label: '姿态传感器辅助' },
     { key: 'mirror', label: '画面左右镜像' },
@@ -191,7 +194,7 @@
         });
         applyCfg();
         saveCfg();
-        updateOrientationHint();
+        applyOrientation();
       });
     });
 
@@ -231,21 +234,48 @@
 
   /* ---------- 使用方式与姿态 ---------- */
 
-  // 横屏是默认也是推荐：跑道纵向穿过画面，左右边界都在视野内，判定最可靠。
-  function updateOrientationHint() {
+  var orientationMismatch = false;
+
+  /**
+   * 让「使用方式」真正生效，而不只是换一句提示文字：
+   *   横屏 —— 画面宽高比大、近处地面在下部占比小 → 远带略上移、近带略窄
+   *   竖屏 —— 画面纵向更长、脚下区域更大       → 近带放宽、远带下移
+   *   自动 —— 按实际画面比例选择
+   * 只覆盖内部带位（nearTop/farTop 等），不动用户在设置面板里手调的阈值。
+   * 若设定期望与实际画面不一致（例如选了横屏却竖着拿），仍按实际比例工作，
+   * 但会提示改正、并在判定时提高置信度门槛（更保守），避免拿错参数硬报。
+   */
+  function applyOrientation() {
     var vw = video ? (video.videoWidth || 0) : 0;
     var vh = video ? (video.videoHeight || 0) : 0;
+    var isLand = vw ? (vw >= vh) : true;
+    var land = isLand;
+    orientationMismatch = false;
+
+    if (cfg.orientation === 'landscape') {
+      land = true;
+      orientationMismatch = vw > 0 && !isLand;
+    } else if (cfg.orientation === 'portrait') {
+      land = false;
+      orientationMismatch = vw > 0 && isLand;
+    }
+
+    if (land) {
+      cfg.nearTop = 0.68; cfg.nearBottom = 0.98;
+      cfg.farTop = 0.26; cfg.farBottom = 0.58;
+    } else {
+      cfg.nearTop = 0.62; cfg.nearBottom = 0.98;
+      cfg.farTop = 0.22; cfg.farBottom = 0.52;
+    }
+
     var msg = '';
-    if (vw && vh) {
-      var isLand = vw >= vh;
-      if (cfg.orientation === 'landscape' && !isLand) {
-        msg = '当前是竖屏画面。横持手机时跑道纵向穿过画面、两侧边界都在视野内，判定最可靠 —— 建议横持。竖屏仍可用，但边界出画时会主动不报警。';
-      } else if (cfg.orientation === 'portrait' && isLand) {
-        msg = '当前是横屏画面，但你选了竖屏模式。';
-      }
+    if (orientationMismatch) {
+      msg = cfg.orientation === 'landscape'
+        ? '当前是竖屏画面。请横持手机：横屏时跑道纵向穿过画面、两侧边界都在视野内，判定最可靠。现在仍按竖屏参数工作，同时提高了报警门槛以免误报。'
+        : '当前是横屏画面，但你选择了竖屏模式，建议改为「横屏」或「自动」。';
     }
     if (msg) setHint(msg);
-    else el.hint.style.display = 'none';
+    else if (el.hint) el.hint.style.display = 'none';
   }
 
   function sensorState() {
@@ -327,7 +357,7 @@
     tracker.reset();
     lastSt = tracker.state();
     startSensor();
-    updateOrientationHint();
+    applyOrientation();
 
     el.btnStart.disabled = true;
     el.btnStop.disabled = false;
@@ -457,8 +487,10 @@
     var st = sensorState();
     var needFrames = cfg.stableFrames + ((st && st.shaking) ? 2 : 0);
 
+    // 使用方式与实际画面不一致（如选了横屏却竖着拿）时提高门槛，宁可少报
+    var confNeed = cfg.minConfidence + (orientationMismatch ? 0.10 : 0);
     var trusted = detected && lastSt.miss === 0 &&
-      lastSt.conf >= cfg.minConfidence &&
+      lastSt.conf >= confNeed &&
       lastSt.sameDir >= needFrames;
 
     var newLevel = 0, newDir = 0;
@@ -490,6 +522,79 @@
         res: res, st: lastSt, level: level, dir: dir,
         sensor: sensorState()
       });
+    }
+  }
+
+  /* ---------- 带位与趋势标记 ---------- */
+
+  /**
+   * 把远带 / 近带与前瞻趋势画在画面上 —— 让"整屏都在用"看得见。
+   * 远带蓝色（看前方跑道走向），近带绿色（判脚下位置），箭头=漂移趋势方向。
+   */
+  function drawBands(ctx, res, sx, sy, wW, wH, W) {
+    if (!cfg.showBands || !res || !res.ok) {
+      if (el.bandNote) el.bandNote.className = '';
+      return;
+    }
+    var farA = cfg.farTop * wH * sy, farB = cfg.farBottom * wH * sy;
+    var nearA = cfg.nearTop * wH * sy, nearB = cfg.nearBottom * wH * sy;
+
+    ctx.save();
+    ctx.font = 'bold 12px system-ui, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+
+    ctx.fillStyle = 'rgba(120,200,255,0.07)';
+    ctx.fillRect(1, farA, W - 2, farB - farA);
+    ctx.strokeStyle = 'rgba(120,200,255,0.5)';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([6, 6]);
+    ctx.strokeRect(1, farA, W - 2, farB - farA);
+    ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(158,220,255,0.95)';
+    ctx.fillText('远带 · 前方跑道', 6, farA + 5);
+
+    ctx.fillStyle = 'rgba(110,235,170,0.07)';
+    ctx.fillRect(1, nearA, W - 2, nearB - nearA);
+    ctx.strokeStyle = 'rgba(110,235,170,0.5)';
+    ctx.setLineDash([6, 6]);
+    ctx.strokeRect(1, nearA, W - 2, nearB - nearA);
+    ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(150,245,195,0.95)';
+    ctx.fillText('近带 · 脚下位置', 6, nearA + 5);
+
+    if (res.far && res.far.ok) {
+      var fy = (farA + farB) / 2;
+      var fc = ((res.far.left + res.far.right) / 2) * sx;
+      ctx.fillStyle = 'rgba(158,220,255,0.95)';
+      ctx.beginPath();
+      ctx.arc(fc, fy, 5, 0, Math.PI * 2);
+      ctx.fill();
+
+      var t = res.trend || 0;
+      if (Math.abs(t) >= 0.02) {
+        var dirX = t > 0 ? 1 : -1;
+        var len = Math.min(80, Math.abs(t) * 300);
+        ctx.strokeStyle = 'rgba(158,220,255,0.95)';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(W / 2, fy);
+        ctx.lineTo(W / 2 + dirX * len, fy);
+        ctx.moveTo(W / 2 + dirX * len, fy);
+        ctx.lineTo(W / 2 + dirX * (len - 9), fy - 5);
+        ctx.moveTo(W / 2 + dirX * len, fy);
+        ctx.lineTo(W / 2 + dirX * (len - 9), fy + 5);
+        ctx.stroke();
+      }
+    }
+    ctx.restore();
+
+    if (el.bandNote) {
+      var np = (res.near && res.near.ok) ? res.near.p.toFixed(2) : '--';
+      var tr = res.trend || 0;
+      el.bandNote.textContent = '远带趋势 ' + (tr >= 0 ? '+' : '') + tr.toFixed(2) +
+        '　近带位置 ' + np;
+      el.bandNote.className = 'on';
     }
   }
 
@@ -571,24 +676,8 @@
       ctx.fillText('置信度 ' + (lastSt.conf * 100).toFixed(0) + '%', W - 10, 10);
     }
 
-    // 远带（前方跑道）：虚线 + 远处跑道中心点 —— 这是"前瞻"的依据
-    if (res && res.far && res.far.ok) {
-      var fy = ((cfg.farTop + cfg.farBottom) / 2 * wH) * sy;
-      ctx.save();
-      ctx.strokeStyle = 'rgba(120,200,255,0.7)';
-      ctx.setLineDash([6, 6]);
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(0, fy);
-      ctx.lineTo(W, fy);
-      ctx.stroke();
-      ctx.restore();
-      var fc = ((res.far.left + res.far.right) / 2) * sx;
-      ctx.fillStyle = 'rgba(120,200,255,0.95)';
-      ctx.beginPath();
-      ctx.arc(fc, fy, 5, 0, Math.PI * 2);
-      ctx.fill();
-    }
+    // 远带 / 近带标记与前瞻趋势 —— 让"整屏都在用"这件事看得见
+    drawBands(ctx, res, sx, sy, wW, wH, W);
 
     // 障碍/占用物：黄色警示框
     if (lastObstacle) {
@@ -660,6 +749,7 @@
     if (detected && res && res.curve) text += ' · 弯道';
     if (detected && res && res.clipped) text += ' · 请抬高手机';
     if (lastObstacle) text = '前方有占用物 · ' + text;
+    if (detected && orientationMismatch) text += ' · 请横持手机';
     var ss = sensorState();
     if (detected && ss && ss.enabled) {
       if (!ss.aiming) text += ' · 请朝下对准跑道';
@@ -737,6 +827,10 @@
   /* ---------- 事件绑定 ---------- */
 
   function bind() {
+    // 旋转手机时实时切换带位参数（横/竖屏用不同的远带与近带）
+    window.addEventListener('resize', function () { if (running) applyOrientation(); });
+    window.addEventListener('orientationchange', function () { if (running) applyOrientation(); });
+
     el.btnStart.addEventListener('click', start);
     el.btnStop.addEventListener('click', stop);
     el.btnSettings.addEventListener('click', function () {
@@ -795,7 +889,7 @@
       dataset = new TLG.Dataset({
         recorder: recorder,
         cloud: cloud,
-        version: '1.4.0',
+        version: '1.6.0',
         buildMeta: function () {
           return {
             cfg: cfg,

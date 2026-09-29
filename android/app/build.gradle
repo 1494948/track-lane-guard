@@ -12,8 +12,8 @@ android {
         applicationId 'cn.xuzf.tlg'
         minSdk 24
         targetSdk 34
-        versionCode 6
-        versionName '1.5.0'
+        versionCode 7
+        versionName '1.6.0'
     }
 
     // web/ 目录是唯一的前端源码，构建时同步进 assets

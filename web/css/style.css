@@ -61,16 +61,31 @@ body::before {
   z-index: 0;
 }
 
+/* ---------- 布局骨架 ----------
+   竖屏：信息 → 画面 → 操作（纵向堆叠，可滚动）
+   横屏：左＝画面（占满主区，一屏内不滚动）／右＝信息 → 操作（独立滚动）
+   用 grid-template-areas 表达，两种朝向共用同一份 DOM，不改结构。
+*/
 #app {
   position: relative;
   z-index: 1;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 10px;
+  grid-template-areas:
+    "info"
+    "stage"
+    "ctrl"
+    "mask";
+  grid-template-rows: auto minmax(200px, 1fr) auto auto;
   padding: calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 16px);
   transition: box-shadow .18s var(--ease);
 }
+
+#stage { grid-area: stage; }
+#infoCol { grid-area: info; display: flex; flex-direction: column; gap: 8px; }
+#ctrlCol { grid-area: ctrl; display: flex; flex-direction: column; gap: 10px; }
+#maskWrap { grid-area: mask; }
 
 /* 报警状态：整屏描边（跑动中一眼可见） */
 body[data-level="2"] #app { box-shadow: inset 0 0 0 5px var(--danger); }
@@ -125,6 +140,7 @@ body[data-level="lost"] #app { box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .
 
 /* ---------- 画面 ---------- */
 #stage {
+  position: relative;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -420,3 +436,71 @@ body[data-collecting="on"] #app { padding-top: calc(env(safe-area-inset-top) + 5
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
+
+/* ============================================================
+   横屏布局：左右分栏，画面占满主区，全部操作一屏可达
+   重点：整页不滚动（跑步时不可能去滚屏），只有右列内部滚动
+   ============================================================ */
+@media (orientation: landscape) {
+  #app {
+    grid-template-areas:
+      "stage info"
+      "stage ctrl"
+      "stage mask";
+    grid-template-columns: minmax(0, 1fr) clamp(272px, 33vw, 400px);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    gap: 10px;
+    padding: calc(env(safe-area-inset-top) + 10px) 12px calc(env(safe-area-inset-bottom) + 12px);
+  }
+  body[data-collecting="on"] #app { padding-top: calc(env(safe-area-inset-top) + 46px); }
+
+  #stage { min-height: 0; }
+  #infoCol { min-height: 0; }
+  #ctrlCol {
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 2px;
+  }
+  #maskWrap { min-height: 0; }
+
+  /* 横屏空间宝贵：紧凑一档，但仍满足触控尺寸 */
+  .status { min-height: 56px; font-size: 20px; padding: 10px 14px; }
+  .meta { font-size: 12px; }
+  .ctrls { gap: 8px; }
+  .ctrls button { min-height: 46px; font-size: 14.5px; }
+  .tips { font-size: 11.5px; }
+  #mask { max-height: 18vh; object-fit: contain; }
+
+  /* 宽屏下设置抽屉加宽，参数一眼看全 */
+  #panel { width: min(460px, 58vw); }
+}
+
+/* 手机横向且很矮时，进一步压掉非必要区块 */
+@media (orientation: landscape) and (max-height: 470px) {
+  .status { min-height: 48px; font-size: 18px; }
+  .tips { display: none; }
+  #mask { max-height: 14vh; }
+}
+
+/* 画面区右上角的带位说明（远带/近带/前瞻），由脚本更新文字 */
+#bandNote {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #cfe0ff;
+  background: rgba(10, 14, 22, .58);
+  border: 1px solid rgba(255, 255, 255, .14);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s var(--ease);
+}
+#bandNote.on { opacity: 1; }
