@@ -34,6 +34,7 @@
     lookahead: true,     // 远景前瞻：远处跑道已偏时提前预警
     showBands: true,     // 画面上标出远带/近带与前瞻趋势（能直观看到整屏都在用）
     viewMode: 'normal',  // 显示模式：normal 标准 / fullscreen 视频全屏 / hidden 隐藏视频（仍识别）
+    detectorMode: 'auto', // 识别引擎：auto 模型就位就用 / rule 仅规则 / model 仅模型
     obstacleAlert: true, // 跑道面内占用物（人影/衣物/水坑）提醒
     sensor: true,        // 姿态传感器辅助（不支持时自动禁用）
     orientation: 'landscape', // 使用方式：横屏（默认）/ 竖屏 / 自动
@@ -57,6 +58,10 @@
   var dataset = null;
   var viewMode = cfg.viewMode || 'normal';   // normal | fullscreen | hidden（隐藏画面时识别照常跑，跟随配置持久化）
   var lastSubNote = '';                      // 辅助提醒行的上次内容（避免每帧刷 DOM）
+  // 障碍检测：模型就位则用模型（能说出类别），否则自动回退颜色规则
+  var detector = null;
+  var detectorBusy = false;
+  var detectorText = '';
   var running = false;
   var stream = null;
   var video = null;
@@ -114,7 +119,7 @@
     el.btnCalib = $('btnCalib');
     el.panel = $('panel');
     el.btnClosePanel = $('btnClosePanel');
-    el.btnReset = $('btnReset');
+    el.btnReset = $('btnReset2');
     el.btnTestL = $('btnTestL');
     el.btnTestR = $('btnTestR');
     el.stage = $('stage');
@@ -136,32 +141,33 @@
 
   /* ---------- 设置面板 ---------- */
 
+  // 分组决定信息层级：alert=常用、detect/alarm=识别调优、more=收进三级菜单
   var SLIDERS = [
-    { key: 'hueCenter', label: '跑道色相中心', min: 0, max: 179, step: 1 },
-    { key: 'hueWidth', label: '色相容差', min: 5, max: 45, step: 1 },
-    { key: 'satMin', label: '最小饱和度', min: 0, max: 200, step: 5 },
-    { key: 'valMin', label: '最小亮度', min: 0, max: 200, step: 5 },
-    { key: 'lineSatMax', label: '分道线最大饱和度', min: 20, max: 140, step: 5 },
-    { key: 'lineValMin', label: '分道线最小亮度', min: 100, max: 255, step: 5 },
-    { key: 'bandTop', label: '检测带上边界', min: 0.20, max: 0.85, step: 0.02, fmt: pct },
-    { key: 'bandBottom', label: '检测带下边界', min: 0.35, max: 1.00, step: 0.02, fmt: pct },
-    { key: 'caution', label: '「注意」阈值', min: 0.08, max: 0.40, step: 0.01, fmt: pct },
-    { key: 'danger', label: '「警告」阈值', min: 0.15, max: 0.50, step: 0.01, fmt: pct },
-    { key: 'stableFrames', label: '持续帧数（越大越抗误报）', min: 2, max: 15, step: 1, suffix: ' 帧' },
-    { key: 'minConfidence', label: '最低置信度（越大越保守）', min: 0.20, max: 0.85, step: 0.05, fmt: pct },
-    { key: 'fps', label: '处理帧率', min: 5, max: 30, step: 1, suffix: ' fps' },
-    { key: 'volume', label: '提示音量', min: 0, max: 1, step: 0.05, fmt: pct }
+    { key: 'hueCenter', label: '跑道色相中心', min: 0, max: 179, step: 1, group: 'detect' },
+    { key: 'hueWidth', label: '色相容差', min: 5, max: 45, step: 1, group: 'detect' },
+    { key: 'satMin', label: '最小饱和度', min: 0, max: 200, step: 5, group: 'detect' },
+    { key: 'valMin', label: '最小亮度', min: 0, max: 200, step: 5, group: 'detect' },
+    { key: 'bandTop', label: '检测带上边界', min: 0.20, max: 0.85, step: 0.02, fmt: pct, group: 'detect' },
+    { key: 'bandBottom', label: '检测带下边界', min: 0.35, max: 1.00, step: 0.02, fmt: pct, group: 'detect' },
+    { key: 'caution', label: '「注意」阈值', min: 0.08, max: 0.40, step: 0.01, fmt: pct, group: 'alarm' },
+    { key: 'danger', label: '「警告」阈值', min: 0.15, max: 0.50, step: 0.01, fmt: pct, group: 'alarm' },
+    { key: 'stableFrames', label: '持续帧数（越大越抗误报）', min: 2, max: 15, step: 1, suffix: ' 帧', group: 'alarm' },
+    { key: 'minConfidence', label: '最低置信度（越大越保守）', min: 0.20, max: 0.85, step: 0.05, fmt: pct, group: 'alarm' },
+    { key: 'fps', label: '处理帧率', min: 5, max: 30, step: 1, suffix: ' fps', group: 'alarm' },
+    { key: 'volume', label: '提示音量', min: 0, max: 1, step: 0.05, fmt: pct, group: 'alert' },
+    { key: 'lineSatMax', label: '分道线最大饱和度', min: 20, max: 140, step: 5, group: 'more' },
+    { key: 'lineValMin', label: '分道线最小亮度', min: 100, max: 255, step: 5, group: 'more' }
   ];
 
   var TOGGLES = [
-    { key: 'tts', label: '语音播报「往左/往右」' },
-    { key: 'vibrate', label: '震动提醒' },
-    { key: 'lookahead', label: '远景前瞻（提前预警）' },
-    { key: 'showBands', label: '在画面上标出远带 / 近带' },
-    { key: 'obstacleAlert', label: '跑道占用物提醒（人影/杂物）' },
-    { key: 'sensor', label: '姿态传感器辅助' },
-    { key: 'mirror', label: '画面左右镜像' },
-    { key: 'debug', label: '显示识别调试图' }
+    { key: 'tts', label: '语音播报「往左/往右」', group: 'alert' },
+    { key: 'vibrate', label: '震动提醒', group: 'alert' },
+    { key: 'lookahead', label: '远景前瞻（提前预警）', group: 'alert' },
+    { key: 'obstacleAlert', label: '跑道占用物提醒', group: 'alert' },
+    { key: 'sensor', label: '姿态传感器辅助', group: 'alert' },
+    { key: 'mirror', label: '画面左右镜像', group: 'alert' },
+    { key: 'showBands', label: '在画面上标出远带 / 近带', group: 'more' },
+    { key: 'debug', label: '显示识别调试图', group: 'more' }
   ];
 
   var ORIENTATIONS = [
@@ -176,36 +182,66 @@
     { val: 'hidden', label: '隐藏视频' }
   ];
 
+  var ENGINE_MODES = [
+    { val: 'auto', label: '自动' },
+    { val: 'rule', label: '仅规则' },
+    { val: 'model', label: '仅模型' }
+  ];
+
   function pct(v) { return Math.round(v * 100) + '%'; }
+  function slidersOf(g) { return SLIDERS.filter(function (s) { return s.group === g; }); }
+  function togglesOf(g) { return TOGGLES.filter(function (t) { return t.group === g; }); }
+
+  function segRow(title, hint, attr, list, current) {
+    var html = '<div class="row"><div class="rowHead"><span>' + title + '</span>' +
+      '<b>' + hint + '</b></div><div class="seg">';
+    list.forEach(function (o) {
+      html += '<button type="button" data-' + attr + '="' + o.val + '"' +
+        (current === o.val ? ' class="active"' : '') + '>' + o.label + '</button>';
+    });
+    return html + '</div></div>';
+  }
+
+  function sliderRow(s) {
+    return '<div class="row"><div class="rowHead"><span>' + s.label +
+      '</span><b id="val_' + s.key + '"></b></div>' +
+      '<input type="range" data-key="' + s.key + '" min="' + s.min + '" max="' + s.max +
+      '" step="' + s.step + '" value="' + cfg[s.key] + '"></div>';
+  }
+
+  function chkRow(t) {
+    return '<label class="chk"><input type="checkbox" data-key="' + t.key + '"' +
+      (cfg[t.key] ? ' checked' : '') + '><span>' + t.label + '</span></label>';
+  }
 
   function buildSettings() {
-    var html = '';
-    SLIDERS.forEach(function (s) {
-      html += '<div class="row"><div class="rowHead"><span>' + s.label +
-        '</span><b id="val_' + s.key + '"></b></div>' +
-        '<input type="range" data-key="' + s.key + '" min="' + s.min + '" max="' + s.max +
-        '" step="' + s.step + '" value="' + cfg[s.key] + '"></div>';
-    });
-    TOGGLES.forEach(function (t) {
-      html += '<label class="chk"><input type="checkbox" data-key="' + t.key + '"' +
-        (cfg[t.key] ? ' checked' : '') + '><span>' + t.label + '</span></label>';
-    });
-    html += '<div class="row" style="margin-top:10px"><div class="rowHead"><span>使用方式</span>' +
-      '<b>横屏时整个界面都会转成横屏</b></div><div class="seg" id="segOrient">';
-    ORIENTATIONS.forEach(function (o) {
-      html += '<button type="button" data-orient="' + o.val + '"' +
-        (cfg.orientation === o.val ? ' class="active"' : '') + '>' + o.label + '</button>';
-    });
-    html += '</div></div>';
+    var html = '<div class="grp">使用方式</div>';
+    html += segRow('使用方式', '横屏时整个界面都会转成横屏', 'orient', ORIENTATIONS, cfg.orientation);
+    html += segRow('显示模式', '隐藏视频时仍在识别', 'view', VIEWMODES, cfg.viewMode);
+    html += segRow('识别引擎', '模型就位就用，否则用规则', 'engine', ENGINE_MODES, cfg.detectorMode) +
+      '<p class="grpNote" id="engineNote"></p>';
 
-    html += '<div class="row"><div class="rowHead"><span>显示模式</span>' +
-      '<b>隐藏视频时仍在识别</b></div><div class="seg" id="segView">';
-    VIEWMODES.forEach(function (v) {
-      html += '<button type="button" data-view="' + v.val + '"' +
-        (cfg.viewMode === v.val ? ' class="active"' : '') + '>' + v.label + '</button>';
-    });
-    html += '</div></div>';
+    html += '<div class="grp">提示</div>';
+    togglesOf('alert').forEach(function (t) { html += chkRow(t); });
+    slidersOf('alert').forEach(function (s) { html += sliderRow(s); });
+
+    html += '<div class="grp">识别参数</div>';
+    slidersOf('detect').forEach(function (s) { html += sliderRow(s); });
+
+    html += '<div class="grp">报警阈值</div>';
+    slidersOf('alarm').forEach(function (s) { html += sliderRow(s); });
+
     el.settingsBody.innerHTML = html;
+    renderDebugBox();
+
+    function refresh(key) {
+      var s = null;
+      for (var i = 0; i < SLIDERS.length; i++) if (SLIDERS[i].key === key) s = SLIDERS[i];
+      if (!s) return;
+      var node = $('val_' + key);
+      if (node) node.textContent = s.fmt ? s.fmt(cfg[key]) : (cfg[key] + (s.suffix || ''));
+    }
+    SLIDERS.forEach(function (s) { refresh(s.key); });
 
     el.settingsBody.querySelectorAll('button[data-orient]').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -220,23 +256,30 @@
     });
 
     el.settingsBody.querySelectorAll('button[data-view]').forEach(function (btn) {
+      btn.addEventListener('click', function () { setViewMode(btn.dataset.view); });
+    });
+
+    el.settingsBody.querySelectorAll('button[data-engine]').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        setViewMode(btn.dataset.view);
+        cfg.detectorMode = btn.dataset.engine;
+        el.settingsBody.querySelectorAll('button[data-engine]').forEach(function (b) {
+          b.className = (b.dataset.engine === cfg.detectorMode) ? 'active' : '';
+        });
+        saveCfg();
+        initDetector();
+        updateEngineNote();
       });
     });
 
-    function refresh(key) {
-      var s = null;
-      for (var i = 0; i < SLIDERS.length; i++) if (SLIDERS[i].key === key) s = SLIDERS[i];
-      if (!s) return;
-      var node = $('val_' + key);
-      if (node) {
-        node.textContent = s.fmt ? s.fmt(cfg[key]) : (cfg[key] + (s.suffix || ''));
-      }
-    }
-    SLIDERS.forEach(function (s) { refresh(s.key); });
+    bindControls(el.settingsBody, refresh);
+    bindControls($('debugBox'), refresh);
+    updateEngineNote();
+  }
 
-    el.settingsBody.querySelectorAll('input[type=range]').forEach(function (input) {
+  /** 统一的控件绑定：滑杆与复选框在设置面板和三级菜单里都存在 */
+  function bindControls(root, refresh) {
+    if (!root) return;
+    root.querySelectorAll('input[type=range]').forEach(function (input) {
       input.addEventListener('input', function () {
         cfg[input.dataset.key] = parseFloat(input.value);
         refresh(input.dataset.key);
@@ -245,13 +288,34 @@
         syncDebugVisibility();
       });
     });
-    el.settingsBody.querySelectorAll('input[type=checkbox]').forEach(function (input) {
+    root.querySelectorAll('input[type=checkbox]').forEach(function (input) {
       input.addEventListener('change', function () {
         cfg[input.dataset.key] = input.checked;
         applyCfg();
         saveCfg();
         syncDebugVisibility();
       });
+    });
+  }
+
+  /** 三级菜单里的调试区：专业调参 + 可视化开关 */
+  function renderDebugBox() {
+    var box = $('debugBox');
+    if (!box) return;
+    var html = '<div class="grp">调试与可视化</div>';
+    togglesOf('more').forEach(function (t) { html += chkRow(t); });
+    html += '<div class="grp">分道线参数（一般不用动）</div>';
+    slidersOf('more').forEach(function (s) { html += sliderRow(s); });
+    html += '<p class="grpNote" id="engineNote2"></p>';
+    box.innerHTML = html;
+  }
+
+  function updateEngineNote() {
+    var txt = detector ? ('当前：' + detector.statusText() +
+      (detector.model.state === 'ready' ? '（单帧约 ' + detector.model.lastMs + ' ms）' : '')) : '';
+    ['engineNote', 'engineNote2'].forEach(function (id) {
+      var n = $(id);
+      if (n) n.textContent = txt;
     });
   }
 
@@ -336,6 +400,19 @@
 
   function sensorState() {
     return sensor ? sensor.state() : null;
+  }
+
+  /** 初始化检测器：模型不存在时静默保持规则模式，不影响任何现有行为 */
+  function initDetector() {
+    if (!TLG.Detector) return;
+    detector = new TLG.Detector({
+      mode: cfg.detectorMode || 'auto',
+      modelUrl: 'models/yolov8n.onnx',
+      onState: function (state) {
+        detectorText = detector ? detector.statusText() : '';
+      }
+    });
+    detector.init();
   }
 
   /**
@@ -590,16 +667,31 @@
     fb.setState(level, dir);
 
     // 障碍/占用物：连续多帧出现才算数，避免单帧闪烁
-    // 障碍提示要保守：必须①已确认在跑道上 ②置信度达标 ③确实在前方 ④面积足够大。
-    // 否则在室内这类根本不是跑道的场景里，桌面杂物会被当成"跑道上的占用物"乱报。
+    // 障碍来源：模型（能说出类别）优先，规则兜底，二者由 detector 融合。
+    // 推理是异步的，用"推理中跳过"节流，避免 Promise 堆积。
+    if (detector && !detectorBusy && cfg.obstacleAlert) {
+      detectorBusy = true;
+      var dp = detector.update(video, res, workCanvas.width, workCanvas.height);
+      if (dp) {
+        dp.then(function () { detectorBusy = false; })
+          .catch(function () { detectorBusy = false; });
+      } else {
+        detectorBusy = false;
+      }
+    }
+    var boxes = detector ? detector.merged : [];
+    // 障碍提示要保守：必须①已确认在跑道上 ②置信度达标 ③确实在前方 ④面积足够大，
+    // 模型结果还要求类别置信度够高 —— 否则宁可只说"占用物"，也不猜错类别。
     var obs = null;
-    if (cfg.obstacleAlert && detected && res.ok && res.obstacles && res.obstacles.length) {
-      var cand = res.obstacles[0];
-      var areaRatio = cand.area / (res.width * res.height);
-      var inFront = cand.cy >= res.height * 0.30;   // 只看前方（画面中下部）
+    if (cfg.obstacleAlert && detected && res.ok && boxes.length) {
+      var cand = boxes[0];
+      var areaRatio = cand.area;
+      var ocy = (cand.box.y0 + cand.box.y1) / 2;
+      var inFront = ocy >= 0.30;   // 只看前方（画面中下部）
       var confNeed2 = Math.max(cfg.minConfidence, 0.50);
-      if (areaRatio >= (cfg.obsMinArea || 0.008) && inFront &&
-          lastSt.conf >= confNeed2 && lastSt.sameDir >= 2) {
+      var modelOk = (cand.src === 'model') ? (cand.conf >= 0.45) : true;
+      if (areaRatio >= (cfg.obsMinArea || 0.010) && inFront &&
+          lastSt.conf >= confNeed2 && lastSt.sameDir >= 2 && modelOk) {
         obs = cand;
       }
     }
@@ -777,17 +869,25 @@
     // 远带 / 近带标记与前瞻趋势 —— 让"整屏都在用"这件事看得见
     drawBands(ctx, res, sx, sy, wW, wH, W);
 
-    // 障碍/占用物：黄色警示框
+    // 障碍框：统一按归一化坐标绘制；模型结果会带类别名与置信度
     if (lastObstacle) {
       var o = lastObstacle;
-      ctx.strokeStyle = 'rgba(255,200,40,0.95)';
+      var px = o.box.x0 * W, py = o.box.y0 * H;
+      var pw = (o.box.x1 - o.box.x0) * W, ph = (o.box.y1 - o.box.y0) * H;
+      ctx.strokeStyle = o.src === 'model' ? 'rgba(255,170,40,0.95)' : 'rgba(255,200,40,0.9)';
       ctx.lineWidth = 3;
-      ctx.strokeRect(o.x0 * sx, o.y0 * sy, (o.x1 - o.x0 + 1) * sx, (o.y1 - o.y0 + 1) * sy);
-      ctx.fillStyle = 'rgba(255,200,40,0.95)';
-      ctx.font = 'bold 15px system-ui, sans-serif';
+      ctx.strokeRect(px, py, pw, ph);
+      var lbl = o.src === 'model'
+        ? (o.cls + ' ' + Math.round(o.conf * 100) + '%')
+        : '占用物';
+      ctx.font = 'bold 14px system-ui, sans-serif';
+      var tw = ctx.measureText(lbl).width + 12;
+      ctx.fillStyle = 'rgba(20,24,32,0.82)';
+      ctx.fillRect(px, Math.max(0, py - 22), tw, 20);
+      ctx.fillStyle = '#ffcf6b';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'top';
-      ctx.fillText('注意：跑道上有占用物', 10, 10);
+      ctx.fillText(lbl, px + 6, Math.max(0, py - 19));
     }
 
     // 方向指示（大字 + 箭头）
@@ -858,7 +958,11 @@
     // 放到下面独立一行 —— 否则会拼成「前方有占用物 · 安全 · 弯道」这种
     // 自相矛盾的长串，状态条也就失去了"一眼看懂"的意义。
     var notes = [];
-    if (lastObstacle) notes.push('前方有占用物');
+    if (lastObstacle) {
+      notes.push(lastObstacle.src === 'model'
+        ? ('前方' + lastObstacle.cls + ' ' + Math.round(lastObstacle.conf * 100) + '%')
+        : '前方有占用物');
+    }
     if (detected && res && res.curve) notes.push('弯道');
     if (detected && res && res.clipped) notes.push('请抬高手机');
     if (detected && orientationMismatch) notes.push('请横持手机');
@@ -1009,7 +1113,7 @@
       dataset = new TLG.Dataset({
         recorder: recorder,
         cloud: cloud,
-        version: '1.8.0',
+        version: '1.9.0',
         buildMeta: function () {
           return {
             cfg: cfg,
@@ -1021,6 +1125,9 @@
       });
       dataset.mount(dsHost);
     }
+
+    initDetector();   // 模型就位则启用目标检测，否则静默保持规则模式
+    updateEngineNote();
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

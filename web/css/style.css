@@ -680,3 +680,64 @@ body[data-rotated="1"] #collectBanner {
   line-height: 1.45;
 }
 body[data-layout="landscape"] .subNote { font-size: 13px; padding: 6px 10px; }
+
+/* ============================================================
+   信息架构：一级常用 / 二级分组 / 三级折叠
+   一级 = 状态 + 画面 + 开始/停止/标定/设置
+   二级 = 设置面板内的分组（使用方式 / 提示 / 识别参数 / 报警阈值）
+   三级 = 「更多设置」折叠：数据采集、调试、分道线参数、恢复默认
+   ============================================================ */
+
+/* 二级分组标题 */
+.grp {
+  margin: 14px 2px 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--faint);
+  text-transform: uppercase;
+}
+.grp:first-child { margin-top: 2px; }
+.grpNote {
+  margin: 2px 2px 8px;
+  font-size: 12px;
+  color: var(--faint);
+  line-height: 1.55;
+}
+
+/* 三级：更多设置 */
+.moreWrap {
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, .022);
+  overflow: hidden;
+}
+.moreWrap > summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: var(--tap);
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.moreWrap > summary::-webkit-details-marker { display: none; }
+.moreWrap > summary::after {
+  content: '▾';
+  color: var(--faint);
+  font-size: 13px;
+  transition: transform .18s var(--ease);
+}
+.moreWrap[open] > summary::after { transform: rotate(180deg); }
+.moreHint { font-size: 11.5px; font-weight: 400; color: var(--faint); }
+.moreWrap > .card {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+.moreWrap .dsRow { padding: 10px 12px 12px; }

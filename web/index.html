@@ -38,15 +38,11 @@
       <button id="btnStart" class="primary">开始检测</button>
       <button id="btnStop" disabled>停止</button>
       <button id="btnCalib">标定</button>
-      <button id="btnFull">全屏画面</button>
-      <button id="btnHide">隐藏画面</button>
       <button id="btnSettings">设置</button>
     </nav>
 
     <p class="tips">默认横持使用：跑道纵向穿过画面，两侧边界都在视野内，判定最可靠。镜头朝前下方对准跑道，
       既看得到脚下的地面、也看得到前方跑道；佩戴耳机时左右耳提示音方向更明确。竖持也能用（设置里切换）。</p>
-
-    <section id="dataset" class="card" aria-label="数据采集与优化"></section>
   </div>
 
   <div id="maskWrap">
@@ -67,10 +63,20 @@
     <button id="btnClosePanel" class="ghost">收起</button>
   </div>
   <div id="settingsBody"></div>
+
+  <!-- 三级菜单：不常用的都收在这里，默认折叠 -->
+  <details id="moreWrap" class="moreWrap">
+    <summary>更多设置<span class="moreHint">数据采集 · 调试 · 恢复默认</span></summary>
+    <section id="dataset" class="card" aria-label="数据采集与优化"></section>
+    <div id="debugBox" class="card"></div>
+    <div class="dsRow">
+      <button type="button" id="btnReset2" class="ghost">恢复默认设置</button>
+    </div>
+  </details>
+
   <div class="panelFoot">
     <button id="btnTestL">试听「往左」</button>
     <button id="btnTestR">试听「往右」</button>
-    <button id="btnReset" class="ghost">恢复默认</button>
   </div>
 </aside>
 
@@ -80,6 +86,7 @@
 <script src="js/recorder.js"></script>
 <script src="js/cloud.js"></script>
 <script src="js/dataset.js"></script>
+<script src="js/detector.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
