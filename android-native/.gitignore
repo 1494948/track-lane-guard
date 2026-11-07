@@ -1,0 +1,16 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# 模型文件因人而异（由 tools/convert_model.py 生成），不进入仓库
+app/src/main/assets/models/*.param
+app/src/main/assets/models/*.bin
+
+# ncnn 预编译库体积大，由 tools/download_ncnn.bat 拉取
+third_party/ncnn/
