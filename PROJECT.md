@@ -238,3 +238,16 @@ node robustness.js
     控件绑定抽成 `bindControls(root)`，同时服务设置面板与三级菜单
   - 环境变化：受管 node 从 `22.22.2-3` 变为 `22.22.2-6`（旧路径会
     "No such file or directory"），测试命令需更新
+- 2026-11-07 · **原生 Android 方案设计（NATIVE-ANDROID.md，仅方案未动代码）**
+  - 用户要求：原生底层、禁 WebUI、全离线、高性能、包大小不设限、
+    所有参数必须带通俗中文说明
+  - 引擎选型 **ncnn**（腾讯）：ARM NEON 手写优化 + Vulkan 成熟 + 官方 YOLO11 example；
+    MNN 为次选（将来发 iOS 更一致）；排除 TFLite（国产芯片 GPU delegate 兼容性差）、
+    Paddle-Lite（训练侧走 PyTorch/Ultralytics 更主流）
+  - 模型：检测用 **YOLO11m**（20.1M 参数，mAP 51，320 输入 35~55ms —— 用户不设包体限制，
+    用精度换体积）；跑道分割用 **YOLO11n-seg**（2.9M，与检测共用 pnnx 转换与后处理）；
+    分割数据未到位前跑道继续用 HSV 颜色规则顶住，不阻塞主流程
+  - 性能设计要点：YUV→RGB 在 C++ 侧零拷贝完成（WebView 版每帧建 Bitmap 是主要开销）、
+    推理与相机解耦且**慢时丢帧不堆积**、只出 arm64-v8a、Vulkan 优先 CPU 兜底
+  - 参数体系分 5 组共 21 项，每项都写明「是什么 / 调大的影响 / 调小的影响 / 什么时候调」
+  - 待用户决定：① 代码归属（子模块 vs 新仓库）② 模型档位（建议 m）
