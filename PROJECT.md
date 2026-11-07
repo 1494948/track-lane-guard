@@ -251,3 +251,23 @@ node robustness.js
     推理与相机解耦且**慢时丢帧不堆积**、只出 arm64-v8a、Vulkan 优先 CPU 兜底
   - 参数体系分 5 组共 21 项，每项都写明「是什么 / 调大的影响 / 调小的影响 / 什么时候调」
   - 待用户决定：① 代码归属（子模块 vs 新仓库）② 模型档位（建议 m）
+- 2026-11-07 · **原生 Android 版 M1-M4 实现完成（`android-native/` 子模块，构建通过）**
+  - 用户确认：作为迭代版本、不建独立仓库、模型用 YOLO11m
+  - 引擎 **ncnn 20240820**（Vulkan 预编译包，arm64-v8a 单架构，CMake 静态链接）
+  - 模型通路 YOLO11m + 规则通路（cv.js 原生移植）双通路，**模型缺失自动回退规则**
+  - CameraX ImageAnalysis：YUV_420_888 直接转 RGB（Java 层不建 Bitmap）、
+    推理与相机解耦慢时丢帧、`STRATEGY_KEEP_ONLY_LATEST`
+  - 输出 AudioTrack 双声道声像提示音 + 震动；UI 为 Compose（一级界面 + 设置 BottomSheet）
+  - 参数体系 5 组 18 项，每项一张卡片含「是什么 / 调大 / 调小 / 什么时候调」
+  - **构建验证通过**：`app-debug.apk` 20.5 MB（`libtlg-native.so` 8.4 MB + `libc++_shared` 1.3 MB）
+  - **本机踩坑（重要，下次直接抄）**：
+    1. `native` 是 Java 关键字，**不能作包名** → 用 `cn.xuzf.tlg.core`
+    2. JNI 函数名有**两处**命名（`.` 与 `_`），`sed` 只替换点号那处会导致 native 方法链不上
+    3. **ncnn 20261020 与 NDK 26/27 不兼容**：其 libc++ 引用 `__hash_memory`，
+       而 NDK 26.1/27.0 的 `libc++_shared.so` 都没有该符号 → 链接失败。
+       已用脚本逐个下载验证，**降到 ncnn 20240820 解决**
+    4. 换 ncnn 版本后必须删 `.cxx/` 与 `CMakeCache.txt`，否则 include 路径还指向旧版本
+    5. `local.properties` 里 `cmake.dir`/`ndk.dir` 不是合法键，会报"文件名目录名语法不正确"；
+       NDK 路径走环境变量 `ANDROID_NDK_HOME`
+    6. `when` 是 Kotlin 硬关键字，不能作参数名
+  - 待办：模型转换（`tools/convert_model.py`）、真机验证（本机无设备）
